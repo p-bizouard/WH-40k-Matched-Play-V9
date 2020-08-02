@@ -4,13 +4,15 @@ import { StyleSheet, Text, View, Picker, TabBarIOS } from 'react-native';
 import intl from 'react-intl-universal';
 import _ from 'lodash';
 import { connect } from 'react-redux'
-import { updateLocale } from './store/actions'
+import { updateLocale, initConfiguration } from './store/actions'
 import { Appbar, Modal, Portal, Provider } from 'react-native-paper';
 
 
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
+
+    this.props.initConfiguration();
   }
 
   _localeSwitcherModal() {
@@ -26,7 +28,7 @@ class Navigation extends React.Component {
     return (
       <Provider>
         <Appbar.Header>
-          <Appbar.Content title={intl.formatMessage({ id: 'homepage-title', defaultMessage: 'Match points' })} subtitle={intl.formatMessage({ id: 'homepage-subtitle', defaultMessage: 'Saved plays'})}  />
+          <Appbar.Content title={intl.formatMessage({ id: 'homepage-title', defaultMessage: 'Match points' })} subtitle={intl.formatMessage({ id: 'homepage-subtitle', defaultMessage: 'Saved plays' })} />
         </Appbar.Header>
         <View style={styles.container}>
 
@@ -61,7 +63,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  updateLocale: (locale: any) => dispatch(updateLocale(locale))
+  updateLocale: (locale: any) => dispatch(updateLocale(locale)),
+  initConfiguration: () => dispatch(initConfiguration())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navigation)

@@ -4,6 +4,7 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import _ from 'lodash';
 import intl from 'react-intl-universal';
+import { Dispatch } from '../../Types'
 
 const SUPPOER_LOCALES = [
   {
@@ -17,7 +18,7 @@ const SUPPOER_LOCALES = [
 ];
 
 const updateIntlLocale = (locale: string) => {
-
+  console.log('locale', locale)
   intl.init({
     currentLocale: locale,
     locales: {
@@ -27,13 +28,52 @@ const updateIntlLocale = (locale: string) => {
   });
 }
 
-export const updateLocale = async function (locale: string) {
-  updateIntlLocale(locale);
+export function updateLocale(locale: string) {
+  console.log('updateLocale');
+  return (dispatch: Dispatch) => {
+    updateIntlLocale(locale);
 
-  await AsyncStorage.setItem('@configuration.locale', locale)
+    return AsyncStorage.setItem('@configuration.locale', locale)
+      .then(function () {
+        console.log('THEN')
+        dispatch({
+          type: 'UPDATE_LOCALE',
+          locale
+        });
+      })
+  }
+}
 
-  return {
-    type: 'UPDATE_LOCALE',
-    locale
-  };
-} 
+
+export function initConfiguration() {
+  return (dispatch: Dispatch) => {
+    return AsyncStorage.getItem('@configuration.locale')
+      .then(function (locale: string) {
+        if (locale !== null) {
+          updateIntlLocale(locale);
+          dispatch({
+            type: 'UPDATE_LOCALE',
+            locale
+          });
+        } else {
+          AsyncStorage.getItem('@configuration.locale')
+            .then(function (locale) {
+              if (locale === null) {
+                locale = intl.determineLocale({
+                  urlLocaleKey: 'lang',
+                  cookieLocaleKey: 'lang'
+                });
+                if (locale.length == 2) {
+                  locale = locale + '-' + locale.toUpperCase();
+                }
+                if (!_.find(SUPPOER_LOCALES, { value: locale })) {
+                  locale = 'fr-FR';
+                }
+              }
+              updateIntlLocale(locale);
+              dispatch({ type: 'UPDATE_LOCALE', locale: locale });
+            })
+        }
+      })
+  }
+}
