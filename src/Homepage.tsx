@@ -6,10 +6,13 @@ import _ from 'lodash';
 import { connect } from 'react-redux'
 import { updateLocale, initConfiguration } from './store/actions'
 import { Appbar, Modal, Portal, Provider } from 'react-native-paper';
-
+import { Dispatch } from './Types'
+import PropTypes from 'prop-types';
 
 class Navigation extends React.Component {
-  constructor(props) {
+
+
+  constructor(props: any) {
     super(props);
 
     this.props.initConfiguration();

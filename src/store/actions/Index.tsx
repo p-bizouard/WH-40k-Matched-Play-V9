@@ -35,7 +35,6 @@ export function updateLocale(locale: string) {
 
     return AsyncStorage.setItem('@configuration.locale', locale)
       .then(function () {
-        console.log('THEN')
         dispatch({
           type: 'UPDATE_LOCALE',
           locale
@@ -48,7 +47,7 @@ export function updateLocale(locale: string) {
 export function initConfiguration() {
   return (dispatch: Dispatch) => {
     return AsyncStorage.getItem('@configuration.locale')
-      .then(function (locale: string) {
+      .then((locale: string | null) => {
         if (locale !== null) {
           updateIntlLocale(locale);
           dispatch({
