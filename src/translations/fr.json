@@ -1,0 +1,18 @@
+{
+    "hak27d": {
+      "defaultMessage": "Panneau de configuration",
+      "description": "title of control panel section"
+    },
+    "haqsd": {
+      "defaultMessage": "Supprimer l'utilisateur {name}",
+      "description": "delete button"
+    },
+    "19hjs": {
+      "defaultMessage": "nouveau mot de passe",
+      "description": "placeholder text"
+    },
+    "explicit-id": {
+      "defaultMessage": "Confirmez le mot de passe",
+      "description": "placeholder text"
+    }
+  }

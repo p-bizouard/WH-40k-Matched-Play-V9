@@ -1,21 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { Provider as PaperProvider, Appbar, Modal, Portal } from 'react-native-paper';
+import { Provider as StoreProvider } from 'react-redux';
+import { createStore } from 'redux'
+import reducers from './src/store/reducers'
+import Homepage from './src/Homepage';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const store = createStore(reducers)
+
+export default class Entrypoint extends React.Component {
+  render() {
+    return (
+      <StoreProvider store={store}>
+        <PaperProvider>
+          <Homepage />
+        </PaperProvider>
+      </StoreProvider>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

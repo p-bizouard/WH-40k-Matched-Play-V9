@@ -1,0 +1,34 @@
+{
+  "19hjs": [
+    {
+      "type": 0,
+      "value": "nouveau mot de passeEN"
+    }
+  ],
+  "explicit-id": [
+    {
+      "type": 0,
+      "value": "Confirmez le mot de passe"
+    }
+  ],
+  "hak27d": [
+    {
+      "type": 0,
+      "value": "Panneau de configurationEN"
+    }
+  ],
+  "haqsd": [
+    {
+      "type": 0,
+      "value": "Supprimer l'utilisateur "
+    },
+    {
+      "type": 1,
+      "value": "name"
+    },
+    {
+      "type": 0,
+      "value": "EN"
+    }
+  ]
+}
