@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import configuration from './configuration'
+import configurationReducer from './Configuration'
+import currentGameReducer from './CurrentGame'
 
 export default combineReducers({
-    configuration,
+    currentGame: currentGameReducer,
+    configuration: configurationReducer,
 })

@@ -1,52 +1,79 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Picker, TabBarIOS } from 'react-native';
+import { StyleSheet, Text, View, Picker, TextInput } from 'react-native';
 import intl from 'react-intl-universal';
 import _ from 'lodash';
 import { connect } from 'react-redux'
-import { updateLocale, initConfiguration } from './store/actions'
-import { Appbar, Modal, Portal, Provider } from 'react-native-paper';
-import { Dispatch } from './Types'
+import { getLocales, updateLocale, initConfiguration } from './store/actions'
+import { Appbar, Modal, Portal, Provider, Button } from 'react-native-paper';
+import { Dispatch, Game } from './Types'
 import PropTypes from 'prop-types';
+import GameModal from './components/GameModal';
 
-class Navigation extends React.Component {
+
+type NavigationProps = {
+  initConfiguration: Function;
+  updateLocale: Function;
+  configuration: {
+    locale: String;
+  };
+  addModal: Boolean;
+  Game: Game;
+}
+
+class Navigation extends React.Component<NavigationProps> {
 
 
   constructor(props: any) {
     super(props);
 
     this.props.initConfiguration();
+
+    this.state = {
+      addModal: false
+    }
   }
 
-  _localeSwitcherModal() {
-
-  }
-
-  componentDidMount() {
-  }
 
   render() {
-    const title = intl.formatMessage({ id: 'hak27d' });
+    const hideModal = () => this.setState({ addModal: false });
+    const showModal = () => {
+      this.setState({ addModal: true });
+    }
+
+    const title = intl.formatMessage({ id: 'hak27d', defaultMessage: 'Test' });
+
 
     return (
       <Provider>
-        <Appbar.Header>
-          <Appbar.Content title={intl.formatMessage({ id: 'homepage-title', defaultMessage: 'Match points' })} subtitle={intl.formatMessage({ id: 'homepage-subtitle', defaultMessage: 'Saved plays' })} />
-        </Appbar.Header>
-        <View style={styles.container}>
+        <Portal>
+          <Appbar.Header>
+            <Appbar.Content title={intl.formatMessage({ id: 'homepage.title', defaultMessage: 'Game points' })} subtitle={intl.formatMessage({ id: 'homepage.subtitle', defaultMessage: 'Saved plays' })} />
+            <Picker
+              selectedValue={this.props.configuration.locale}
+              style={{ height: 50, width: 150 }}
+              onValueChange={(itemValue) => this.props.updateLocale(itemValue)}
+            >
+              {getLocales().map((value) => {
+                return <Picker.Item label={value.name} value={value.value} key={value.value} />
+              })}
+            </Picker>
+          </Appbar.Header>
+          <View style={styles.container}>
 
-          <Picker
-            selectedValue={this.props.configuration.locale}
-            style={{ height: 50, width: 150 }}
-            onValueChange={(itemValue) => this.props.updateLocale(itemValue)}
-          >
-            <Picker.Item label="en" value="en-US" />
-            <Picker.Item label="fr" value="fr-FR" />
-          </Picker>
+            <Text>Open up App.tsx to start working on your app! ({title})</Text>
+            <StatusBar style="auto" />
+            <Button icon="plus" mode="contained" onPress={showModal}>Test</Button>
+          </View>
+          <View style={styles.container}>
+            <Text>Open up App.tsx to start working on your app! ({title})</Text>
+            <StatusBar style="auto" />
+          </View>
 
-          <Text>{this.props.configuration.locale} Open up App.tsx to start working on your app! ({title})</Text>
-          <StatusBar style="auto" />
-        </View>
+          <Modal visible={this.state.addModal} onDismiss={hideModal}>
+            <GameModal />
+          </Modal>
+        </Portal>
       </Provider>
     );
   }
@@ -61,11 +88,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: any) => ({
   configuration: state.configuration
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   updateLocale: (locale: any) => dispatch(updateLocale(locale)),
   initConfiguration: () => dispatch(initConfiguration())
 })

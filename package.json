@@ -6,7 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "format-translations": "formatjs compile src/translations/fr.json --ast --out-file src/translations/fr-compiled.json && formatjs compile src/translations/en.json --ast --out-file src/translations/en-compiled.json"
+    "format-translations": "formatjs compile src/translations/fr.json --ast --out-file src/translations/fr-compiled.json && formatjs compile src/translations/en.json --ast --out-file src/translations/en-compiled.json",
+    "extract-translations": "formatjs extract src/**/*.ts* --out-file src/translations/fr.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs extract src/**/*.ts* --out-file src/translations/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'"
   },
   "dependencies": {
     "@formatjs/cli": "^2.3.0",
