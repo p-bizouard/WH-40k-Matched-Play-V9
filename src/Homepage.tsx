@@ -1,100 +1,87 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Picker, TextInput } from 'react-native';
-import intl from 'react-intl-universal';
-import _ from 'lodash';
+import React from 'react'
+import { View, Dimensions } from 'react-native'
 import { connect } from 'react-redux'
-import { getLocales, updateLocale, initConfiguration } from './store/actions'
-import { Appbar, Modal, Portal, Provider, Button } from 'react-native-paper';
-import { Dispatch, Game } from './Types'
-import PropTypes from 'prop-types';
-import GameModal from './components/GameModal';
+import {
+  initConfiguration,
+  resetGames,
+  resetConfiguration,
+} from './store/actions'
+import { Button } from 'react-native-paper'
+import { Game } from './types'
+import Games from './components/Games'
+import styles from './styles'
+import { ScrollView } from 'react-native-gesture-handler'
+import { useHeaderHeight } from '@react-navigation/stack'
+import LocaleSelector from './components/LocaleSelector'
 
-
-type NavigationProps = {
-  initConfiguration: Function;
-  updateLocale: Function;
+interface HomepageProps {
+  initConfiguration: typeof initConfiguration
+  resetConfiguration: typeof resetConfiguration
+  resetGames: typeof resetGames
   configuration: {
-    locale: String;
-  };
-  addModal: Boolean;
-  Game: Game;
+    locale: String
+  }
+  currentGame: Game
+  navigation: any
 }
 
-class Navigation extends React.Component<NavigationProps> {
+function Homepage({ navigation, ...props }: HomepageProps) {
+  React.useLayoutEffect(() => {
+    props.initConfiguration()
+    setHeader()
+  }, [])
 
-
-  constructor(props: any) {
-    super(props);
-
-    this.props.initConfiguration();
-
-    this.state = {
-      addModal: false
-    }
+  const setHeader = () => {
+    navigation.setOptions({
+      // eslint-disable-next-line react/display-name
+      headerRight: () => <LocaleSelector />,
+    })
   }
 
+  return (
+    <ScrollView
+      style={{
+        height: Dimensions.get('window').height - useHeaderHeight(),
+      }}
+      contentContainerStyle={styles.body}
+    >
+      <View style={styles.container}>
+        <Games />
 
-  render() {
-    const hideModal = () => this.setState({ addModal: false });
-    const showModal = () => {
-      this.setState({ addModal: true });
-    }
+        <Button
+          mode="contained"
+          icon="plus"
+          onPress={() => navigation.navigate('EditGame')}
+          color="green"
+        >
+          Ajouter une partie
+        </Button>
 
-    const title = intl.formatMessage({ id: 'hak27d', defaultMessage: 'Test' });
-
-
-    return (
-      <Provider>
-        <Portal>
-          <Appbar.Header>
-            <Appbar.Content title={intl.formatMessage({ id: 'homepage.title', defaultMessage: 'Game points' })} subtitle={intl.formatMessage({ id: 'homepage.subtitle', defaultMessage: 'Saved plays' })} />
-            <Picker
-              selectedValue={this.props.configuration.locale}
-              style={{ height: 50, width: 150 }}
-              onValueChange={(itemValue) => this.props.updateLocale(itemValue)}
-            >
-              {getLocales().map((value) => {
-                return <Picker.Item label={value.name} value={value.value} key={value.value} />
-              })}
-            </Picker>
-          </Appbar.Header>
-          <View style={styles.container}>
-
-            <Text>Open up App.tsx to start working on your app! ({title})</Text>
-            <StatusBar style="auto" />
-            <Button icon="plus" mode="contained" onPress={showModal}>Test</Button>
-          </View>
-          <View style={styles.container}>
-            <Text>Open up App.tsx to start working on your app! ({title})</Text>
-            <StatusBar style="auto" />
-          </View>
-
-          <Modal visible={this.state.addModal} onDismiss={hideModal}>
-            <GameModal />
-          </Modal>
-        </Portal>
-      </Provider>
-    );
-  }
+        <Button
+          mode="contained"
+          icon="delete"
+          onPress={() => {
+            props.resetGames()
+            props.resetConfiguration()
+          }}
+          color="red"
+        >
+          RESET
+        </Button>
+      </View>
+    </ScrollView>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 const mapStateToProps = (state: any) => ({
-  configuration: state.configuration
+  configuration: state.configuration,
+  currentGame: state.currentGame,
 })
 
 const mapDispatchToProps = (dispatch: Function) => ({
-  updateLocale: (locale: any) => dispatch(updateLocale(locale)),
-  initConfiguration: () => dispatch(initConfiguration())
+  resetGames: () => dispatch(resetGames()),
+  resetConfiguration: () => dispatch(resetConfiguration()),
+  initConfiguration: () => dispatch(initConfiguration()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navigation)
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage)

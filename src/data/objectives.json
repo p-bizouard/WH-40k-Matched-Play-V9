@@ -1,0 +1,92 @@
+[
+  {
+    "id": "purge-the-ennemy",
+    "secondary": [
+      {
+        "id": "assassinate"
+      },
+      {
+        "id": "bring-it-down"
+      },
+      {
+        "id": "titan-slayers"
+      },
+      {
+        "id": "slay-the-warlord"
+      }
+    ]
+  },
+  {
+    "id": "no-mercy-no-respite",
+    "secondary": [
+      {
+        "id": "thin-their-ranks"
+      },
+      {
+        "id": "attrition"
+      },
+      {
+        "id": "while-we-stand-we-fight"
+      },
+      {
+        "id": "first-strike"
+      }
+    ]
+  },
+  {
+    "id": "battlefield-supremacy",
+    "secondary": [
+      {
+        "id": "engage-on-all-fronts"
+      },
+      {
+        "id": "line-breaker"
+      },
+      {
+        "id": "domination"
+      }
+    ]
+  },
+  {
+    "id": "shadow-operations",
+    "secondary": [
+      {
+        "id": "investigate-sites"
+      },
+      {
+        "id": "repair-teleport-homer"
+      },
+      {
+        "id": "raise-the-banners-high"
+      }
+    ]
+  },
+  {
+    "id": "warpcraft",
+    "secondary": [
+      {
+        "id": "mental-interrogation"
+      },
+      {
+        "id": "psychic-ritual"
+      },
+      {
+        "id": "abhor-the-witch"
+      }
+    ]
+  },
+  {
+    "id": "custom",
+    "secondary": [
+      {
+        "id": "custom-1"
+      },
+      {
+        "id": "custom-2"
+      },
+      {
+        "id": "custom-3"
+      }
+    ]
+  }
+]

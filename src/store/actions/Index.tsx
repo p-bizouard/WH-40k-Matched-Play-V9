@@ -1,13 +1,33 @@
-import { removePlayer, removeTeam, addTeam, updateGame } from './CurrentGame'
-import { getLocales, updateLocale, initConfiguration } from './Translation'
-
-export {
+import {
   removePlayer,
   removeTeam,
   addTeam,
-  updateGame,
+  updateCurrentGame,
+  addPlayer,
+  updatePlayer,
+  resetCurrentGame,
+  updatePlayerObjective,
+} from './currentGame'
+import { getLocales, updateLocale, updateIntlLocale } from './translation'
+import { initConfiguration, resetConfiguration } from './configuration'
+import { addGame, updateGame, removeGame, resetGames } from './games'
 
+export {
+  removePlayer,
+  addPlayer,
+  removeTeam,
+  addTeam,
+  updatePlayer,
+  updateCurrentGame,
+  resetCurrentGame,
   getLocales,
   updateLocale,
-  initConfiguration
-};
+  initConfiguration,
+  updateIntlLocale,
+  resetConfiguration,
+  addGame,
+  updateGame,
+  removeGame,
+  updatePlayerObjective,
+  resetGames,
+}
