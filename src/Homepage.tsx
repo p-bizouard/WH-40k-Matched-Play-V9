@@ -13,6 +13,7 @@ import styles from './styles'
 import { ScrollView } from 'react-native-gesture-handler'
 import { useHeaderHeight } from '@react-navigation/stack'
 import LocaleSelector from './components/LocaleSelector'
+import intl from 'react-intl-universal'
 
 interface HomepageProps {
   initConfiguration: typeof initConfiguration
@@ -26,13 +27,21 @@ interface HomepageProps {
 }
 
 function Homepage({ navigation, ...props }: HomepageProps) {
+  const [initialized, setInitialized] = React.useState(false)
+
   React.useLayoutEffect(() => {
     props.initConfiguration()
     setHeader()
+    setInitialized(true)
   }, [])
+
+  React.useEffect(() => {
+    setHeader()
+  })
 
   const setHeader = () => {
     navigation.setOptions({
+      title: intl.get('display.homepage').d('Homepage'),
       // eslint-disable-next-line react/display-name
       headerRight: () => <LocaleSelector />,
     })
@@ -45,30 +54,34 @@ function Homepage({ navigation, ...props }: HomepageProps) {
       }}
       contentContainerStyle={styles.body}
     >
-      <View style={styles.container}>
-        <Games />
+      {initialized ? (
+        <View style={styles.container}>
+          <Games />
 
-        <Button
-          mode="contained"
-          icon="plus"
-          onPress={() => navigation.navigate('EditGame')}
-          color="green"
-        >
-          Ajouter une partie
-        </Button>
+          <Button
+            mode="contained"
+            icon="plus"
+            onPress={() => navigation.navigate('EditGame')}
+            color="green"
+          >
+            {intl.get('game.add').d('Add a new game')}
+          </Button>
 
-        <Button
-          mode="contained"
-          icon="delete"
-          onPress={() => {
-            props.resetGames()
-            props.resetConfiguration()
-          }}
-          color="red"
-        >
-          RESET
-        </Button>
-      </View>
+          <Button
+            mode="contained"
+            icon="delete"
+            onPress={() => {
+              props.resetGames()
+              props.resetConfiguration()
+            }}
+            color="red"
+          >
+            RESET
+          </Button>
+        </View>
+      ) : (
+        <View></View>
+      )}
     </ScrollView>
   )
 }

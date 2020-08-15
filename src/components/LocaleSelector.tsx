@@ -16,18 +16,15 @@ interface LocaleSelectorProps {
 }
 
 function LocaleSelector({ ...props }: LocaleSelectorProps) {
-  const [modal, setModal] = useState(false)
+  const [dialog, setDialog] = useState(false)
 
   return (
     <View>
       <Portal>
         <Dialog
-          visible={modal}
-          onDismiss={() => setModal(false)}
-          style={{
-            maxWidth: 600,
-            maxHeight: '85%',
-          }}
+          visible={dialog}
+          onDismiss={() => setDialog(false)}
+          style={styles.dialog}
         >
           <Dialog.ScrollArea>
             <ScrollView
@@ -38,7 +35,7 @@ function LocaleSelector({ ...props }: LocaleSelectorProps) {
               <RadioButton.Group
                 onValueChange={(itemValue) => {
                   props.updateLocale(itemValue)
-                  setModal(false)
+                  setDialog(false)
                 }}
                 value={props.configuration.locale}
               >
@@ -54,14 +51,14 @@ function LocaleSelector({ ...props }: LocaleSelectorProps) {
             </ScrollView>
           </Dialog.ScrollArea>
           <Dialog.Actions>
-            <Button onPress={() => setModal(false)}>Close</Button>
+            <Button onPress={() => setDialog(false)}>Close</Button>
           </Dialog.Actions>
         </Dialog>
       </Portal>
       <Button
         style={styles.mr10}
         mode="contained"
-        onPress={() => setModal(true)}
+        onPress={() => setDialog(true)}
         icon={() => (
           <Flag
             code={getCountryFromIso(props.configuration.locale)}

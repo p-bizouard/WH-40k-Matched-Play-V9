@@ -4,10 +4,8 @@ import 'intl/locale-data/jsonp/en'
 import 'intl/locale-data/jsonp/fr-FR'
 import 'intl/locale-data/jsonp/en-US'
 
-import _ from 'lodash'
-import intl from 'react-intl-universal'
 import { DispatchLocale } from '../../types'
-import { updateIntlLocale, getDefaultLocale, getLocales } from './translation'
+import { updateIntlLocale, getDefaultLocale } from './translation'
 
 export function initConfiguration() {
   updateIntlLocale(getDefaultLocale())

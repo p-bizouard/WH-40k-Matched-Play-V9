@@ -1,0 +1,294 @@
+{
+  "army.space-wolves": [
+    {
+      "type": 0,
+      "value": "Space wolves"
+    }
+  ],
+  "army.ultramarines": [
+    {
+      "type": 0,
+      "value": "Ultramarines"
+    }
+  ],
+  "army.xxxxxxxxxxxxxxxxxxxxxxxx": [
+    {
+      "type": 0,
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ],
+  "display.add-game": [
+    {
+      "type": 0,
+      "value": "Ajouter une partie"
+    }
+  ],
+  "display.close": [
+    {
+      "type": 0,
+      "value": "Fermer"
+    }
+  ],
+  "display.edit-game": [
+    {
+      "type": 0,
+      "value": "Configurer une partie"
+    }
+  ],
+  "display.homepage": [
+    {
+      "type": 0,
+      "value": "Parties enregistrées"
+    }
+  ],
+  "display.none": [
+    {
+      "type": 0,
+      "value": "Aucun"
+    }
+  ],
+  "game.add": [
+    {
+      "type": 0,
+      "value": "Nouvelle partie"
+    }
+  ],
+  "game.add-player": [
+    {
+      "type": 0,
+      "value": "Ajouter un joueur"
+    }
+  ],
+  "game.add-team": [
+    {
+      "type": 0,
+      "value": "Ajouter une équipe"
+    }
+  ],
+  "game.delete": [
+    {
+      "type": 0,
+      "value": "Supprimer"
+    }
+  ],
+  "game.mission-secondary": [
+    {
+      "type": 0,
+      "value": "Objective secondaire de mission"
+    }
+  ],
+  "game.objective-x": [
+    {
+      "type": 0,
+      "value": "Obj. "
+    },
+    {
+      "type": 1,
+      "value": "objectiveNumber"
+    }
+  ],
+  "game.objective-x-set": [
+    {
+      "type": 0,
+      "value": "Désignez l'objectif "
+    },
+    {
+      "type": 1,
+      "value": "objectiveNumber"
+    }
+  ],
+  "game.player-number-x": [
+    {
+      "type": 0,
+      "value": "Joueur "
+    },
+    {
+      "type": 1,
+      "value": "playerNumber"
+    }
+  ],
+  "game.select-army": [
+    {
+      "type": 0,
+      "value": "Sëlectionner une armée"
+    }
+  ],
+  "game.team-number-x": [
+    {
+      "type": 0,
+      "value": "Équipe "
+    },
+    {
+      "type": 1,
+      "value": "teamNumber"
+    }
+  ],
+  "mission.combat-patrol": [
+    {
+      "type": 0,
+      "value": "Patrouille de combat"
+    }
+  ],
+  "mission.incursion": [
+    {
+      "type": 0,
+      "value": "Incursion"
+    }
+  ],
+  "mission.strike-force": [
+    {
+      "type": 0,
+      "value": "Strike force"
+    }
+  ],
+  "mission.strike-force.exploration": [
+    {
+      "type": 0,
+      "value": "Exploration"
+    }
+  ],
+  "mission.strike-force.front-line-warfare": [
+    {
+      "type": 0,
+      "value": "Lignes de bataille"
+    }
+  ],
+  "mission.strike-force.overrun": [
+    {
+      "type": 0,
+      "value": "Débordement"
+    }
+  ],
+  "mission.strike-force.priority-target": [
+    {
+      "type": 0,
+      "value": "Cible prioritaire"
+    }
+  ],
+  "mission.strike-force.retrieval-mission": [
+    {
+      "type": 0,
+      "value": "Mission de récupération"
+    }
+  ],
+  "mission.strike-force.scorched-earth": [
+    {
+      "type": 0,
+      "value": "Terre brulée"
+    }
+  ],
+  "mission.strike-force.surround-and-destroy": [
+    {
+      "type": 0,
+      "value": "Encercler et détruire"
+    }
+  ],
+  "mission.strike-force.sweep-and-clear": [
+    {
+      "type": 0,
+      "value": "Balayer et nettoyer"
+    }
+  ],
+  "mission.strike-force.vital-intelligence": [
+    {
+      "type": 0,
+      "value": "Renseignements vitaux"
+    }
+  ],
+  "mission.strike-force.xxxxxxxxxxxxxxxxxxxxxxxx": [
+    {
+      "type": 0,
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ],
+  "objective.purge-the-ennemy": [
+    {
+      "type": 0,
+      "value": "P."
+    }
+  ],
+  "objective.purge-the-ennemy.assassinate": [
+    {
+      "type": 0,
+      "value": "Assassinate"
+    }
+  ],
+  "objective.purge-the-ennemy.xxxxxxxxxxxxxxxxxxxxxxxx": [
+    {
+      "type": 0,
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ],
+  "objective.strike-force.data-intercept": [
+    {
+      "type": 0,
+      "value": "Interception de données"
+    }
+  ],
+  "objective.strike-force.direct-assault": [
+    {
+      "type": 0,
+      "value": "Assaut direct"
+    }
+  ],
+  "objective.strike-force.minimise-losses": [
+    {
+      "type": 0,
+      "value": "Minimiser les pertes"
+    }
+  ],
+  "objective.strike-force.overrun": [
+    {
+      "type": 0,
+      "value": "Débordement"
+    }
+  ],
+  "objective.strike-force.priority-targets": [
+    {
+      "type": 0,
+      "value": "Cibles prioritaires"
+    }
+  ],
+  "objective.strike-force.raze": [
+    {
+      "type": 0,
+      "value": "Raser"
+    }
+  ],
+  "objective.strike-force.strategic-scan": [
+    {
+      "type": 0,
+      "value": "Scan stratégique"
+    }
+  ],
+  "objective.strike-force.surround-them": [
+    {
+      "type": 0,
+      "value": "Encerclez-les"
+    }
+  ],
+  "objective.strike-force.take-and-hold": [
+    {
+      "type": 0,
+      "value": "Prendre et tenir"
+    }
+  ],
+  "objective.strike-force.vital-ground": [
+    {
+      "type": 0,
+      "value": "Terrain vital"
+    }
+  ],
+  "objective.strike-force.xxxxxxxxxxxxxxxxxxxxxxxx": [
+    {
+      "type": 0,
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ],
+  "xxxxxxxxxxxxxxxxxxxxxxxx": [
+    {
+      "type": 0,
+      "value": "xxxxxxxxxxxxxxxxxxx"
+    }
+  ]
+}

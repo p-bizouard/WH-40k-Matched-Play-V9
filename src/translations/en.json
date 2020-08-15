@@ -1,11 +1,8 @@
 {
-  "hak27d": {
-    "defaultMessage": "TestEN"
+  "design.homepage": {
+    "defaultMessage": "Saved games"
   },
-  "homepage.subtitle": {
-    "defaultMessage": "Saved plays"
-  },
-  "homepage.title": {
-    "defaultMessage": "Match points"
+  "game.add": {
+    "defaultMessage": "New game"
   }
 }

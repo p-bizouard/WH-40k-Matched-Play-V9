@@ -1,0 +1,41 @@
+{
+  "mission.combat-patrol": {
+    "defaultMessage": "Patrouille de combat"
+  },
+  "mission.incursion": {
+    "defaultMessage": "Incursion"
+  },
+  "mission.strike-force": {
+    "defaultMessage": "Strike force"
+  },
+  "mission.strike-force.retrieval-mission": {
+    "defaultMessage": "Mission de récupération"
+  },
+  "mission.strike-force.scorched-earth": {
+    "defaultMessage": "Terre brulée"
+  },
+  "mission.strike-force.vital-intelligence": {
+    "defaultMessage": "Renseignements vitaux"
+  },
+  "mission.strike-force.surround-and-destroy": {
+    "defaultMessage": "Encercler et détruire"
+  },
+  "mission.strike-force.front-line-warfare": {
+    "defaultMessage": "Lignes de bataille"
+  },
+  "mission.strike-force.exploration": {
+    "defaultMessage": "Exploration"
+  },
+  "mission.strike-force.overrun": {
+    "defaultMessage": "Débordement"
+  },
+  "mission.strike-force.sweep-and-clear": {
+    "defaultMessage": "Balayer et nettoyer"
+  },
+  "mission.strike-force.priority-target": {
+    "defaultMessage": "Cible prioritaire"
+  },
+  "mission.strike-force.xxxxxxxxxxxxxxxxxxxxxxxx": {
+    "defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
+  }
+}

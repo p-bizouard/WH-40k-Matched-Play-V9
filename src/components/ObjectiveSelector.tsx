@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, ScrollView } from 'react-native'
 import objectives from '../data/objectives.json'
-import scenarios from '../data/scenarios.json'
-
+import missions from '../data/missions.json'
+import intl from 'react-intl-universal'
 import { connect } from 'react-redux'
-import { updatePlayerObjective } from '../store/actions'
+import { updatePlayerObjective } from '../store/actions/index'
 import {
   Button,
   Portal,
@@ -15,11 +15,17 @@ import {
   TouchableRipple,
   Divider,
 } from 'react-native-paper'
-import { Game, ObjectiveCategory, Scenario, Objective } from '../Types'
+import {
+  Game,
+  ObjectiveCategory,
+  Objective,
+  Mission,
+  GameFormat,
+} from '../Types'
 import styles from '../styles'
 
 interface ObjectiveSelectorProps {
-  updatePlayerObjective: Function
+  updatePlayerObjective: typeof updatePlayerObjective
   currentGame: Game
   teamNumber: number
   playerNumber: number
@@ -46,12 +52,16 @@ class ObjectiveSelector extends React.Component<
     const hideDialog = () => this.setState({ dialog: false })
     const showDialog = () => this.setState({ dialog: true })
 
-    const updateObjective = (id: string) => {
+    const updateObjective = (
+      objectiveCategoryId: string,
+      objectiveId: string
+    ) => {
       this.props.updatePlayerObjective(
         this.props.teamNumber,
         this.props.playerNumber,
         this.props.objectiveNumber,
-        id,
+        objectiveCategoryId,
+        objectiveId,
         'secondary'
       )
       hideDialog()
@@ -61,17 +71,22 @@ class ObjectiveSelector extends React.Component<
       this.props.playerNumber
     ]
 
+    const format: GameFormat | undefined = missions.find(
+      (format) => this.props.currentGame.format === format.id
+    )
+    const mission = format
+      ? format.missions.find(
+          (mission: Mission) => mission.id === this.props.currentGame.mission
+        )
+      : undefined
+
     return (
       <View style={{ marginBottom: 10, width: '100%' }}>
         <Portal>
           <Dialog
             visible={this.state.dialog}
             onDismiss={hideDialog}
-            style={{
-              maxWidth: 600,
-              alignSelf: 'center',
-              maxHeight: '95%',
-            }}
+            style={styles.dialog}
           >
             <Dialog.ScrollArea>
               <ScrollView
@@ -81,53 +96,47 @@ class ObjectiveSelector extends React.Component<
               >
                 <RadioButton.Group
                   onValueChange={(itemValue) => {
-                    updateObjective(itemValue)
+                    updateObjective(format!.id, itemValue)
                   }}
                   value={
                     player.secondaryObjectives[this.props.objectiveNumber].id
                   }
                 >
-                  <Title>Mission secondary</Title>
-                  {this.props.currentGame.scenario ? (
-                    scenarios
-                      .filter(
-                        (scenario) =>
-                          this.props.currentGame.scenario === scenario.id
-                      )
-                      .map((scenario) => {
+                  <Title>
+                    {intl.get('game.mission-secondary').d('Mission secondary')}
+                  </Title>
+                  {format && mission ? (
+                    <View key={`objective-mission-${mission.id}`}>
+                      {mission.secondary.map((objective: Objective) => {
                         return (
-                          <View
-                            style={{ marginBottom: 20 }}
-                            key={`objective-scenario-${scenario.id}`}
+                          <TouchableRipple
+                            key={`objective-description-${objective.id}`}
+                            onPress={() => {
+                              updateObjective(format.id, objective.id)
+                            }}
+                            rippleColor="rgba(0, 0, 0, .32)"
                           >
-                            {scenario.secondary.map((objective: Objective) => {
-                              return (
-                                <TouchableRipple
-                                  key={`objective-description-${objective.id}`}
-                                  onPress={() => {
-                                    updateObjective(objective.id)
-                                  }}
-                                  rippleColor="rgba(0, 0, 0, .32)"
-                                >
-                                  <View>
-                                    <RadioButton.Item
-                                      style={{ paddingLeft: 0 }}
-                                      label={objective.id}
-                                      value={objective.id}
-                                      key={`objective-${objective.id}`}
-                                    />
-                                    <Text style={{ marginBottom: 10 }}>
-                                      {objective.id}
-                                    </Text>
-                                  </View>
-                                </TouchableRipple>
-                              )
-                            })}
-                          </View>
+                            <View>
+                              <RadioButton.Item
+                                style={{ paddingLeft: 0 }}
+                                label={intl
+                                  .get(`objective.${format.id}.${objective.id}`)
+                                  .d(objective.id)}
+                                value={objective.id}
+                                key={`objective-${objective.id}`}
+                              />
+                              <Text>
+                                {intl.get(
+                                  `objective.description.${format.id}.${objective.id}`
+                                )}
+                              </Text>
+                            </View>
+                          </TouchableRipple>
                         )
-                      })
+                      })}
+                    </View>
                   ) : (
-                    <Text>None</Text>
+                    <Text>{intl.get('display.none').d('None')}</Text>
                   )}
 
                   {objectives.map((objectiveCategory: ObjectiveCategory) => {
@@ -136,28 +145,41 @@ class ObjectiveSelector extends React.Component<
                         style={{ marginBottom: 20 }}
                         key={`objective-category-${objectiveCategory.id}`}
                       >
-                        <Divider style={styles.divider} />
+                        <Divider style={[styles.divider, { marginTop: 10 }]} />
 
-                        <Title>{objectiveCategory.id}</Title>
+                        <Title>
+                          {intl
+                            .get(`objective.${objectiveCategory.id}`)
+                            .d(objectiveCategory.id)}
+                        </Title>
                         {objectiveCategory.secondary.map(
                           (objective: Objective) => {
                             return (
                               <TouchableRipple
                                 key={`objective-description-${objective.id}`}
                                 onPress={() => {
-                                  updateObjective(objective.id)
+                                  updateObjective(
+                                    objectiveCategory.id,
+                                    objective.id
+                                  )
                                 }}
                                 rippleColor="rgba(0, 0, 0, .32)"
                               >
                                 <View>
                                   <RadioButton.Item
                                     style={{ paddingLeft: 0 }}
-                                    label={objective.id}
+                                    label={intl
+                                      .get(
+                                        `objective.${objectiveCategory.id}.${objective.id}`
+                                      )
+                                      .d(objective.id)}
                                     value={objective.id}
                                     key={`objective-${objective.id}`}
                                   />
-                                  <Text style={{ marginBottom: 10 }}>
-                                    {objective.id}
+                                  <Text>
+                                    {intl.get(
+                                      `objective.description.${objectiveCategory.id}.${objective.id}`
+                                    )}
                                   </Text>
                                 </View>
                               </TouchableRipple>
@@ -171,7 +193,9 @@ class ObjectiveSelector extends React.Component<
               </ScrollView>
             </Dialog.ScrollArea>
             <Dialog.Actions>
-              <Button onPress={hideDialog}>Close</Button>
+              <Button onPress={hideDialog}>
+                {intl.get('display.close').d('Close')}
+              </Button>
             </Dialog.Actions>
           </Dialog>
         </Portal>
@@ -190,10 +214,27 @@ class ObjectiveSelector extends React.Component<
           }}
         >
           {player.secondaryObjectives[this.props.objectiveNumber].id
-            ? `Obj. ${this.props.objectiveNumber + 1} : ${
-                player.secondaryObjectives[this.props.objectiveNumber].id
-              }`
-            : `Click to set objective ${this.props.objectiveNumber + 1}`}
+            ? intl
+                .get('game.objective-x', {
+                  objectiveNumber: this.props.objectiveNumber + 1,
+                })
+                .d(`Obj. ${this.props.objectiveNumber + 1}`) +
+              ' : ' +
+              intl
+                .get(
+                  `objective.${
+                    player.secondaryObjectives[this.props.objectiveNumber]
+                      .category
+                  }.${
+                    player.secondaryObjectives[this.props.objectiveNumber].id
+                  }`
+                )
+                .d(player.secondaryObjectives[this.props.objectiveNumber].id)
+            : intl
+                .get('game.objective-x-set', {
+                  objectiveNumber: this.props.objectiveNumber + 1,
+                })
+                .d(`Click to set objective ${this.props.objectiveNumber + 1}`)}
         </Button>
       </View>
     )
@@ -209,6 +250,7 @@ const mapDispatchToProps = (dispatch: Function) => ({
     teamNumber: number,
     playerNumber: number,
     objectiveNumber: number,
+    objectiveCategoryId: string,
     objectiveId: string,
     primaryOrSecondary: string,
     scores?: number[],
@@ -219,6 +261,7 @@ const mapDispatchToProps = (dispatch: Function) => ({
         teamNumber,
         playerNumber,
         objectiveNumber,
+        objectiveCategoryId,
         objectiveId,
         primaryOrSecondary,
         scores,

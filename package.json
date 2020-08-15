@@ -7,8 +7,8 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "eslint *.tsx **/*.tsx src/**/*.tsx",
-    "format-translations": "formatjs compile src/translations/fr.json --ast --out-file src/translations/fr-compiled.json && formatjs compile src/translations/en.json --ast --out-file src/translations/en-compiled.json",
-    "extract-translations": "formatjs extract src/**/*.ts* --out-file src/translations/fr.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs extract src/**/*.ts* --out-file src/translations/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'"
+    "lint-fix": "eslint *.tsx **/*.tsx src/**/*.tsx --fix",
+    "compile-translations": "formatjs compile src/translations/fr*.json --ast --out-file src/translations/compiled/fr.json && formatjs compile src/translations/en*.json --ast --out-file src/translations/compiled/en.json"
   },
   "dependencies": {
     "@formatjs/cli": "^2.4.0",

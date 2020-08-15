@@ -1,0 +1,158 @@
+{
+  "design.homepage": [
+    {
+      "type": 0,
+      "value": "Saved games"
+    }
+  ],
+  "game.add": [
+    {
+      "type": 0,
+      "value": "New game"
+    }
+  ],
+  "mission.combat-patrol": [
+    {
+      "type": 0,
+      "value": "Combat patrol"
+    }
+  ],
+  "mission.incursion": [
+    {
+      "type": 0,
+      "value": "Incursion"
+    }
+  ],
+  "mission.strike-force": [
+    {
+      "type": 0,
+      "value": "Strike force"
+    }
+  ],
+  "mission.strike-force.exploration": [
+    {
+      "type": 0,
+      "value": "Exploration"
+    }
+  ],
+  "mission.strike-force.front-line-warfare": [
+    {
+      "type": 0,
+      "value": "Front line warfare"
+    }
+  ],
+  "mission.strike-force.overrun": [
+    {
+      "type": 0,
+      "value": "Overrun"
+    }
+  ],
+  "mission.strike-force.priority-target": [
+    {
+      "type": 0,
+      "value": "priority target"
+    }
+  ],
+  "mission.strike-force.retrieval-mission": [
+    {
+      "type": 0,
+      "value": "Retrieval mission"
+    }
+  ],
+  "mission.strike-force.scorched-earth": [
+    {
+      "type": 0,
+      "value": "Scorched earth"
+    }
+  ],
+  "mission.strike-force.surround-and-destroy": [
+    {
+      "type": 0,
+      "value": "Surround and destroy"
+    }
+  ],
+  "mission.strike-force.sweep-and-clear": [
+    {
+      "type": 0,
+      "value": "Sweep and clear"
+    }
+  ],
+  "mission.strike-force.vital-intelligence": [
+    {
+      "type": 0,
+      "value": "Vital intelligence"
+    }
+  ],
+  "mission.strike-force.xxxxxxxxxxxxxxxxxxxxxxxx": [
+    {
+      "type": 0,
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ],
+  "objective.strike-force.data-intercept": [
+    {
+      "type": 0,
+      "value": "Data intercept"
+    }
+  ],
+  "objective.strike-force.direct-assault": [
+    {
+      "type": 0,
+      "value": "Direct assault"
+    }
+  ],
+  "objective.strike-force.minimise-losses": [
+    {
+      "type": 0,
+      "value": "Minimise losses"
+    }
+  ],
+  "objective.strike-force.overrun": [
+    {
+      "type": 0,
+      "value": "Overrun"
+    }
+  ],
+  "objective.strike-force.priority-targets": [
+    {
+      "type": 0,
+      "value": "Priority targets"
+    }
+  ],
+  "objective.strike-force.raze": [
+    {
+      "type": 0,
+      "value": "Raze"
+    }
+  ],
+  "objective.strike-force.strategic-scan": [
+    {
+      "type": 0,
+      "value": "Strategic scan"
+    }
+  ],
+  "objective.strike-force.surround-them": [
+    {
+      "type": 0,
+      "value": "Surround them"
+    }
+  ],
+  "objective.strike-force.take-and-hold": [
+    {
+      "type": 0,
+      "value": "Take and hold"
+    }
+  ],
+  "objective.strike-force.vital-ground": [
+    {
+      "type": 0,
+      "value": "Vital ground"
+    }
+  ],
+  "objective.strike-force.xxxxxxxxxxxxxxxxxxxxxxxx": [
+    {
+      "type": 0,
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ]
+}

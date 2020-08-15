@@ -45,6 +45,11 @@ const styles = StyleSheet.create({
   bold: {
     fontWeight: 'bold',
   },
+  dialog: {
+    maxWidth: 600,
+    alignSelf: 'center',
+    maxHeight: '85%',
+  },
 })
 
 export default styles

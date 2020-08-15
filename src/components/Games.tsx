@@ -1,27 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View, Dimensions } from 'react-native'
-import { mdiDotsHorizontal } from '@mdi/js'
+import { View } from 'react-native'
 import { connect } from 'react-redux'
-import {
-  updateGame,
-  addTeam,
-  removeTeam,
-  addPlayer,
-  updatePlayer,
-  updateCurrentGame,
-} from '../store/actions'
-import {
-  Button,
-  IconButton,
-  Title,
-  Card,
-  Provider,
-  Menu,
-  Divider,
-} from 'react-native-paper'
+import { IconButton, Card } from 'react-native-paper'
 import { Game, Team, Player } from '../Types'
 import { useNavigation } from '@react-navigation/native'
 import styles from '../styles'
+import intl from 'react-intl-universal'
 
 interface GamesProps {
   updateCurrentGame: Function
@@ -44,10 +28,16 @@ function Games(props: GamesProps) {
             key={`game-${game.id}`}
           >
             <Card.Title
-              title={`${game.scenario}`}
+              title={intl
+                .get(`mission.${game.format}.${game.mission}`)
+                .d(game.mission)}
               subtitle={game.teams
                 .map((team: Team) =>
-                  team.players.map((player: Player) => player.army).join(', ')
+                  team.players
+                    .map((player: Player) =>
+                      intl.get(`army.${player.army}`).d(player.army!)
+                    )
+                    .join(', ')
                 )
                 .join(' vs ')}
               right={() => (
@@ -66,10 +56,10 @@ function Games(props: GamesProps) {
 }
 const mapStateToProps = (state: any) => ({
   games: state.games,
+  configuration: state.configuration,
 })
 
 const mapDispatchToProps = (dispatch: Function) => ({
-  updateCurrentGame: (data: any) => dispatch(updateCurrentGame(data)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Games)

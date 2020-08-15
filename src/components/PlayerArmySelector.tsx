@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, ScrollView, StyleSheet } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import armies from '../data/armies.json'
 import { connect } from 'react-redux'
 import { updatePlayer, removePlayer } from '../store/actions'
@@ -12,6 +12,8 @@ import {
   DefaultTheme,
 } from 'react-native-paper'
 import { Game, Army } from '../Types'
+import styles from '../styles'
+import intl from 'react-intl-universal'
 
 interface PlayerArmySelectorProps {
   updatePlayer: Function
@@ -52,11 +54,7 @@ class PlayerArmySelector extends React.Component<
           <Dialog
             visible={this.state.dialog}
             onDismiss={hideDialog}
-            style={{
-              maxWidth: 600,
-              alignSelf: 'center',
-              maxHeight: '95%',
-            }}
+            style={styles.dialog}
           >
             <Dialog.ScrollArea>
               <ScrollView
@@ -80,7 +78,7 @@ class PlayerArmySelector extends React.Component<
                   {armies.map((army: Army) => {
                     return (
                       <RadioButton.Item
-                        label={army.id}
+                        label={intl.get(`army.${army.id}`).d(army.id)}
                         value={army.id}
                         key={army.id}
                       />
@@ -90,7 +88,9 @@ class PlayerArmySelector extends React.Component<
               </ScrollView>
             </Dialog.ScrollArea>
             <Dialog.Actions>
-              <Button onPress={hideDialog}>Close</Button>
+              <Button onPress={hideDialog}>
+                {intl.get('display.close').d('Close')}
+              </Button>
             </Dialog.Actions>
           </Dialog>
         </Portal>
@@ -109,9 +109,14 @@ class PlayerArmySelector extends React.Component<
                 : 'red',
             }}
           >
+            {intl
+              .get('game.player-number-x', {
+                playerNumber: this.props.currentPlayerNumber,
+              })
+              .d(`Player ${this.props.currentPlayerNumber}`) + ' : '}
             {player.army
-              ? `Player ${this.props.currentPlayerNumber} : ${player.army}`
-              : `Player ${this.props.currentPlayerNumber} : select an army`}
+              ? intl.get(`army.${player.army}`).d(player.army)
+              : intl.get('game.select-army').d('Select an army')}
           </Button>
           {this.props.currentGame.teams[this.props.teamNumber].players.length >
           1 ? (
@@ -131,14 +136,6 @@ class PlayerArmySelector extends React.Component<
     )
   }
 }
-
-const styles = StyleSheet.create({
-  flexView: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-})
 
 const mapStateToProps = (state: any) => ({
   currentGame: state.currentGame,

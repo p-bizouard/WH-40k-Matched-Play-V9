@@ -7,6 +7,7 @@ import {
   updatePlayer,
   resetCurrentGame,
   updatePlayerObjective,
+  setMission,
 } from './currentGame'
 import { getLocales, updateLocale, updateIntlLocale } from './translation'
 import { initConfiguration, resetConfiguration } from './configuration'
@@ -30,4 +31,5 @@ export {
   removeGame,
   updatePlayerObjective,
   resetGames,
+  setMission,
 }

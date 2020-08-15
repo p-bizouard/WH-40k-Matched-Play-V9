@@ -1,11 +1,53 @@
 {
-  "hak27d": {
-    "defaultMessage": "TestFR"
+  "display.homepage": {
+    "defaultMessage": "Parties enregistrées"
   },
-  "homepage.subtitle": {
-    "defaultMessage": "Saved plays"
+  "display.add-game": {
+    "defaultMessage": "Ajouter une partie"
   },
-  "homepage.title": {
-    "defaultMessage": "Match points"
+  "display.edit-game": {
+    "defaultMessage": "Configurer une partie"
+  },
+  "game.add": {
+    "defaultMessage": "Nouvelle partie"
+  },
+  "game.team-number-x": {
+    "defaultMessage": "Équipe {teamNumber}"
+  },
+  "game.add-player": {
+    "defaultMessage": "Ajouter un joueur"
+  },
+  "game.add-team": {
+    "defaultMessage": "Ajouter une équipe"
+  },
+  "game.delete": {
+    "defaultMessage": "Supprimer"
+  },
+  "game.player-number-x": {
+    "defaultMessage": "Joueur {playerNumber}"
+  },
+  "game.select-army": {
+    "defaultMessage": "Sëlectionner une armée"
+  },
+  "game.mission-secondary": {
+    "defaultMessage": "Objective secondaire de mission"
+  },
+  "display.none": {
+    "defaultMessage": "Aucun"
+  },
+  "display.close": {
+    "defaultMessage": "Fermer"
+  },
+  "game.objective-x": {
+    "defaultMessage": "Obj. {objectiveNumber}"
+  },
+  "game.objective-x-set": {
+    "defaultMessage": "Désignez l'objectif {objectiveNumber}"
+  },
+  "xxxxxxxxxxxxxxxxxxxxxxxx": {
+    "defaultMessage": "xxxxxxxxxxxxxxxxxxx"
+  },
+  "xxxxxxxxxxxxxxxxxxxxxxxx": {
+    "defaultMessage": "xxxxxxxxxxxxxxxxxxx"
   }
 }

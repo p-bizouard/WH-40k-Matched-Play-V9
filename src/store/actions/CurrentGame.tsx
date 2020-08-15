@@ -11,11 +11,12 @@ export function removePlayer(teamNumber: number, playerNumber: number) {
 }
 
 export function addPlayer(teamNumber: number) {
-  return (dispatch: Function) => {
+  return (dispatch: Function, getState: Function) => {
     dispatch({
       type: 'ADD_PLAYER',
       data: { teamNumber },
     })
+    dispatch(resetPrimaryObjectives())
   }
 }
 
@@ -29,10 +30,11 @@ export function removeTeam(teamNumber: number) {
 }
 
 export function addTeam() {
-  return (dispatch: Function) => {
+  return (dispatch: Function, getState: Function) => {
     dispatch({
       type: 'ADD_TEAM',
     })
+    dispatch(resetPrimaryObjectives())
   }
 }
 
@@ -40,6 +42,26 @@ export function resetCurrentGame() {
   return (dispatch: Function) => {
     dispatch({
       type: 'RESET_CURRENT_GAME',
+    })
+  }
+}
+
+export function setMission(formatId: string, missionId: string) {
+  return (dispatch: Function) => {
+    if (formatId && missionId) {
+      dispatch({
+        type: 'SET_MISSION',
+        data: { formatId, missionId },
+      })
+      dispatch(resetPrimaryObjectives())
+    }
+  }
+}
+
+export function resetPrimaryObjectives() {
+  return (dispatch: Function) => {
+    dispatch({
+      type: 'RESET_PRIMARY_OBJECTIVES',
     })
   }
 }
@@ -73,39 +95,44 @@ export function updatePlayerObjective(
   teamNumber: number,
   playerNumber: number,
   objectiveNumber: number,
+  objectiveCategoryId: string,
   objectiveId: string,
   primaryOrSecondary: string,
   scores?: number[] | null,
   callUpdateGame: Boolean = false
 ) {
   return (dispatch: Function, getState: Function) => {
-    const playerData: any = {}
-
-    playerData[
+    const primaryOrSecondaryKey =
       primaryOrSecondary === 'primary'
         ? 'primaryObjectives'
         : 'secondaryObjectives'
-    ] = getState().currentGame.teams[teamNumber].players[playerNumber][
-      primaryOrSecondary === 'primary'
-        ? 'primaryObjectives'
-        : 'secondaryObjectives'
-    ].map(
-      (currentObjective: PlayerObjective, currentObjectiveNumber: number) => {
-        if (currentObjectiveNumber === objectiveNumber) {
-          console.log(scores)
-          return {
-            ...currentObjective,
-            id: objectiveId,
-            scores: scores ? scores : currentObjective.scores,
-          }
-        }
-        return currentObjective
-      }
-    )
 
     dispatch({
       type: 'UPDATE_PLAYER',
-      data: { teamNumber, playerNumber, playerData },
+      data: {
+        teamNumber,
+        playerNumber,
+        playerData: {
+          [primaryOrSecondaryKey]: getState().currentGame.teams[
+            teamNumber
+          ].players[playerNumber][primaryOrSecondaryKey].map(
+            (
+              currentObjective: PlayerObjective,
+              currentObjectiveNumber: number
+            ) => {
+              if (currentObjectiveNumber === objectiveNumber) {
+                return {
+                  ...currentObjective,
+                  id: objectiveId,
+                  category: objectiveCategoryId,
+                  scores: scores ? scores : currentObjective.scores,
+                }
+              }
+              return currentObjective
+            }
+          ),
+        },
+      },
     })
 
     if (callUpdateGame) dispatch(updateGame(getState().currentGame))

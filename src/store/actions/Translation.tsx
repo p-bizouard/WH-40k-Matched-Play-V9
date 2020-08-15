@@ -2,7 +2,6 @@ import 'intl'
 import 'intl/locale-data/jsonp/fr-FR'
 import 'intl/locale-data/jsonp/en-GB'
 
-import _ from 'lodash'
 import intl from 'react-intl-universal'
 import { DispatchLocale } from '../../types'
 
@@ -31,8 +30,8 @@ export const updateIntlLocale = (locale: string) => {
   intl.init({
     currentLocale: locale,
     locales: {
-      'en-GB': require('../../translations/en-compiled.json'),
-      'fr-FR': require('../../translations/fr-compiled.json'),
+      'en-GB': require('../../translations/compiled/en.json'),
+      'fr-FR': require('../../translations/compiled/fr.json'),
     },
   })
 }

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { View, Dimensions } from 'react-native'
 import { connect } from 'react-redux'
 import { updatePlayer, updateGame, updateCurrentGame } from './store/actions'
-import { Button, Title, IconButton, Divider } from 'react-native-paper'
+import { Title, Divider } from 'react-native-paper'
 import {
   Game,
   Team,
@@ -11,22 +11,19 @@ import {
   PlayerObjective as PlayerObjectiveType,
 } from './types'
 
-import ScenarioSelector from './components/ScenarioSelector'
-import PlayerArmySelector from './components/PlayerArmySelector'
-import ObjectiveSelector from './components/ObjectiveSelector'
-import { NavigationContainerRef } from '@react-navigation/native'
-import { v4 as uuidv4 } from 'uuid'
+import { NavigationProp } from '@react-navigation/native'
 import styles from './styles'
 import { ScrollView } from 'react-native-gesture-handler'
 import { useHeaderHeight } from '@react-navigation/stack'
 import PlayerObjective from './components/PlayerObjective'
+import intl from 'react-intl-universal'
 
 interface ViewGameProps {
   updateGame: Function
   updateCurrentGame: Function
   currentGame: Game
   updatePlayer: Function
-  navigation: NavigationContainerRef
+  navigation: NavigationProp
   route: ViewGameRouteProp
 }
 
@@ -96,7 +93,11 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
                 {countPlayers() > 2 ? (
                   <View style={styles.flexView}>
                     <Title key={'teamNumber' + teamNumber}>
-                      Team {teamNumber + 1}
+                      {intl
+                        .get('game.team-number-x', {
+                          teamNumber: teamNumber + 1,
+                        })
+                        .d(`Team ${teamNumber + 1}`)}
                     </Title>
                     <Title style={styles.bold}>{totalTeamScore(team)}</Title>
                   </View>
@@ -108,9 +109,26 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
                 return (
                   <View key={'player' + teamNumber + '-' + playerNumber}>
                     <View style={styles.flexView}>
-                      <Title>{player.army}</Title>
+                      <Title>
+                        {intl.get(`army.${player.army}`).d(player.army!)}
+                      </Title>
                       <Title>{totalPlayerScore(player)}</Title>
                     </View>
+                    {player.primaryObjectives.map(
+                      (
+                        objective: PlayerObjectiveType,
+                        objectiveNumber: number
+                      ) =>
+                        objective.id ? (
+                          <PlayerObjective
+                            key={`player-objective-${teamNumber}-${playerNumber}-primary-${objectiveNumber}`}
+                            teamNumber={teamNumber}
+                            playerNumber={playerNumber}
+                            objectiveNumber={objectiveNumber}
+                            primaryOrSecondary="primary"
+                          />
+                        ) : null
+                    )}
                     {player.secondaryObjectives.map(
                       (
                         objective: PlayerObjectiveType,

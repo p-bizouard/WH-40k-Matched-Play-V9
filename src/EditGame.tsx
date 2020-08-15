@@ -1,58 +1,68 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { View, ScrollView, Dimensions } from 'react-native'
-import { connect } from 'react-redux'
 import {
   addTeam,
   removeTeam,
   addPlayer,
-  updatePlayer,
   updateCurrentGame,
   addGame,
-  updateGame,
   resetCurrentGame,
   removeGame,
-} from './store/actions'
+} from './store/actions/index'
 import { Button, Title, IconButton, Divider } from 'react-native-paper'
 import { Game, Team, Player, EditGameRouteProp } from './types'
 
-import ScenarioSelector from './components/ScenarioSelector'
+import MissionSelector from './components/MissionSelector'
 import PlayerArmySelector from './components/PlayerArmySelector'
 import ObjectiveSelector from './components/ObjectiveSelector'
-import { NavigationContainerRef } from '@react-navigation/native'
+import { NavigationProp } from '@react-navigation/native'
 import styles from './styles'
-import uuid from 'react-native-uuid'
+import missions from './data/missions.json'
 
 import { useHeaderHeight } from '@react-navigation/stack'
-import LocaleSelector from './components/LocaleSelector'
+import SaveCurrentGameButton from './components/SaveCurrentGameButton'
+import intl from 'react-intl-universal'
+import { connect } from 'react-redux'
 
 interface EditGameProps {
-  addPlayer: Function
-  removeTeam: Function
-  updateGame: Function
-  removeGame: Function
-  addTeam: Function
-  updateCurrentGame: Function
-  resetCurrentGame: Function
-  addGame: Function
+  addPlayer: typeof addPlayer
+  removeTeam: typeof removeTeam
+  removeGame: typeof removeGame
+  addTeam: typeof addTeam
+  updateCurrentGame: typeof updateCurrentGame
+  resetCurrentGame: typeof resetCurrentGame
+  addGame: typeof addGame
   currentGame: Game
-  updatePlayer: Function
-  navigation: NavigationContainerRef
+  navigation: NavigationProp
   route: EditGameRouteProp
 }
 
 function EditGame({ navigation, route, ...props }: EditGameProps) {
-  useEffect(() => {
+  const [initialized, setInitialized] = React.useState(false)
+
+  React.useLayoutEffect(() => {
     if (route.params && route.params.game) {
       props.updateCurrentGame(route.params.game)
     } else {
       props.resetCurrentGame()
     }
+    setHeader()
+    setInitialized(true)
   }, [])
 
-  navigation.setOptions({
-    // eslint-disable-next-line react/display-name
-    headerRight: () => <LocaleSelector />,
+  React.useEffect(() => {
+    setHeader()
   })
+
+  const setHeader = () => {
+    navigation.setOptions({
+      title: route.params && route.params.game
+        ? intl.get('display.edit-game').d(`Edit game`)
+        : intl.get('display.add-game').d(`Add game`),
+      // eslint-disable-next-line react/display-name
+      headerRight: () => <SaveCurrentGameButton navigation={navigation} />,
+    })
+  }
 
   const countPlayers = () => {
     return props.currentGame.teams.reduce(
@@ -61,18 +71,6 @@ function EditGame({ navigation, route, ...props }: EditGameProps) {
       },
       0
     )
-  }
-
-  const saveGame = () => {
-    if (props.currentGame.id) {
-      navigation.navigate('Homepage')
-      props.updateCurrentGame({ ...props.currentGame }, true)
-    } else {
-      navigation.navigate('Homepage')
-      const id = uuid.v4()
-      props.updateCurrentGame({ ...props.currentGame, id })
-      props.addGame({ ...props.currentGame, id })
-    }
   }
 
   const removeGame = () => {
@@ -90,119 +88,123 @@ function EditGame({ navigation, route, ...props }: EditGameProps) {
       }}
       contentContainerStyle={styles.body}
     >
-      <View style={styles.container}>
-        <ScenarioSelector />
+      {initialized ? (
+        <View style={styles.container}>
+          <MissionSelector />
 
-        {props.currentGame.teams.map((team: Team, teamNumber: number) => {
-          return (
-            <View key={'team' + teamNumber} style={styles.team}>
-              {countPlayers() > 2 ? (
-                <View>
-                  <Divider style={styles.divider} />
-                  <View style={styles.flexView}>
-                    <Title>Team {teamNumber + 1}</Title>
-                    {props.currentGame.teams.length > 2 ? (
-                      <IconButton
-                        key={'teamDeleteIcon' + teamNumber}
-                        icon="delete-forever"
-                        onPress={() => props.removeTeam(teamNumber)}
-                        color="red"
-                      />
-                    ) : null}
-                  </View>
-                </View>
-              ) : null}
-
-              {team.players.map((player: Player, playerNumber: number) => {
-                currentPlayerNumber++
-                return (
-                  <View key={'player' + teamNumber + '-' + playerNumber}>
+          {props.currentGame.teams.map((team: Team, teamNumber: number) => {
+            return (
+              <View key={'team' + teamNumber} style={styles.team}>
+                {countPlayers() > 2 ? (
+                  <View>
                     <Divider style={styles.divider} />
-
-                    <PlayerArmySelector
-                      key={'player-army-' + teamNumber + '-' + playerNumber}
-                      teamNumber={teamNumber}
-                      playerNumber={playerNumber}
-                      currentPlayerNumber={currentPlayerNumber}
-                    />
-
-                    <ObjectiveSelector
-                      key={
-                        'objective-' + teamNumber + '-' + playerNumber + '-1'
-                      }
-                      teamNumber={teamNumber}
-                      playerNumber={playerNumber}
-                      objectiveNumber={0}
-                    />
-
-                    <ObjectiveSelector
-                      key={
-                        'objective-' + teamNumber + '-' + playerNumber + '-2'
-                      }
-                      teamNumber={teamNumber}
-                      playerNumber={playerNumber}
-                      objectiveNumber={1}
-                    />
-
-                    <ObjectiveSelector
-                      key={
-                        'objective-' + teamNumber + '-' + playerNumber + '-3'
-                      }
-                      teamNumber={teamNumber}
-                      playerNumber={playerNumber}
-                      objectiveNumber={2}
-                    />
-
-                    <Button
-                      key={'playerAddIcon' + teamNumber}
-                      mode="outlined"
-                      icon="plus"
-                      onPress={() => props.addPlayer(teamNumber)}
-                      color="green"
-                    >
-                      Ajouter un joueur
-                    </Button>
+                    <View style={styles.flexView}>
+                      <Title>
+                        {intl
+                          .get('game.team-number-x', {
+                            teamNumber: teamNumber + 1,
+                          })
+                          .d(`Team ${teamNumber + 1}`)}
+                      </Title>
+                      {props.currentGame.teams.length > 2 ? (
+                        <IconButton
+                          key={'teamDeleteIcon' + teamNumber}
+                          icon="delete-forever"
+                          onPress={() => props.removeTeam(teamNumber)}
+                          color="red"
+                        />
+                      ) : null}
+                    </View>
                   </View>
-                )
-              })}
-            </View>
-          )
-        })}
+                ) : null}
 
-        <Divider style={styles.divider} />
+                {team.players.map((player: Player, playerNumber: number) => {
+                  currentPlayerNumber++
+                  return (
+                    <View key={'player' + teamNumber + '-' + playerNumber}>
+                      <Divider style={styles.divider} />
 
-        <Button
-          mode="outlined"
-          icon="plus"
-          onPress={() => props.addTeam()}
-          color="green"
-        >
-          Ajouter une équipe
-        </Button>
+                      <PlayerArmySelector
+                        key={'player-army-' + teamNumber + '-' + playerNumber}
+                        teamNumber={teamNumber}
+                        playerNumber={playerNumber}
+                        currentPlayerNumber={currentPlayerNumber}
+                      />
 
-        <Divider style={styles.divider} />
+                      <ObjectiveSelector
+                        key={
+                          'objective-' + teamNumber + '-' + playerNumber + '-1'
+                        }
+                        teamNumber={teamNumber}
+                        playerNumber={playerNumber}
+                        objectiveNumber={0}
+                      />
 
-        <View style={styles.flexView}>
-          {props.currentGame.id ? (
-            <Button
-              icon="delete"
-              color="red"
-              onPress={removeGame}
-              mode="outlined"
-            >
-              Delete
-            </Button>
-          ) : null}
+                      <ObjectiveSelector
+                        key={
+                          'objective-' + teamNumber + '-' + playerNumber + '-2'
+                        }
+                        teamNumber={teamNumber}
+                        playerNumber={playerNumber}
+                        objectiveNumber={1}
+                      />
+
+                      <ObjectiveSelector
+                        key={
+                          'objective-' + teamNumber + '-' + playerNumber + '-3'
+                        }
+                        teamNumber={teamNumber}
+                        playerNumber={playerNumber}
+                        objectiveNumber={2}
+                      />
+
+                      <Button
+                        key={'playerAddIcon' + teamNumber}
+                        mode="outlined"
+                        icon="plus"
+                        onPress={() => props.addPlayer(teamNumber)}
+                        color="green"
+                      >
+                        {intl.get('game.add-player').d(`Add a player`)}
+                      </Button>
+                    </View>
+                  )
+                })}
+              </View>
+            )
+          })}
+
+          <Divider style={styles.divider} />
 
           <Button
-            icon="content-save-outline"
-            onPress={saveGame}
             mode="outlined"
+            icon="plus"
+            onPress={() => props.addTeam()}
+            color="green"
           >
-            Save
+            {intl.get('game.add-team').d(`Add a team`)}
           </Button>
+
+          <Divider style={styles.divider} />
+
+          <View style={styles.flexView}>
+            {props.currentGame.id ? (
+              <Button
+                icon="delete"
+                color="red"
+                onPress={removeGame}
+                mode="outlined"
+              >
+                {intl.get('game.delete').d(`Delete`)}
+              </Button>
+            ) : null}
+
+            <SaveCurrentGameButton navigation={navigation} />
+          </View>
         </View>
-      </View>
+      ) : (
+        <View></View>
+      )}
     </ScrollView>
   )
 }
@@ -213,16 +215,12 @@ const mapStateToProps = (state: any) => ({
 
 const mapDispatchToProps = (dispatch: Function) => ({
   removeGame: (game: Game) => dispatch(removeGame(game)),
-  addGame: (game: Game) => dispatch(addGame(game)),
   resetCurrentGame: () => dispatch(resetCurrentGame()),
-  updateCurrentGame: (data: any, callUpdateGame: Boolean) =>
+  updateCurrentGame: (data: any, callUpdateGame: Boolean = false) =>
     dispatch(updateCurrentGame(data, callUpdateGame)),
-  updateGame: (data: any) => dispatch(updateGame(data)),
   addTeam: () => dispatch(addTeam()),
   removeTeam: (teamNumber: number) => dispatch(removeTeam(teamNumber)),
   addPlayer: (teamNumber: number) => dispatch(addPlayer(teamNumber)),
-  updatePlayer: (teamNumber: number, playerNumber: number, playerData: any) =>
-    dispatch(updatePlayer(teamNumber, playerNumber, playerData)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditGame)

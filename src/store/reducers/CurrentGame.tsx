@@ -1,5 +1,6 @@
-import { Game, Team, Player } from '../../types'
+import { Game, Team, Player, Objective, PlayerObjective } from '../../types'
 import clonedeep from 'lodash.clonedeep'
+import missions from '../../data/missions.json'
 
 export interface CurrentGameAction {
   type: string
@@ -7,11 +8,14 @@ export interface CurrentGameAction {
     teamNumber?: number
     playerNumber?: number
     playerData?: any
+    formatId?: string
+    missionId?: string
   }
 }
 
 const defaultObjective = {
   id: '',
+  category: '',
   scores: [null, null, null, null, null],
 }
 const defaultPlayer = {
@@ -27,7 +31,8 @@ const defaultTeam = {
 }
 const defaultGame = {
   name: '',
-  scenario: '',
+  mission: '',
+  format: '',
   date: new Date(),
   teams: [clonedeep(defaultTeam), clonedeep(defaultTeam)],
 }
@@ -38,11 +43,47 @@ const currentGameReducer = (
 ): Game => {
   switch (action.type) {
     case 'RESET_CURRENT_GAME':
+      console.log('CLONE', clonedeep(defaultGame))
       return clonedeep(defaultGame)
     case 'UPDATE_CURRENT_GAME':
       return {
         ...state,
         ...action.data,
+      } as Game
+    case 'SET_MISSION':
+      return {
+        ...state,
+        format: action.data.formatId!,
+        mission: action.data.missionId!,
+      }
+    case 'RESET_PRIMARY_OBJECTIVES':
+      return {
+        ...state,
+        teams: state.teams.map((team: Team, teamIndex: number) => {
+          return {
+            ...team,
+            players: team.players.map((player: Player) => {
+              const format = missions.find(
+                (format) => format.id === state.format
+              )
+
+              if (!format) return state
+
+              return {
+                ...player,
+                primaryObjectives: format.missions
+                  .find((mission) => mission.id === state.mission)!
+                  .primary.map((objective: Objective) => {
+                    return {
+                      ...clonedeep(defaultObjective),
+                      id: objective.id,
+                      category: format.id,
+                    } as PlayerObjective
+                  }),
+              } as Player
+            }),
+          } as Team
+        }),
       }
     case 'REMOVE_PLAYER':
       if (state.teams[action.data.teamNumber!].players.length === 1) {
@@ -57,7 +98,13 @@ const currentGameReducer = (
           ...state,
           teams: state.teams.map((team: Team, teamIndex: number) => {
             if (teamIndex === action.data.teamNumber) {
-              team.players.splice(action.data.playerNumber!, 1)
+              return {
+                ...team,
+                players: [
+                  ...team.players.slice(0, action.data.playerNumber!),
+                  ...team.players.slice(action.data.playerNumber! + 1),
+                ],
+              } as Team
             }
             return team
           }),
@@ -68,9 +115,12 @@ const currentGameReducer = (
         ...state,
         teams: state.teams.map((team: Team, teamIndex: number) => {
           if (teamIndex === action.data.teamNumber) {
-            team.players = team.players.concat({
-              ...defaultGame.teams[0].players[0],
-            })
+            return {
+              ...team,
+              players: team.players.concat({
+                ...defaultGame.teams[0].players[0],
+              }),
+            } as Team
           }
           return team
         }),
@@ -80,17 +130,20 @@ const currentGameReducer = (
         ...state,
         teams: state.teams.map((team: Team, teamIndex: number) => {
           if (teamIndex === action.data.teamNumber) {
-            team.players = team.players.map(
-              (player: Player, playerIndex: number) => {
-                if (playerIndex === action.data.playerNumber) {
-                  player = {
-                    ...player,
-                    ...action.data.playerData,
+            return {
+              ...team,
+              players: team.players = team.players.map(
+                (player: Player, playerIndex: number) => {
+                  if (playerIndex === action.data.playerNumber) {
+                    return {
+                      ...player,
+                      ...action.data.playerData,
+                    } as Player
                   }
+                  return player
                 }
-                return player
-              }
-            )
+              ),
+            } as Team
           }
           return team
         }),

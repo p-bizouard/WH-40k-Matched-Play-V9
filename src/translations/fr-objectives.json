@@ -1,0 +1,53 @@
+{
+  "objective.strike-force.take-and-hold": {
+    "defaultMessage": "Prendre et tenir"
+  },
+  "objective.strike-force.minimise-losses": {
+    "defaultMessage": "Minimiser les pertes"
+  },
+  "objective.strike-force.raze": {
+    "defaultMessage": "Raser"
+  },
+  "objective.strike-force.data-intercept": {
+    "defaultMessage": "Interception de données"
+  },
+  "objective.strike-force.surround-them": {
+    "defaultMessage": "Encerclez-les"
+  },
+  "objective.strike-force.vital-ground": {
+    "defaultMessage": "Terrain vital"
+  },
+  "objective.strike-force.strategic-scan": {
+    "defaultMessage": "Scan stratégique"
+  },
+  "objective.strike-force.overrun": {
+    "defaultMessage": "Débordement"
+  },
+  "objective.strike-force.direct-assault": {
+    "defaultMessage": "Assaut direct"
+  },
+  "objective.strike-force.priority-targets": {
+    "defaultMessage": "Cibles prioritaires"
+  },
+  "objective.purge-the-ennemy": {
+    "defaultMessage": "P."
+  },
+  "objective.purge-the-ennemy.assassinate": {
+    "defaultMessage": "Assassinate"
+  },
+  "objective.purge-the-ennemy.xxxxxxxxxxxxxxxxxxxxxxxx": {
+    "defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "objective.purge-the-ennemy.xxxxxxxxxxxxxxxxxxxxxxxx": {
+    "defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "objective.purge-the-ennemy.xxxxxxxxxxxxxxxxxxxxxxxx": {
+    "defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "objective.purge-the-ennemy.xxxxxxxxxxxxxxxxxxxxxxxx": {
+    "defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "objective.strike-force.xxxxxxxxxxxxxxxxxxxxxxxx": {
+    "defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
+  }
+}

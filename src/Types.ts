@@ -1,4 +1,5 @@
 import { RouteProp } from '@react-navigation/native'
+import { InteractionManager } from 'react-native'
 
 export interface UpdateLocale {
   type: string
@@ -9,6 +10,17 @@ export interface UpdateLocale {
 
 export interface DispatchLocale {
   (arg0: UpdateLocale): void
+}
+
+export interface GameFormat {
+  id: string
+  missions: Mission[]
+}
+export interface Mission {
+  id: string
+  number: number | null
+  primary: Objective[]
+  secondary: Objective[]
 }
 
 export interface Objective {
@@ -22,6 +34,7 @@ export interface ObjectiveCategory {
 
 export interface PlayerObjective {
   id: string
+  category: string
   scores: number[] | null[]
 }
 
@@ -37,7 +50,8 @@ export interface Team {
 
 export interface Game {
   id?: string
-  scenario: string
+  format: string
+  mission: string
   name: string
   date: Date
   teams: Team[]
@@ -47,7 +61,7 @@ export interface Army {
   id: string
 }
 
-export interface Scenario {
+export interface Mission {
   id: string
   primary: Objective[]
   secondary: Objective[]
