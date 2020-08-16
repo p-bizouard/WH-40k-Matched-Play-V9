@@ -1,4 +1,10 @@
 {
+  "army.xenos.tau": [
+    {
+      "type": 0,
+      "value": "T'au"
+    }
+  ],
   "design.homepage": [
     {
       "type": 0,

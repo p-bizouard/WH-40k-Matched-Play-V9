@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Provider as PaperProvider } from 'react-native-paper'
+import { Provider as PaperProvider, DefaultTheme } from 'react-native-paper'
 import { Provider as StoreProvider } from 'react-redux'
 import { store, persistor } from './src/store/configureStore'
 import { PersistGate } from 'redux-persist/integration/react'
@@ -10,6 +10,8 @@ import Homepage from './src/Homepage'
 import EditGame from './src/EditGame'
 import ViewGame from './src/ViewGame'
 
+import { theme } from './src/styles'
+
 const Stack = createStackNavigator()
 
 export default class Entrypoint extends React.Component {
@@ -18,7 +20,7 @@ export default class Entrypoint extends React.Component {
       <StoreProvider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <NavigationContainer theme={DarkTheme}>
-            <PaperProvider>
+            <PaperProvider theme={theme}>
               <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen name="Homepage" component={Homepage} />
                 <Stack.Screen name="EditGame" component={EditGame} />

@@ -96,9 +96,6 @@ class ObjectiveSelector extends React.Component<
                 }}
               >
                 <RadioButton.Group
-                  onValueChange={(itemValue) => {
-                    updateObjective(format!.id, itemValue)
-                  }}
                   value={
                     player.secondaryObjectives[this.props.objectiveNumber].id
                   }
@@ -129,6 +126,9 @@ class ObjectiveSelector extends React.Component<
                                   .d(humanizeString(objective.id))}
                                 value={objective.id}
                                 key={`objective-${objective.id}`}
+                                onPress={() => {
+                                  updateObjective(format.id, objective.id)
+                                }}
                               />
                               {description && description != '' ? (
                                 <Text>{description}</Text>
@@ -181,6 +181,12 @@ class ObjectiveSelector extends React.Component<
                                       .d(humanizeString(objective.id))}
                                     value={objective.id}
                                     key={`objective-${objective.id}`}
+                                    onPress={() => {
+                                      updateObjective(
+                                        objectiveCategory.id,
+                                        objective.id
+                                      )
+                                    }}
                                   />
                                   {description ? (
                                     <Text>{description}</Text>

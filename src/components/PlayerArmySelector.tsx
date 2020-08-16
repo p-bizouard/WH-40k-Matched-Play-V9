@@ -13,7 +13,7 @@ import {
   Title,
 } from 'react-native-paper'
 import { Game, Army, Faction } from '../Types'
-import styles from '../styles'
+import styles, { theme } from '../styles'
 import intl from 'react-intl-universal'
 import humanizeString from 'humanize-string'
 
@@ -67,7 +67,7 @@ class PlayerArmySelector extends React.Component<
                   {armies.map((faction: Faction) => {
                     return (
                       <View key={`faction-${faction.id}`}>
-                        <Title>{faction.id}</Title>
+                        <Title>{humanizeString(faction.id)}</Title>
                         {faction.armies.map((army: Army) => {
                           return (
                             <RadioButton.Item
@@ -115,9 +115,7 @@ class PlayerArmySelector extends React.Component<
             }}
             style={{
               flex: 1,
-              backgroundColor: player.army
-                ? DefaultTheme.colors.primary
-                : 'red',
+              backgroundColor: player.army ? theme.colors.primary : 'red',
             }}
           >
             {intl

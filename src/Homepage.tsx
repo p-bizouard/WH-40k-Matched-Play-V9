@@ -9,7 +9,7 @@ import {
 import { Button } from 'react-native-paper'
 import { Game, HomepageScreenNavigationProp } from './types'
 import Games from './components/Games'
-import styles from './styles'
+import styles, { theme } from './styles'
 import { ScrollView } from 'react-native'
 import { useHeaderHeight } from '@react-navigation/stack'
 import LocaleSelector from './components/LocaleSelector'
@@ -62,7 +62,7 @@ function Homepage({ navigation, ...props }: HomepageProps) {
             mode="contained"
             icon="plus"
             onPress={() => navigation.navigate('EditGame')}
-            color="green"
+            color={theme.colors.add}
           >
             {intl.get('game.add').d('Add a new game')}
           </Button>

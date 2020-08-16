@@ -1,4 +1,19 @@
 import { StyleSheet, Dimensions } from 'react-native'
+import { DefaultTheme } from 'react-native-paper'
+
+export const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#172629',
+    accent: '#6eccc9',
+    add: '#628831',
+    // background: 'blue',
+    // surface: 'yellow',
+    // backdrop: 'purple',
+    // placeholder: 'pink',
+  },
+}
 
 const styles = StyleSheet.create({
   body: {
@@ -18,6 +33,9 @@ const styles = StyleSheet.create({
   team: {
     borderTopColor: '#555',
     width: '100%',
+  },
+  addButton: {
+    color: '#628831',
   },
   mb10: {
     marginBottom: 10,

@@ -1,76 +1,125 @@
 [
-  { "id": "combat-patrol", "missions": [] },
-  { "id": "incursion", "missions": [] },
-  {
-    "id": "strike-force",
-    "missions": [
-      {
-        "id": "retrieval-mission",
-        "number": 11,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "minimise-losses" }]
-      },
-      {
-        "id": "scorched-earth",
-        "number": 12,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "raze" }]
-      },
-      {
-        "id": "vital-intelligence",
-        "number": 13,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "data-intercept" }]
-      },
-      {
-        "id": "surround-and-destroy",
-        "number": 21,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "surround-them" }]
-      },
-      {
-        "id": "front-line-warfare",
-        "number": 22,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "vital-ground" }]
-      },
-      {
-        "id": "exploration",
-        "number": 23,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "strategic-scan" }]
-      },
-      {
-        "id": "overrun",
-        "number": 31,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "overrun" }]
-      },
-      {
-        "id": "sweep-and-clear",
-        "number": 32,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "direct-assault" }]
-      },
-      {
-        "id": "priority-target",
-        "number": 33,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": [{ "id": "priority-targets" }]
-      },
-      {
-        "id": "the-four-pillars",
-        "number": null,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": []
-      },
-      {
-        "id": "no-mans-land",
-        "number": null,
-        "primary": [{ "id": "take-and-hold" }],
-        "secondary": []
-      }
-    ]
-  },
-  { "id": "onslaught", "missions": [] }
+	{
+		"id": "combat-patrol",
+		"missions": []
+		},
+	{
+		"id": "incursion",
+		"missions": [
+			{
+				"id": "crossfire",
+				"number": 11,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "outflank" }]
+			},
+			{
+				"id": "resupply",
+				"number": 12,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "secure-landing-sites" }]
+			},
+			{
+				"id": "raid",
+				"number": 13,
+				"primary": [{ "id": "domination" }],
+				"secondary": [{ "id": "raid-supply-lines" }]
+			},
+			{
+				"id": "centre-ground",
+				"number": 21,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "centre-ground" }]
+			},
+			{
+				"id": "ascension",
+				"number": 22,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "ascend" }]
+			},
+			{
+				"id": "forward-push",
+				"number": 23,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "forward-push" }]
+			},
+			{
+				"id": "rise-of-the-machine-spirit",
+				"number": 31,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "inload-data-psalm" }]
+			},
+			{
+				"id": "show-of-force",
+				"number": 32,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "minimise-losses" }]
+			},
+			{
+				"id": "reconnaissance-mission",
+				"number": 33,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "recon-sweep" }]
+			}
+		]
+	},
+	{
+		"id": "strike-force",
+		"missions": [
+			{
+				"id": "retrieval-mission",
+				"number": 11,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "minimise-losses" }]
+			},
+			{
+				"id": "scorched-earth",
+				"number": 12,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "raze" }]
+			},
+			{
+				"id": "vital-intelligence",
+				"number": 13,
+				"primary": [{ "id": "domination" }],
+				"secondary": [{ "id": "data-intercept" }]
+			},
+			{
+				"id": "surround-and-destroy",
+				"number": 21,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "surround-them" }]
+			},
+			{
+				"id": "front-line-warfare",
+				"number": 22,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "vital-ground" }]
+			},
+			{
+				"id": "exploration",
+				"number": 23,
+				"primary": [{ "id": "domination" }],
+				"secondary": [{ "id": "strategic-scan" }]
+			},
+			{
+				"id": "overrun",
+				"number": 31,
+				"primary": [{ "id": "domination" }],
+				"secondary": [{ "id": "overrun" }]
+			},
+			{
+				"id": "sweep-and-clear",
+				"number": 32,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "direct-assault" }]
+			},
+			{
+				"id": "priority-target",
+				"number": 33,
+				"primary": [{ "id": "take-and-hold" }],
+				"secondary": [{ "id": "priority-targets" }]
+			}
+		]
+	},
+	{ "id": "onslaught", "missions": [] }
 ]

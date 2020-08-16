@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { View, Dimensions } from 'react-native'
 import { connect } from 'react-redux'
 import { updatePlayer, updateGame, updateCurrentGame } from './store/actions'

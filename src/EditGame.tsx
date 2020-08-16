@@ -21,7 +21,7 @@ import {
 import MissionSelector from './components/MissionSelector'
 import PlayerArmySelector from './components/PlayerArmySelector'
 import ObjectiveSelector from './components/ObjectiveSelector'
-import styles from './styles'
+import styles, { theme } from './styles'
 
 import { useHeaderHeight } from '@react-navigation/stack'
 import SaveCurrentGameButton from './components/SaveCurrentGameButton'
@@ -167,10 +167,10 @@ function EditGame({ navigation, route, ...props }: EditGameProps) {
 
                       <Button
                         key={'playerAddIcon' + teamNumber}
-                        mode="outlined"
+                        mode="contained"
                         icon="plus"
                         onPress={() => props.addPlayer(teamNumber)}
-                        color="green"
+                        color={theme.colors.add}
                       >
                         {intl.get('game.add-player').d(`Add a player`)}
                       </Button>
@@ -184,10 +184,10 @@ function EditGame({ navigation, route, ...props }: EditGameProps) {
           <Divider style={styles.divider} />
 
           <Button
-            mode="outlined"
+            mode="contained"
             icon="plus"
             onPress={() => props.addTeam()}
-            color="green"
+            color={theme.colors.add}
           >
             {intl.get('game.add-team').d(`Add a team`)}
           </Button>
