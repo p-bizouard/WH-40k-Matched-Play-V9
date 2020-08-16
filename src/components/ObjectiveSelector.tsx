@@ -23,6 +23,7 @@ import {
   GameFormat,
 } from '../Types'
 import styles from '../styles'
+import humanizeString from 'humanize-string'
 
 interface ObjectiveSelectorProps {
   updatePlayerObjective: typeof updatePlayerObjective
@@ -108,9 +109,13 @@ class ObjectiveSelector extends React.Component<
                   {format && mission ? (
                     <View key={`objective-mission-${mission.id}`}>
                       {mission.secondary.map((objective: Objective) => {
+                        const description = intl.get(
+                          `objective.description.${format.id}.${objective.id}`
+                        )
+
                         return (
                           <TouchableRipple
-                            key={`objective-description-${objective.id}`}
+                            key={`objective-${objective.id}`}
                             onPress={() => {
                               updateObjective(format.id, objective.id)
                             }}
@@ -121,15 +126,13 @@ class ObjectiveSelector extends React.Component<
                                 style={{ paddingLeft: 0 }}
                                 label={intl
                                   .get(`objective.${format.id}.${objective.id}`)
-                                  .d(objective.id)}
+                                  .d(humanizeString(objective.id))}
                                 value={objective.id}
                                 key={`objective-${objective.id}`}
                               />
-                              <Text>
-                                {intl.get(
-                                  `objective.description.${format.id}.${objective.id}`
-                                )}
-                              </Text>
+                              {description && description != '' ? (
+                                <Text>{description}</Text>
+                              ) : null}
                             </View>
                           </TouchableRipple>
                         )
@@ -150,10 +153,13 @@ class ObjectiveSelector extends React.Component<
                         <Title>
                           {intl
                             .get(`objective.${objectiveCategory.id}`)
-                            .d(objectiveCategory.id)}
+                            .d(humanizeString(objectiveCategory.id))}
                         </Title>
                         {objectiveCategory.secondary.map(
                           (objective: Objective) => {
+                            const description = intl.get(
+                              `objective.description.${objectiveCategory.id}.${objective.id}`
+                            )
                             return (
                               <TouchableRipple
                                 key={`objective-description-${objective.id}`}
@@ -172,15 +178,13 @@ class ObjectiveSelector extends React.Component<
                                       .get(
                                         `objective.${objectiveCategory.id}.${objective.id}`
                                       )
-                                      .d(objective.id)}
+                                      .d(humanizeString(objective.id))}
                                     value={objective.id}
                                     key={`objective-${objective.id}`}
                                   />
-                                  <Text>
-                                    {intl.get(
-                                      `objective.description.${objectiveCategory.id}.${objective.id}`
-                                    )}
-                                  </Text>
+                                  {description ? (
+                                    <Text>{description}</Text>
+                                  ) : null}
                                 </View>
                               </TouchableRipple>
                             )
@@ -229,7 +233,11 @@ class ObjectiveSelector extends React.Component<
                     player.secondaryObjectives[this.props.objectiveNumber].id
                   }`
                 )
-                .d(player.secondaryObjectives[this.props.objectiveNumber].id)
+                .d(
+                  humanizeString(
+                    player.secondaryObjectives[this.props.objectiveNumber].id
+                  )
+                )
             : intl
                 .get('game.objective-x-set', {
                   objectiveNumber: this.props.objectiveNumber + 1,

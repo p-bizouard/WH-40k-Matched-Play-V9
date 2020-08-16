@@ -7,6 +7,7 @@ import { Button, Portal, Dialog, RadioButton, Title } from 'react-native-paper'
 import { Game } from '../Types'
 import styles from '../styles'
 import intl from 'react-intl-universal'
+import humanizeString from 'humanize-string'
 
 interface MissionSelectorProps {
   currentGame: Game
@@ -45,10 +46,9 @@ function MissionSelector({ ...props }: MissionSelectorProps) {
                         {format.missions.map((mission) => {
                           return (
                             <RadioButton.Item
-                              label={intl.formatMessage({
-                                id: `mission.${format.id}.${mission.id}`,
-                                defaultMessage: mission.id,
-                              })}
+                              label={intl
+                                .get(`mission.${format.id}.${mission.id}`)
+                                .d(humanizeString(mission.id))}
                               onPress={() => {
                                 props.setMission(format.id, mission.id)
                                 setDialog(false)
@@ -80,10 +80,11 @@ function MissionSelector({ ...props }: MissionSelectorProps) {
         }}
       >
         {props.currentGame.mission
-          ? intl.formatMessage({
-              id: `mission.${props.currentGame.format}.${props.currentGame.mission}`,
-              defaultMessage: props.currentGame.mission,
-            })
+          ? intl
+              .get(
+                `mission.${props.currentGame.format}.${props.currentGame.mission}`
+              )
+              .d(humanizeString(props.currentGame.mission))
           : 'Click to set mission'}
       </Button>
     </View>

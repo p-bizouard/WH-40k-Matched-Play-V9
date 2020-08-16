@@ -1,17 +1,127 @@
 [
   {
-    "id": "ultramarine"
+    "id": "adeptus-astartes",
+    "armies": [
+      {
+        "id": "space-marines"
+      },
+      {
+        "id": "black-templars"
+      },
+      {
+        "id": "blood-angels"
+      },
+      {
+        "id": "dark-angels"
+      },
+      {
+        "id": "deathwatch"
+      },
+      {
+        "id": "grey-knights"
+      },
+      {
+        "id": "imperial-fists"
+      },
+      {
+        "id": "iron-hands"
+      },
+      {
+        "id": "raven-guard"
+      },
+      {
+        "id": "salamanders"
+      },
+      {
+        "id": "space-wolves"
+      },
+      {
+        "id": "ultramarines"
+      },
+      {
+        "id": "white-scars"
+      }
+    ]
   },
   {
-    "id": "space-wolves"
+    "id": "imperium",
+    "armies": [
+      {
+        "id": "adepta-sororitas"
+      },
+      {
+        "id": "adeptus-custodes"
+      },
+      {
+        "id": "adeptus-mechanicus"
+      },
+      {
+        "id": "astra-militarum"
+      },
+      {
+        "id": "imperial-knights"
+      },
+      {
+        "id": "inquisition"
+      },
+      {
+        "id": "officio-assassinorum"
+      },
+      {
+        "id": "sisters-of-silence"
+      }
+    ]
   },
   {
-    "id": "white-scars"
+    "id": "chaos",
+    "armies": [
+      {
+        "id": "chaos-daemons"
+      },
+      {
+        "id": "chaos-knights"
+      },
+      {
+        "id": "chaos-space-marines"
+      },
+      {
+        "id": "death-guard"
+      },
+      {
+        "id": "thousand-sons"
+      }
+    ]
   },
   {
-    "id": "spaces-marines"
-  },
-  {
-    "id": "tyranides"
+    "id": "xenos",
+    "armies": [
+      {
+        "id": "craftworlds"
+      },
+      {
+        "id": "drukhari"
+      },
+      {
+        "id": "genestealer-cults"
+      },
+      {
+        "id": "harlequins"
+      },
+      {
+        "id": "necrons"
+      },
+      {
+        "id": "orks"
+      },
+      {
+        "id": "tau"
+      },
+      {
+        "id": "tyranids"
+      },
+      {
+        "id": "ynnari"
+      }
+    ]
   }
 ]

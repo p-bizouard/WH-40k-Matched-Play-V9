@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "wh-40k-objectives",
-    "slug": "wh-40k-objectives",
+    "name": "V9 objectives",
+    "slug": "v9-objectives",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,10 +20,12 @@
       "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon.png"
     },
     "android": {
-      "package": "foo.bar.com"
+      "permissions": [],
+      "package": "com.bizouard.wh_v9_objectives",
+      "versionCode": 2
     }
   }
 }

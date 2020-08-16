@@ -9,28 +9,49 @@ import {
   Player,
   ViewGameRouteProp,
   PlayerObjective as PlayerObjectiveType,
+  ViewGameScreenNavigationProp,
 } from './types'
 
-import { NavigationProp } from '@react-navigation/native'
 import styles from './styles'
 import { ScrollView } from 'react-native-gesture-handler'
 import { useHeaderHeight } from '@react-navigation/stack'
 import PlayerObjective from './components/PlayerObjective'
 import intl from 'react-intl-universal'
+import humanizeString from 'humanize-string'
+import LocaleSelector from './components/LocaleSelector'
 
 interface ViewGameProps {
   updateGame: Function
   updateCurrentGame: Function
   currentGame: Game
   updatePlayer: Function
-  navigation: NavigationProp
+  navigation: ViewGameScreenNavigationProp
   route: ViewGameRouteProp
+  configuration: {
+    locale: String
+  }
 }
 
 function ViewGame({ navigation, route, ...props }: ViewGameProps) {
-  useEffect(() => {
+  const [initialized, setInitialized] = React.useState(false)
+
+  React.useLayoutEffect(() => {
     props.updateCurrentGame(route.params.game)
+    setHeader()
+    setInitialized(true)
   }, [])
+
+  React.useEffect(() => {
+    setHeader()
+  })
+
+  const setHeader = () => {
+    navigation.setOptions({
+      title: intl.get('display.view-game').d(`View game`),
+      // eslint-disable-next-line react/display-name
+      headerRight: () => <LocaleSelector />,
+    })
+  }
 
   const countPlayers = () => {
     return props.currentGame.teams.reduce(
@@ -74,8 +95,6 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
     }, 0)
   }
 
-  let currentPlayerNumber = 0
-
   return (
     <ScrollView
       style={{
@@ -83,80 +102,86 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
       }}
       contentContainerStyle={styles.body}
     >
-      <View style={styles.container}>
-        {props.currentGame.teams.map((team: Team, teamNumber: number) => {
-          return (
-            <View key={'team' + teamNumber} style={styles.team}>
-              {teamNumber !== 0 ? <Divider style={styles.divider} /> : null}
+      {initialized ? (
+        <View style={styles.container}>
+          {props.currentGame.teams.map((team: Team, teamNumber: number) => {
+            return (
+              <View key={'team' + teamNumber} style={styles.team}>
+                {teamNumber !== 0 ? <Divider style={styles.divider} /> : null}
 
-              <View style={styles.flexView}>
-                {countPlayers() > 2 ? (
-                  <View style={styles.flexView}>
-                    <Title key={'teamNumber' + teamNumber}>
-                      {intl
-                        .get('game.team-number-x', {
-                          teamNumber: teamNumber + 1,
-                        })
-                        .d(`Team ${teamNumber + 1}`)}
-                    </Title>
-                    <Title style={styles.bold}>{totalTeamScore(team)}</Title>
-                  </View>
-                ) : null}
-              </View>
-
-              {team.players.map((player: Player, playerNumber: number) => {
-                currentPlayerNumber++
-                return (
-                  <View key={'player' + teamNumber + '-' + playerNumber}>
+                <View style={styles.flexView}>
+                  {countPlayers() > 2 ? (
                     <View style={styles.flexView}>
-                      <Title>
-                        {intl.get(`army.${player.army}`).d(player.army!)}
+                      <Title key={'teamNumber' + teamNumber}>
+                        {intl
+                          .get('game.team-number-x', {
+                            teamNumber: teamNumber + 1,
+                          })
+                          .d(`Team ${teamNumber + 1}`)}
                       </Title>
-                      <Title>{totalPlayerScore(player)}</Title>
+                      <Title style={styles.bold}>{totalTeamScore(team)}</Title>
                     </View>
-                    {player.primaryObjectives.map(
-                      (
-                        objective: PlayerObjectiveType,
-                        objectiveNumber: number
-                      ) =>
-                        objective.id ? (
-                          <PlayerObjective
-                            key={`player-objective-${teamNumber}-${playerNumber}-primary-${objectiveNumber}`}
-                            teamNumber={teamNumber}
-                            playerNumber={playerNumber}
-                            objectiveNumber={objectiveNumber}
-                            primaryOrSecondary="primary"
-                          />
-                        ) : null
-                    )}
-                    {player.secondaryObjectives.map(
-                      (
-                        objective: PlayerObjectiveType,
-                        objectiveNumber: number
-                      ) =>
-                        objective.id ? (
-                          <PlayerObjective
-                            key={`player-objective-${teamNumber}-${playerNumber}-secondary-${objectiveNumber}`}
-                            teamNumber={teamNumber}
-                            playerNumber={playerNumber}
-                            objectiveNumber={objectiveNumber}
-                            primaryOrSecondary="secondary"
-                          />
-                        ) : null
-                    )}
-                  </View>
-                )
-              })}
-            </View>
-          )
-        })}
-      </View>
+                  ) : null}
+                </View>
+
+                {team.players.map((player: Player, playerNumber: number) => {
+                  return (
+                    <View key={'player' + teamNumber + '-' + playerNumber}>
+                      <View style={styles.flexView}>
+                        <Title>
+                          {intl
+                            .get(`army.${player.army}`)
+                            .d(humanizeString(player.army))}
+                        </Title>
+                        <Title>{totalPlayerScore(player)}</Title>
+                      </View>
+                      {player.primaryObjectives.map(
+                        (
+                          objective: PlayerObjectiveType,
+                          objectiveNumber: number
+                        ) =>
+                          objective.id ? (
+                            <PlayerObjective
+                              key={`player-objective-${teamNumber}-${playerNumber}-primary-${objectiveNumber}`}
+                              teamNumber={teamNumber}
+                              playerNumber={playerNumber}
+                              objectiveNumber={objectiveNumber}
+                              primaryOrSecondary="primary"
+                            />
+                          ) : null
+                      )}
+                      {player.secondaryObjectives.map(
+                        (
+                          objective: PlayerObjectiveType,
+                          objectiveNumber: number
+                        ) =>
+                          objective.id ? (
+                            <PlayerObjective
+                              key={`player-objective-${teamNumber}-${playerNumber}-secondary-${objectiveNumber}`}
+                              teamNumber={teamNumber}
+                              playerNumber={playerNumber}
+                              objectiveNumber={objectiveNumber}
+                              primaryOrSecondary="secondary"
+                            />
+                          ) : null
+                      )}
+                    </View>
+                  )
+                })}
+              </View>
+            )
+          })}
+        </View>
+      ) : (
+        <View></View>
+      )}
     </ScrollView>
   )
 }
 
 const mapStateToProps = (state: any) => ({
   currentGame: state.currentGame,
+  configuration: state.configuration,
 })
 
 const mapDispatchToProps = (dispatch: Function) => ({

@@ -1,39 +1,5 @@
 [
   {
-    "id": "purge-the-ennemy",
-    "secondary": [
-      {
-        "id": "assassinate"
-      },
-      {
-        "id": "bring-it-down"
-      },
-      {
-        "id": "titan-slayers"
-      },
-      {
-        "id": "slay-the-warlord"
-      }
-    ]
-  },
-  {
-    "id": "no-mercy-no-respite",
-    "secondary": [
-      {
-        "id": "thin-their-ranks"
-      },
-      {
-        "id": "attrition"
-      },
-      {
-        "id": "while-we-stand-we-fight"
-      },
-      {
-        "id": "first-strike"
-      }
-    ]
-  },
-  {
     "id": "battlefield-supremacy",
     "secondary": [
       {
@@ -48,16 +14,50 @@
     ]
   },
   {
+    "id": "no-mercy-no-respite",
+    "secondary": [
+      {
+        "id": "thin-their-ranks"
+      },
+      {
+        "id": "attrition"
+      },
+      {
+        "id": "while-we-stand-we-fight"
+      }
+    ]
+  },
+  {
+    "id": "purge-the-ennemy",
+    "secondary": [
+      {
+        "id": "titan-slayers"
+      },
+      {
+        "id": "bring-it-down"
+      },
+      {
+        "id": "slay-the-warlord"
+      },
+      {
+        "id": "assassinate"
+      }
+    ]
+  },
+  {
     "id": "shadow-operations",
     "secondary": [
+      {
+        "id": "raise-the-banners-high"
+      },
       {
         "id": "investigate-sites"
       },
       {
-        "id": "repair-teleport-homer"
+        "id": "deploy-scramblers"
       },
       {
-        "id": "raise-the-banners-high"
+        "id": "repair-teleport-homer"
       }
     ]
   },
@@ -65,13 +65,16 @@
     "id": "warpcraft",
     "secondary": [
       {
+        "id": "abhor-the-witch"
+      },
+      {
         "id": "mental-interrogation"
       },
       {
         "id": "psychic-ritual"
       },
       {
-        "id": "abhor-the-witch"
+        "id": "pierce-the-evil"
       }
     ]
   },

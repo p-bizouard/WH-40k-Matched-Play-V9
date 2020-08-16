@@ -10,14 +10,18 @@ import {
   removeGame,
 } from './store/actions/index'
 import { Button, Title, IconButton, Divider } from 'react-native-paper'
-import { Game, Team, Player, EditGameRouteProp } from './types'
+import {
+  Game,
+  Team,
+  Player,
+  EditGameRouteProp,
+  EditGameScreenNavigationProp,
+} from './types'
 
 import MissionSelector from './components/MissionSelector'
 import PlayerArmySelector from './components/PlayerArmySelector'
 import ObjectiveSelector from './components/ObjectiveSelector'
-import { NavigationProp } from '@react-navigation/native'
 import styles from './styles'
-import missions from './data/missions.json'
 
 import { useHeaderHeight } from '@react-navigation/stack'
 import SaveCurrentGameButton from './components/SaveCurrentGameButton'
@@ -33,7 +37,7 @@ interface EditGameProps {
   resetCurrentGame: typeof resetCurrentGame
   addGame: typeof addGame
   currentGame: Game
-  navigation: NavigationProp
+  navigation: EditGameScreenNavigationProp
   route: EditGameRouteProp
 }
 
@@ -56,11 +60,14 @@ function EditGame({ navigation, route, ...props }: EditGameProps) {
 
   const setHeader = () => {
     navigation.setOptions({
-      title: route.params && route.params.game
-        ? intl.get('display.edit-game').d(`Edit game`)
-        : intl.get('display.add-game').d(`Add game`),
+      title:
+        route.params && route.params.game
+          ? intl.get('display.edit-game').d(`Edit game`)
+          : intl.get('display.add-game').d(`Add game`),
       // eslint-disable-next-line react/display-name
-      headerRight: () => <SaveCurrentGameButton navigation={navigation} />,
+      headerRight: () => (
+        <SaveCurrentGameButton navigation={navigation} icon={true} />
+      ),
     })
   }
 

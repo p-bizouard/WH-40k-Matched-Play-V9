@@ -6,10 +6,11 @@ import { Game, Team, Player } from '../Types'
 import { useNavigation } from '@react-navigation/native'
 import styles from '../styles'
 import intl from 'react-intl-universal'
+import humanizeString from 'humanize-string'
 
 interface GamesProps {
-  updateCurrentGame: Function
   games: Game[]
+  configuration: any
 }
 
 function Games(props: GamesProps) {
@@ -30,12 +31,14 @@ function Games(props: GamesProps) {
             <Card.Title
               title={intl
                 .get(`mission.${game.format}.${game.mission}`)
-                .d(game.mission)}
+                .d(humanizeString(game.mission))}
               subtitle={game.teams
                 .map((team: Team) =>
                   team.players
                     .map((player: Player) =>
-                      intl.get(`army.${player.army}`).d(player.army!)
+                      intl
+                        .get(`army.${player.army}`)
+                        .d(humanizeString(player.army))
                     )
                     .join(', ')
                 )
@@ -59,7 +62,4 @@ const mapStateToProps = (state: any) => ({
   configuration: state.configuration,
 })
 
-const mapDispatchToProps = (dispatch: Function) => ({
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Games)
+export default connect(mapStateToProps)(Games)

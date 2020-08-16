@@ -19,6 +19,8 @@ const defaultObjective = {
   scores: [null, null, null, null, null],
 }
 const defaultPlayer = {
+  army: '',
+  faction: '',
   primaryObjectives: [clonedeep(defaultObjective)],
   secondaryObjectives: [
     clonedeep(defaultObjective),

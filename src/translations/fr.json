@@ -8,6 +8,9 @@
   "display.edit-game": {
     "defaultMessage": "Configurer une partie"
   },
+  "display.view-game": {
+    "defaultMessage": "Partie en cours"
+  },
   "game.add": {
     "defaultMessage": "Nouvelle partie"
   },
@@ -27,7 +30,7 @@
     "defaultMessage": "Joueur {playerNumber}"
   },
   "game.select-army": {
-    "defaultMessage": "Sëlectionner une armée"
+    "defaultMessage": "Sélectionner une armée"
   },
   "game.mission-secondary": {
     "defaultMessage": "Objective secondaire de mission"
@@ -38,16 +41,13 @@
   "display.close": {
     "defaultMessage": "Fermer"
   },
+  "display.save": {
+    "defaultMessage": "Sauvegarder"
+  },
   "game.objective-x": {
     "defaultMessage": "Obj. {objectiveNumber}"
   },
   "game.objective-x-set": {
     "defaultMessage": "Désignez l'objectif {objectiveNumber}"
-  },
-  "xxxxxxxxxxxxxxxxxxxxxxxx": {
-    "defaultMessage": "xxxxxxxxxxxxxxxxxxx"
-  },
-  "xxxxxxxxxxxxxxxxxxxxxxxx": {
-    "defaultMessage": "xxxxxxxxxxxxxxxxxxx"
   }
 }

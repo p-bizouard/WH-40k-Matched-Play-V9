@@ -7,10 +7,10 @@ import {
   resetConfiguration,
 } from './store/actions'
 import { Button } from 'react-native-paper'
-import { Game } from './types'
+import { Game, HomepageScreenNavigationProp } from './types'
 import Games from './components/Games'
 import styles from './styles'
-import { ScrollView } from 'react-native-gesture-handler'
+import { ScrollView } from 'react-native'
 import { useHeaderHeight } from '@react-navigation/stack'
 import LocaleSelector from './components/LocaleSelector'
 import intl from 'react-intl-universal'
@@ -23,7 +23,7 @@ interface HomepageProps {
     locale: String
   }
   currentGame: Game
-  navigation: any
+  navigation: HomepageScreenNavigationProp
 }
 
 function Homepage({ navigation, ...props }: HomepageProps) {
@@ -41,7 +41,7 @@ function Homepage({ navigation, ...props }: HomepageProps) {
 
   const setHeader = () => {
     navigation.setOptions({
-      title: intl.get('display.homepage').d('Homepage'),
+      title: intl.get('display.homepage').d('Games list'),
       // eslint-disable-next-line react/display-name
       headerRight: () => <LocaleSelector />,
     })
@@ -67,7 +67,7 @@ function Homepage({ navigation, ...props }: HomepageProps) {
             {intl.get('game.add').d('Add a new game')}
           </Button>
 
-          <Button
+          {/* <Button
             mode="contained"
             icon="delete"
             onPress={() => {
@@ -77,7 +77,7 @@ function Homepage({ navigation, ...props }: HomepageProps) {
             color="red"
           >
             RESET
-          </Button>
+          </Button> */}
         </View>
       ) : (
         <View></View>

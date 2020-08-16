@@ -10,10 +10,12 @@ import {
   RadioButton,
   IconButton,
   DefaultTheme,
+  Title,
 } from 'react-native-paper'
-import { Game, Army } from '../Types'
+import { Game, Army, Faction } from '../Types'
 import styles from '../styles'
 import intl from 'react-intl-universal'
+import humanizeString from 'humanize-string'
 
 interface PlayerArmySelectorProps {
   updatePlayer: Function
@@ -47,7 +49,6 @@ class PlayerArmySelector extends React.Component<
     const player = this.props.currentGame.teams[this.props.teamNumber].players[
       this.props.playerNumber
     ]
-
     return (
       <View style={{ marginBottom: 10, width: '100%' }}>
         <Portal>
@@ -62,26 +63,36 @@ class PlayerArmySelector extends React.Component<
                   paddingVertical: 20,
                 }}
               >
-                <RadioButton.Group
-                  onValueChange={(itemValue) => {
-                    this.props.updatePlayer(
-                      this.props.teamNumber,
-                      this.props.playerNumber,
-                      {
-                        army: itemValue,
-                      }
-                    )
-                    hideDialog()
-                  }}
-                  value={player.army ? player.army : ''}
-                >
-                  {armies.map((army: Army) => {
+                <RadioButton.Group value={player.army ? player.army : ''}>
+                  {armies.map((faction: Faction) => {
                     return (
-                      <RadioButton.Item
-                        label={intl.get(`army.${army.id}`).d(army.id)}
-                        value={army.id}
-                        key={army.id}
-                      />
+                      <View key={`faction-${faction.id}`}>
+                        <Title>{faction.id}</Title>
+                        {faction.armies.map((army: Army) => {
+                          return (
+                            <RadioButton.Item
+                              onPress={() => {
+                                console.log(faction)
+
+                                this.props.updatePlayer(
+                                  this.props.teamNumber,
+                                  this.props.playerNumber,
+                                  {
+                                    faction: faction.id,
+                                    army: army.id,
+                                  }
+                                )
+                                hideDialog()
+                              }}
+                              label={intl
+                                .get(`army.${army.id}`)
+                                .d(humanizeString(army.id))}
+                              value={army.id}
+                              key={army.id}
+                            />
+                          )
+                        })}
+                      </View>
                     )
                   })}
                 </RadioButton.Group>
@@ -115,7 +126,7 @@ class PlayerArmySelector extends React.Component<
               })
               .d(`Player ${this.props.currentPlayerNumber}`) + ' : '}
             {player.army
-              ? intl.get(`army.${player.army}`).d(player.army)
+              ? intl.get(`army.${player.army}`).d(humanizeString(player.army))
               : intl.get('game.select-army').d('Select an army')}
           </Button>
           {this.props.currentGame.teams[this.props.teamNumber].players.length >

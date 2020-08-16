@@ -15,6 +15,8 @@ import {
 import { Game, Player, PlayerObjective as PlayerObjectiveType } from '../Types'
 import styles from '../styles'
 import { isNumber } from 'lodash'
+import humanizeString from 'humanize-string'
+import intl from 'react-intl-universal'
 
 interface PlayerObjectiveProps {
   updatePlayerObjective: typeof updatePlayerObjective
@@ -39,14 +41,13 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
       props.teamNumber,
       props.playerNumber,
       props.objectiveNumber,
+      getObjective().category,
       getObjective().id,
       props.primaryOrSecondary,
-      getObjective().scores.map(
-        (currentScore: number | null, currentRound: any) => {
-          if (currentRound !== round) return currentScore
-          return score
-        }
-      ),
+      getObjective().scores.map((currentScore: any, currentRound: any) => {
+        if (currentRound !== round) return currentScore
+        return score
+      }),
       true
     )
   }
@@ -63,6 +64,9 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
     ][props.objectiveNumber]
   }
 
+  const objectiveDescription = intl.get(
+    `objective.description.${getObjective().category}.${getObjective().id}`
+  )
   return (
     <View>
       <Portal>
@@ -78,27 +82,59 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
               }}
             >
               <Title>
-                {getObjective().id} ({props.primaryOrSecondary})
+                {intl
+                  .get(
+                    `objective.${getObjective().category}.${getObjective().id}`
+                  )
+                  .d(humanizeString(getObjective().id))}
               </Title>
-              <Text>fsdf</Text>
+              <Text>{objectiveDescription}</Text>
             </ScrollView>
           </Dialog.ScrollArea>
           <Dialog.Actions>
-            <Button onPress={() => setDialog(false)}>Close</Button>
+            <Button onPress={() => setDialog(false)}>
+              {intl.get('display.close').d('Close')}
+            </Button>
           </Dialog.Actions>
         </Dialog>
       </Portal>
-      <View style={{ marginTop: 10, marginBottom: 10, width: '100%' }}>
-        <View style={[styles.flexView, styles.mb10]}>
-          <Text onPress={() => setDialog(true)}>
-            {getObjective().id} ({props.primaryOrSecondary})
+      <View
+        style={{
+          marginBottom: 10,
+          marginTop: objectiveDescription ? 0 : 10,
+          width: '100%',
+        }}
+      >
+        <View style={[styles.flexView]}>
+          <Text
+            onPress={() => {
+              if (objectiveDescription) setDialog(true)
+            }}
+          >
+            {intl
+              .get(`objective.${getObjective().category}.${getObjective().id}`)
+              .d(humanizeString(getObjective().id))}{' '}
+            (
+            {intl
+              .get(`objective.${props.primaryOrSecondary}`)
+              .d(humanizeString(props.primaryOrSecondary))}
+            )
           </Text>
-          <IconButton icon="help-circle" onPress={() => setDialog(true)} />
+          {objectiveDescription ? (
+            <IconButton
+              style={{ margin: 0 }}
+              size={20}
+              icon="help-circle"
+              onPress={() => {
+                if (objectiveDescription) setDialog(true)
+              }}
+            />
+          ) : null}
           <Text style={{ marginLeft: 'auto' }}>
             {getObjective().scores.reduce((a: number, b: number) => a + b, 0)}
           </Text>
         </View>
-        <View style={[styles.flexView, styles.mb10]}>
+        <View style={[styles.flexView]}>
           {getObjective().scores.map((score: number, round: number) => (
             <TextInput
               style={{ width: 48, marginLeft: 10 }}
@@ -118,6 +154,7 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
 
 const mapStateToProps = (state: any) => ({
   currentGame: state.currentGame,
+  configuration: state.configuration,
 })
 
 const mapDispatchToProps = (dispatch: Function) => ({

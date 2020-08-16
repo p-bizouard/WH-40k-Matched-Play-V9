@@ -1,21 +1,24 @@
 import React from 'react'
 
 import { connect } from 'react-redux'
-import { Button } from 'react-native-paper'
+import { Button, IconButton } from 'react-native-paper'
 import { Game } from '../types'
 import uuid from 'react-native-uuid'
 import { updateCurrentGame, addGame } from '../store/actions'
 import { NavigationProp } from '@react-navigation/native'
+import intl from 'react-intl-universal'
 
 interface SaveCurrentGameButtonProps {
   updateCurrentGame: typeof updateCurrentGame
   addGame: typeof addGame
   currentGame: Game
   navigation: NavigationProp
+  icon?: boolean
 }
 
 function SaveCurrentGameButton({
   navigation,
+  icon = false,
   ...props
 }: SaveCurrentGameButtonProps) {
   const isValid = () => {
@@ -43,9 +46,15 @@ function SaveCurrentGameButton({
   }
 
   if (isValid())
-    return (
+    return icon ? (
+      <IconButton
+        icon="content-save-outline"
+        onPress={saveGame}
+        color="white"
+      />
+    ) : (
       <Button icon="content-save-outline" onPress={saveGame} mode="contained">
-        Save
+        {intl.get('display.save').d(`Save`)}
       </Button>
     )
   else return null

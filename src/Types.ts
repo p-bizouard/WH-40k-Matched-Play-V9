@@ -1,5 +1,6 @@
-import { RouteProp } from '@react-navigation/native'
+import { RouteProp, CompositeNavigationProp } from '@react-navigation/native'
 import { InteractionManager } from 'react-native'
+import { StackNavigationProp } from '@react-navigation/stack'
 
 export interface UpdateLocale {
   type: string
@@ -39,7 +40,8 @@ export interface PlayerObjective {
 }
 
 export interface Player {
-  army?: string
+  army: string
+  faction: string
   primaryObjectives: PlayerObjective[]
   secondaryObjectives: PlayerObjective[]
 }
@@ -61,6 +63,11 @@ export interface Army {
   id: string
 }
 
+export interface Faction {
+  id: string
+  armies: Army[]
+}
+
 export interface Mission {
   id: string
   primary: Objective[]
@@ -74,3 +81,17 @@ type RootStackParamList = {
 }
 export type EditGameRouteProp = RouteProp<RootStackParamList, 'EditGame'>
 export type ViewGameRouteProp = RouteProp<RootStackParamList, 'ViewGame'>
+
+export type HomepageScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Homepage'
+>
+export type EditGameScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'EditGame'
+>
+
+export type ViewGameScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'ViewGame'
+>
