@@ -14,6 +14,9 @@
   "game.add": {
     "defaultMessage": "Nouvelle partie"
   },
+  "game.notes": {
+    "defaultMessage": "Notes"
+  },
   "game.team-number-x": {
     "defaultMessage": "Équipe {teamNumber}"
   },

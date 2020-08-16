@@ -77,6 +77,12 @@
       "value": "Objective secondaire de mission"
     }
   ],
+  "game.notes": [
+    {
+      "type": 0,
+      "value": "Notes"
+    }
+  ],
   "game.objective-x": [
     {
       "type": 0,
@@ -294,7 +300,7 @@
   "objective.description.incursion.domination": [
     {
       "type": 0,
-      "value": "À la fin de votre tour, 3pts si vous controlez plus de la moitié des objectifs"
+      "value": "En phase de commandement : 5pts si vous contrôlez 2 objectif, +5 pts si 3 objectifs, +5 pts si plus d'objectifs que l'adversaire"
     }
   ],
   "objective.description.incursion.take-and-hold": [
@@ -378,7 +384,7 @@
   "objective.description.strike-force.domination": [
     {
       "type": 0,
-      "value": "À la fin de votre tour, 3pts si vous controlez plus de la moitié des objectifs"
+      "value": "En phase de commandement : 5pts si vous contrôlez 2 objectif, +5 pts si 3 objectifs, +5 pts si plus d'objectifs que l'adversaire"
     }
   ],
   "objective.description.strike-force.minimise-losses": [

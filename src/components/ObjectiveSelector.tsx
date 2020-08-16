@@ -14,6 +14,7 @@ import {
   Title,
   TouchableRipple,
   Divider,
+  Switch,
 } from 'react-native-paper'
 import {
   Game,
@@ -35,6 +36,7 @@ interface ObjectiveSelectorProps {
 
 interface ObjectiveSelectorStates {
   dialog: boolean
+  notes: boolean
 }
 
 class ObjectiveSelector extends React.Component<
@@ -46,6 +48,7 @@ class ObjectiveSelector extends React.Component<
 
     this.state = {
       dialog: false,
+      notes: true,
     }
   }
 
@@ -77,7 +80,7 @@ class ObjectiveSelector extends React.Component<
     )
     const mission = format
       ? format.missions.find(
-          (mission: Mission) => mission.id === this.props.currentGame.mission
+        (mission: Mission) => mission.id === this.props.currentGame.mission
         )
       : undefined
 
@@ -130,7 +133,7 @@ class ObjectiveSelector extends React.Component<
                                   updateObjective(format.id, objective.id)
                                 }}
                               />
-                              {description && description != '' ? (
+                              {description && this.state.notes ? (
                                 <Text>{description}</Text>
                               ) : null}
                             </View>
@@ -162,7 +165,7 @@ class ObjectiveSelector extends React.Component<
                             )
                             return (
                               <TouchableRipple
-                                key={`objective-description-${objective.id}`}
+                                key={`objective-${objective.id}`}
                                 onPress={() => {
                                   updateObjective(
                                     objectiveCategory.id,
@@ -188,7 +191,7 @@ class ObjectiveSelector extends React.Component<
                                       )
                                     }}
                                   />
-                                  {description ? (
+                                  {description && this.state.notes ? (
                                     <Text>{description}</Text>
                                   ) : null}
                                 </View>
@@ -203,9 +206,15 @@ class ObjectiveSelector extends React.Component<
               </ScrollView>
             </Dialog.ScrollArea>
             <Dialog.Actions>
-              <Button onPress={hideDialog}>
-                {intl.get('display.close').d('Close')}
-              </Button>
+              <View style={styles.flexView}>
+                <View>
+                  <Text>{intl.get('game.notes').d('Notes')}</Text>
+                  <Switch value={this.state.notes} onValueChange={() => this.setState({notes: !this.state.notes})} />
+                </View>
+                <Button onPress={hideDialog}>
+                  {intl.get('display.close').d('Close')}
+                </Button>
+              </View>
             </Dialog.Actions>
           </Dialog>
         </Portal>
@@ -225,10 +234,10 @@ class ObjectiveSelector extends React.Component<
         >
           {player.secondaryObjectives[this.props.objectiveNumber].id
             ? intl
-                .get('game.objective-x', {
-                  objectiveNumber: this.props.objectiveNumber + 1,
-                })
-                .d(`Obj. ${this.props.objectiveNumber + 1}`) +
+              .get('game.objective-x', {
+                objectiveNumber: this.props.objectiveNumber + 1,
+              })
+              .d(`Obj. ${this.props.objectiveNumber + 1}`) +
               ' : ' +
               intl
                 .get(
@@ -245,10 +254,10 @@ class ObjectiveSelector extends React.Component<
                   )
                 )
             : intl
-                .get('game.objective-x-set', {
-                  objectiveNumber: this.props.objectiveNumber + 1,
-                })
-                .d(`Click to set objective ${this.props.objectiveNumber + 1}`)}
+              .get('game.objective-x-set', {
+                objectiveNumber: this.props.objectiveNumber + 1,
+              })
+              .d(`Click to set objective ${this.props.objectiveNumber + 1}`)}
         </Button>
       </View>
     )
