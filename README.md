@@ -120,7 +120,7 @@ Project Link: [https://github.com/p-bizouard/WH-40k-objectives](https://github.c
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/p-bizouard/WH-40k-objectives.svg?style=flat-square
 [issues-url]: https://github.com/p-bizouard/WH-40k-objectives/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [license-url]: README.md
