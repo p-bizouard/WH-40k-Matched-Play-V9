@@ -14,11 +14,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/p-bizouard/WH-40k-objectives">
+  <a href="https://github.com/p-bizouard/WH-40k-Matched-Play-V9">
     <img src="assets/icon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">WH-40k-objectives V9</h3>
+  <h3 align="center">WH-40k Matched Play V9</h3>
 
   <p align="center">Composition and score tracking of a Warhammer 40k game in V9</p>
 </p>
@@ -115,12 +115,12 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 P-Bizouard : wh.40k.objectives@gmail.com
 
-Project Link: [https://github.com/p-bizouard/WH-40k-objectives](https://github.com/p-bizouard/WH-40k-objectives)
+Project Link: [https://github.com/p-bizouard/WH-40k-Matched-Play-V9](https://github.com/p-bizouard/WH-40k-Matched-Play-V9)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[issues-shield]: https://img.shields.io/github/issues/p-bizouard/WH-40k-objectives.svg?style=flat-square
-[issues-url]: https://github.com/p-bizouard/WH-40k-objectives/issues
+[issues-shield]: https://img.shields.io/github/issues/p-bizouard/WH-40k-Matched-Play-V9.svg?style=flat-square
+[issues-url]: https://github.com/p-bizouard/WH-40k-Matched-Play-V9/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [license-url]: README.md
