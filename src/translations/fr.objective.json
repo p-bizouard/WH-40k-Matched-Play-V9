@@ -1,206 +1,175 @@
 {
-	"objective.primary": {
-		"defaultMessage": "Primaire"
-	},
-	"objective.secondary": {
-		"defaultMessage": "Secondaire"
-	},
-	"objective.strike-force.take-and-hold": {
-		"defaultMessage": "Prendre et tenir"
-	},
-	"objective.description.strike-force.take-and-hold": {
-		"defaultMessage": "En phase de commandement : 5pts si vous contrôlez 1 objectif, +5 pts si 2 objectifs, +5 pts si plus d'objectifs que l'adversaire"
-	},
-	"objective.strike-force.domination": {
-		"defaultMessage": "Domination"
+  "objective.primary": {
+    "defaultMessage": "Primaire"
   },
-	"objective.description.strike-force.domination": {
-		"defaultMessage": "En phase de commandement : 5pts si vous contrôlez 2 objectif, +5 pts si 3 objectifs, +5 pts si plus d'objectifs que l'adversaire"
+  "objective.secondary": {
+    "defaultMessage": "Secondaire"
   },
-	"objective.incursion.take-and-hold": {
-		"defaultMessage": "Prendre et tenir"
-	},
-	"objective.description.incursion.take-and-hold": {
-		"defaultMessage": "En phase de commandement : 5pts si vous contrôlez 1 objectif, +5 pts si 2 objectifs, +5 pts si plus d'objectifs que l'adversaire"
-	},
-	"objective.incursion.domination": {
-		"defaultMessage": "Domination"
+  "objective.take-and-hold": {
+    "defaultMessage": "Prendre et tenir"
   },
-	"objective.description.incursion.domination": {
-		"defaultMessage": "En phase de commandement : 5pts si vous contrôlez 2 objectif, +5 pts si 3 objectifs, +5 pts si plus d'objectifs que l'adversaire"
+  "objective.description.take-and-hold": {
+    "defaultMessage": "À la fin de la phase de Commandement de chaque joueur, le joueur dont c'est le tour marque 5 points de victoire pour chacune des conditions suivantes qu'il remplit (pour un maximum de 15 points de victoire) :\n- Il contrôle 1 pion objectif ou plus.\n- Il contrôle 2 pion objectif ou plus.\n- Il contrôle plus de pions objectif que son adversaire n'en contrôle.\n\nCet objectif principal ne peut pas être marqué au 1er round de bataille."
   },
-	"objective.strike-force.minimise-losses": {
-		"defaultMessage": "Minimiser les pertes"
-	},
-	"objective.description.strike-force.minimise-losses": {
-		"defaultMessage": "En fin de bataille : 15pts si 75+% des unités présentes sur table au début de la partie sont vivantes em fin. 10pts si 50+%, 5pts si 25+%"
-	},
-	"objective.strike-force.raze": {
-		"defaultMessage": "Raser"
-	},
-	"objective.description.strike-force.raze": {
-		"defaultMessage": "En fin de bataille : 5pts si 1 objectif rasé, 15 pts si 2 objectifs"
-	},
-	"objective.strike-force.data-intercept": {
-		"defaultMessage": "Interception de données"
-	},
-	"objective.description.strike-force.data-intercept": {
-		"defaultMessage": "À la fin de la phase de mouvement, si l'unité est à portée de l'objectif et sans ennemis.\n+1pt par objectif controlé si l'unité est toujours à portée de l'objectif à la fin de la prochaine phase de commandement."
-	},
-	"objective.strike-force.surround-them": {
-		"defaultMessage": "Encerclez-les"
-	},
-	"objective.description.strike-force.surround-them": {
-		"defaultMessage": "4pts à la fin de votre phase de commandement et à la fin de la bataille si vous contrôlez 2 objectifs dans votre zone de déploiement, et 1+ dans la zone de déploiement adversaire.\n8pts si vous contrôlez les 4 objectifs dans les zones de déploiement"
-	},
-	"objective.strike-force.vital-ground": {
-		"defaultMessage": "Terrain vital"
-	},
-	"objective.description.strike-force.vital-ground": {
-		"defaultMessage": "À la fin de vos phases de commandement :\n3pts si vous contrôlez l'objectif de l'adversaire, +2pts par objectif en zone neutre"
-	},
-	"objective.strike-force.strategic-scan": {
-		"defaultMessage": "Scan stratégique"
-	},
-	"objective.strike-force.overrun": {
-		"defaultMessage": "Débordement"
-	},
-	"objective.strike-force.direct-assault": {
-		"defaultMessage": "Assaut direct"
-	},
-	"objective.strike-force.priority-targets": {
-		"defaultMessage": "Cibles prioritaires"
-	},
-	"objective.battlefield-supremacy": {
-		"defaultMessage": "Suprématie militaire"
-	},
-	"objective.battlefield-supremacy.engage-on-all-fronts": {
-		"defaultMessage": "Sur tous les fronts"
-	},
-	"objective.description.battlefield-supremacy.engage-on-all-fronts": {
-		"defaultMessage": "À la fin de votre tour, 2pts si 1+ unité entièrement dans 3 quarts de table à 6'' du centre du champ de bataille. 3pts si 1+ unité dans chaque quart."
-	},
-	"objective.battlefield-supremacy.line-breaker": {
-		"defaultMessage": "Briseur de ligne"
-	},
-	"objective.description.battlefield-supremacy.line-breaker": {
-		"defaultMessage": "À la fin de votre tour, 4pts si 2+ unités entièrement dans la zone de déploiement adverse"
-	},
-	"objective.battlefield-supremacy.domination": {
-		"defaultMessage": "Domination"
-	},
-	"objective.description.battlefield-supremacy.domination": {
-		"defaultMessage": "À la fin de votre tour, 3pts si vous controlez plus de la moitié des objectifs"
-	},
-	"objective.no-mercy-no-respite": {
-		"defaultMessage": "Pas de pitié, pas de répit"
-	},
-	"objective.no-mercy-no-respite.thin-their-ranks": {
-		"defaultMessage": "Érodez leurs rangs"
-	},
-	"objective.description.no-mercy-no-respite.thin-their-ranks": {
-		"defaultMessage": "Comptez 1 point pour chaque figurine ennemie détruite, 10 si 10pv ou plus. À la fin de la bataille, divisez par 10 en arrondissant à l'entier inférieur"
-	},
-	"objective.no-mercy-no-respite.attrition": {
-		"defaultMessage": "Broyez-les"
-	},
-	"objective.description.no-mercy-no-respite.attrition": {
-		"defaultMessage": "À la fin du round, 3pts si plus d'unités ennemies détruites que d'unités amies"
-	},
-	"objective.no-mercy-no-respite.while-we-stand-we-fight": {
-		"defaultMessage": "Combattons tant que nous tenons"
-	},
-	"objective.description.no-mercy-no-respite.while-we-stand-we-fight": {
-		"defaultMessage": "À la fin de la bataille, 5pts par figurine sur le champ de bataille parmi les 3 qui coûtent le plus de points."
-	},
-	"objective.purge-the-ennemy": {
-		"defaultMessage": "Éliminez l'ennemi"
-	},
-	"objective.purge-the-ennemy.titan-slayers": {
-		"defaultMessage": "Chasseur de titans"
-	},
-	"objective.description.purge-the-ennemy.titan-slayers": {
-		"defaultMessage": "À la fin de la bataille, 10pts si une unité ennemie titanesque détruite, 12pts si 2, 15pts si 3"
-	},
-	"objective.purge-the-ennemy.bring-it-down": {
-		"defaultMessage": "Abattez-le"
-	},
-	"objective.description.purge-the-ennemy.bring-it-down": {
-		"defaultMessage": "À la fin de la bataille, 2pts par figurine monstre ou véhicule ennemie avec 10pv ou moins détruite. 3pts si 11+pv"
-	},
-	"objective.purge-the-ennemy.slay-the-warlord": {
-		"defaultMessage": "Coupez la tête"
-	},
-	"objective.description.purge-the-ennemy.slay-the-warlord": {
-		"defaultMessage": "13pts si seigneur de guerre ennemi tué au tour 1, 10pts au tour 2, 6pts au tour 3, 3pts au tour 4, 1pt au tour 5"
-	},
-	"objective.purge-the-ennemy.assassinate": {
-		"defaultMessage": "Assassinat"
-	},
-	"objective.description.purge-the-ennemy.assassinate": {
-		"defaultMessage": "En fin de bataille, 3pts pour chaque figurine personnage ennemi détruite"
-	},
-	"objective.shadow-operations": {
-		"defaultMessage": "Opérations clandestines"
-	},
-	"objective.shadow-operations.raise-the-banners-high": {
-		"defaultMessage": "Levez haut les étendards"
-	},
-	"objective.description.shadow-operations.raise-the-banners-high": {
-		"defaultMessage": "En fin de phase de mouvement, une unité infanterie peut lever un étendard si aucun ennemi sur l'objectif. +1pt à votre phase de commandement et à la fin de la bataille si aucun ennemi intervenu sur l'objectif"
-	},
-	"objective.shadow-operations.investigate-sites": {
-		"defaultMessage": "Inspecter le terrain"
-	},
-	"objective.description.shadow-operations.investigate-sites": {
-		"defaultMessage": "En fin de tour, 3pts si une unité infanterie hors personnage est à 6'' du centre à la fin de la phase de mouvement et qu'aucun ennemi à 6'', jusqu'en fin de tour"
-	},
-	"objective.shadow-operations.deploy-scramblers": {
-		"defaultMessage": "Déployez les brouilleurs"
-	},
-	"objective.description.shadow-operations.deploy-scramblers": {
-		"defaultMessage": "En fin de bataille, 10pts si 1 drone déployé dans votre zone, 1 dans la zone adverse, et 1 à 6+'' de la zone de chaque joueur. Drone déployé par infanterie hors personnage en fin de phase de mouvement si unité entièrement dans zone ciblée"
-	},
-	"objective.shadow-operations.repair-teleport-homer": {
-		"defaultMessage": "Réparer la balise de téléportation"
-	},
-	"objective.description.shadow-operations.repair-teleport-homer": {
-		"defaultMessage": "4pts à chaque fois qu'une unité d'infanterie entièrement dans zone adverse en fin de phase de mouvement, et toujours entièrement dans la zone adverse à votre prochaine phase de commandement"
-	},
-	"objective.warpcraft": {
-		"defaultMessage": "Art du warp"
-	},
-	"objective.warpcraft.abhor-the-witch": {
-		"defaultMessage": "Abhorrez le sorcier"
-	},
-	"objective.description.warpcraft.abhor-the-witch": {
-		"defaultMessage": "Si votre armée ne contient pas de psyker. 5pts pour chaque unité personnage psyker ennemie détruite, 3pts pour chaque unité psyker non personnage"
-	},
-	"objective.warpcraft.mental-interrogation": {
-		"defaultMessage": "Interrogation mentale"
-	},
-	"objective.description.warpcraft.mental-interrogation": {
-		"defaultMessage": "3pts pour chaque pouvoir psy spécial réussi : `Interrogation Mentale`, charge warp 4, si votre psyker est à 18'' d'une figurine personnage ennemie"
-	},
-	"objective.warpcraft.psychic-ritual": {
-		"defaultMessage": "Rituel psychique"
-	},
-	"objective.description.warpcraft.psychic-ritual": {
-		"defaultMessage": "En fin de partie, 15pts si pouvoir psy spécial réussi 3x : `Rituel Psychique`, charge warp 3, si votre psyker est à 6'' du centre de table"
-	},
-	"objective.warpcraft.pierce-the-evil": {
-		"defaultMessage": "Percer le voile"
-	},
-	"objective.description.warpcraft.pierce-the-evil": {
-		"defaultMessage": "En fin de bataille, 8pts si pouvoir psy spécial réussi 2x : `Percer le Voile`, charge warp 4, si votre psyker est à 6'' du bord de table adversaire et à plus de 6'' de figurine ennemie"
-	},
-	"objective.description.xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx": {
-		"defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
-	},
-	"objective.xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx": {
-		"defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
-	},
-	"objective.description.xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx": {
-		"defaultMessage": "xxxxxxxxxxxxxxxxxxxxxxxx"
-	}
+  "objective.domination": {
+    "defaultMessage": "Domination"
+  },
+  "objective.description.domination": {
+    "defaultMessage": "À la fin de la phase de Commandement de chaque joueur, le joueur dont c'est le tour marque 5 points de victoire pour chacune des conditions suivantes qu'il remplit (pour un maximum de 15 points de victoire) :\n- Il contrôle 2 pion objectif ou plus.\n- Il contrôle 3 pion objectif ou plus.\n- Il contrôle plus de pions objectif que son adversaire n'en contrôle.\n\nCet objectif principal ne peut pas être marqué au 1er round de bataille."
+  },
+  "objective.unified-advance": {
+    "defaultMessage": "Avance unifiée"
+  },
+  "objective.description.unified-advance": {
+    "defaultMessage": "À la fin de la phase de Commandement de chaque joueur, le joueur dont c'est le tour marque 5 points de victoire pour chacune des conditions suivantes qu'il remplit (pour un maximum de 15 points de victoire) :\n- Il contrôle 1 objectif ou plus.\n- Il contrôle au moins 1 pion objectif marqué A\n- Il contrôle au moins 1 pion objectif marqué A, au moins 1 pion objectif marqué B et au moins 1 pion objectif marqué C.\nCet objectif principal ne peut pas être marqué au 1er round de bataille."
+  },
+
+  "objective.minimise-losses": {
+    "defaultMessage": "Minimiser les pertes"
+  },
+  "objective.description.minimise-losses": {
+    "defaultMessage": "En fin de bataille : 15pts si 75+% des unités présentes sur table au début de la partie sont vivantes em fin. 10pts si 50+%, 5pts si 25+%"
+  },
+  "objective.raze": {
+    "defaultMessage": "Raser"
+  },
+  "objective.description.raze": {
+    "defaultMessage": "En fin de bataille : 5pts si 1 objectif rasé, 15 pts si 2 objectifs"
+  },
+  "objective.data-intercept": {
+    "defaultMessage": "Interception de données"
+  },
+  "objective.description.data-intercept": {
+    "defaultMessage": "À la fin de la phase de mouvement, si l'unité est à portée de l'objectif et sans ennemis.\n+1pt par objectif contrôlé si l'unité est toujours à portée de l'objectif à la fin de la prochaine phase de commandement."
+  },
+  "objective.vital-ground": {
+    "defaultMessage": "Terrain vital"
+  },
+  "objective.description.vital-ground": {
+    "defaultMessage": "À la fin de vos phases de commandement :\n3pts si vous contrôlez l'objectif de l'adversaire, +2pts par objectif en zone neutre"
+  },
+  "objective.strategic-scan": {
+    "defaultMessage": "Scan stratégique"
+  },
+  "objective.overrun": {
+    "defaultMessage": "Débordement"
+  },
+  "objective.direct-assault": {
+    "defaultMessage": "Assaut direct"
+  },
+  "objective.priority-targets": {
+    "defaultMessage": "Cibles prioritaires"
+  },
+  "objective.battlefield-supremacy": {
+    "defaultMessage": "Suprématie militaire"
+  },
+
+  "objective.outflank": {
+    "defaultMessage": "Prise de flanc"
+  },
+  "objective.description.outflank": {
+    "defaultMessage": "À la fin de votre phase de Commandement, 3pts si vous contrôlez les 2 pions objectifs marqués A. 5pts si vous contrôlez A et qu'il y a au moins 1 unité ennemie à 9'' du centre de table. Ne peut être marqué au 1er round"
+  },
+  "objective.secure-landing-sites": {
+    "defaultMessage": "Sécurisez les sites d'atterrissage"
+  },
+  "objective.description.secure-landing-sites": {
+    "defaultMessage": "À la fin de votre phase de Commandement, 2pts par objectif A contrôlé au T2, 2pts par objectif A au T3, 3pts par objectif A au T4, 6pts par objectif A au T5. Ne peut-être marqué au 1er round."
+  },
+  "objective.raid-supply-lines": {
+    "defaultMessage": "Attaquez les lignes de ravitaillement"
+  },
+  "objective.description.raid-supply-lines": {
+    "defaultMessage": "À la fin de votre phase de commandement, 3pts si vous contrôlez 1 des pions objectifs dans la zone de déploiement de votre adversaire, 5pts si vous contrôlez les 2. Ne peut-être marqué au 1er round."
+  },
+  "objective.centre-ground": {
+    "defaultMessage": "Position centrale"
+  },
+  "objective.description.centre-ground": {
+    "defaultMessage": "Chaque fois que votre armée accomplit l'action suivante, 3pts si vous contrôlez à ce moment là un des pions A, 5pts si vous contrôlez les 2 pions A. `Position Centrale (Action) : 1 unité de votre armée est à portée d'un pion A à la fin de votre phase de mouvement et qu'aucune unité ennemie (aérodynes exclus) n'est à portée de cet objectif. L'action est accomplie à la fin de votre prochaine phase de Commandement tant que l'unité est toujours à portée du pion."
+  },
+  "objective.ascend": {
+    "defaultMessage": "S'élever"
+  },
+  "objective.description.ascend": {
+    "defaultMessage": "À la fin de chacun de vos tours, si vous contrôlez le pion objectif central, vous marquez un nombre de points égal au numéro du round en cours. +1pt si votre seigneur de guerre est à portée du pion objectif central"
+  },
+  "objective.forward-push": {
+    "defaultMessage": "Irruption"
+  },
+  "objective.description.forward-push": {
+    "defaultMessage": "Action à réaliser. Au début de votre phase de mouvement, 1 unité peut commencer à effectuer l'action si elle est à portée d'un pion que vous contrôlez. Cette action est accomplie à la fin de votre tour. 1pt pour le pion dans votre camp, 2pts pour le pion central le plus proche de votre zone, 4pts pour le pion central le plus éloigné, 8pts pour le pion dans la zone adverse."
+  },
+  "objective.inload-data-psalm": {
+    "defaultMessage": "Télécharger le data-psaume"
+  },
+  "objective.description.inload-data-psalm": {
+    "defaultMessage": "Action à réaliser : Une ou plusieurs unités de votre armée peut commencer cette action à votre phase de mouvement. Chaque unité qiu commence doit être à porté d'un pion différent. Impossible si une unité ennemie est à portée du pion (aérodynes exclus). Cette action se termine à la fin de votre phase de commandement suivante. 1pt pour 1 action, 3pts pour 2 actions, 6pts pour 3 actions, 10pts pour 4 actions."
+  },
+  "objective.surgical-assault": {
+    "defaultMessage": "Assaut Chirurgical"
+  },
+  "objective.description.surgical-assault": {
+    "defaultMessage": "Marquez 5 points de victoire si vous contrôlez le pion objectif dans la zone adverse à la fin de votre tour."
+  },
+  "objective.survey": {
+    "defaultMessage": "Sondage"
+  },
+  "objective.description.survey": {
+    "defaultMessage": "Marquez 5 points de victoire si vous contrôlez les deux pions objectifs qui ne sont dans aucune des zones de déploiement des joueurs à la fin de votre phase de commandement. Cet objectif secondaire ne peut pas être marqué au 1er round de bataille."
+  },
+  "objective.encircle": {
+    "defaultMessage": "Encercler"
+  },
+  "objective.description.encircle": {
+    "defaultMessage": "Marquez 3 points de victoire si vous avez au moins 1 unité de votre armée (AÉRODYNES exclus) entièrement à 6'' de votre bord de champ de bataille et au moins 1 unité de votre armée (AÉRODYNES exclus) entièrement à 6'' du bord de champ de bataille adverse à la fin de votre tour (marquez 5 points de victoire à la place si 1 de ces unités est de surcroît entièrement dans la zone de déploiement adverse)."
+  },
+  "objective.lines-of-demarcation": {
+    "defaultMessage": "Lignes de démarcation"
+  },
+  "objective.description.lines-of-demarcation": {
+    "defaultMessage": "À la fin de votre tour, vous marquez 4 points de victoire si vous contrôlez les deux pions objectifs marqués A, ou 2 points de victoire si vous contrôlez les 2 pions objectifs marqués B (selon le gain le plus élevé)."
+  },
+  "objective.ransack": {
+    "defaultMessage": "Saccage"
+  },
+  "objective.description.ransack": {
+    "defaultMessage": "Marquez des points de victoire à la fin de votre phase de Commandement si vous contrôlez un ou plusieurs pions objectifs qui se trouvent dans la zone de déploiement adverse, comme indiqué par le tableau ci-dessous :\n- 1 pion contrôlé : 2 points de victoire\n- 2 pions contrôlé : 3 points de victoire\n- 3 pions contrôlé : 5 points de victoire"
+  },
+  "objective.test-their-line": {
+    "defaultMessage": "Éprouvez leur Ligne"
+  },
+  "objective.description.test-their-line": {
+    "defaultMessage": "Marquez 3 points de victoire à la fin de votre tour si deux unités de votre armée ou plus (AÉRODYNES exclus) sont entièrement dans la zone de déploiement de votre adversaire et qu'au moins deux bords de champ de bataille différents ont au moins une de ces unités entièrement à 6'' dé ux (si l'un de ces bords de champ de bataille est le bord de champ de bataille adverse, marquez 5 points de victoire à la place). Pour les besoins de cet objectif, une unité ne peut être entièrement à 6'' de deux bords de champ de bataille parce qu'elle est dans un angle du champ de bataille, vous pouvez choisir quel bord de champ de bataille prendre en compte à la fin de votre tour."
+  },
+  "objective.hold-the-center": {
+    "defaultMessage": "Tenir le centre"
+  },
+  "objective.description.hold-the-center": {
+    "defaultMessage": "Marquez 5 points de victoire à la fin de votre phase de commandement si vous contrôlez plus de pions objectif marqués B que votre adversaire n'en contrôle et que vous avez plus de figurines entièrement à 12'' du centre du champ de bataille que votre adversaire. Cet objectif secondaire ne peut pas être marqué au 1er round de bataille."
+  },
+  "objective.surround-them": {
+    "defaultMessage": "Encerclez-les"
+  },
+  "objective.description.surround-them": {
+    "defaultMessage": "Marquez 4 points de victoire à la fin de votre phase de Commandement et à la fin de la bataille si vous contrôlez les pions objectifs dans votre zone de déploiement et un pion objectif ou plus dans la zone de déploiement adverse. Marquez 8 points de victoire à la place si vous contrôlez les quatre pions objectif qui sont dans les zones de déploiement."
+  },
+  "objective.search-for-the-portal": {
+    "defaultMessage": "Chercher le portail"
+  },
+  "objective.description.search-for-the-portal": {
+    "defaultMessage": "Chaque fois qu'une unité de votre armée accomplit l'action Cherchez le Portail, vous marquez 1 point de victoire, et 1 point de victoire supplémentaire pour chaque pion objectif marqué A actuellement sous votre contrôle (pour un maximum de 5 points de victoire).\nChercher le Portail (Action) : 1 unité d'INFANTERIE de votre armée (PERSONNAGES exclus) peut commencer à effectuer cette action à la fin de votre phase de Mouvement si elle est entièrement dans la Zone de Fouille figurée sur la carte de déploiement (rayon de 12'' du centre). L'action est accomplie à la fin de votre prochaine phase de commandement tant que l'unité qui l'effectue est toujours entièrement dans la Zone de Fouille."
+  },
+  "objective.secure-no-mans-land": {
+    "defaultMessage": "Sécuriser le no man's land"
+  },
+  "objective.description.secure-no-mans-land": {
+    "defaultMessage": "À la fin de chacun de vos tours, si vous contrôlez le pion objectif central, vous marquez un nombre de points égal au numéro du round de bataille actuel."
+  },
+  "objective.siphon-power": {
+    "defaultMessage": "Siphon de pouvoir"
+  },
+  "objective.description.siphon-power": {
+    "defaultMessage": "Action à accomplir : une unité ou plus de votre armée peut commencer cette action à la fin de votre phase de mouvement. Chaque unité qui commence doit être à portée d'un objectif différent. Une unité ne peut pas commencer l'action si une unité ennemie (aérodyne exclu) est à portée de l'objectif. L'action est accomplie à la fin de votre prochaine phase de commandement. 1 action : 1pt, 2 actions : 3pts, 3 actions : 6pts, 4 actions: 10pts"
+  }
 }

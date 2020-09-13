@@ -2,7 +2,7 @@
   "expo": {
     "name": "V9 objectives",
     "slug": "v9-objectives",
-    "version": "1.0.0",
+    "version": "1.0.7",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -25,7 +23,7 @@
     "android": {
       "permissions": [],
       "package": "com.bizouard.wh_v9_objectives",
-      "versionCode": 2
+      "versionCode": 8
     }
   }
 }

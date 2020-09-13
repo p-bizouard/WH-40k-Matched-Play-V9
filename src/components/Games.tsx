@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import { connect } from 'react-redux'
-import { IconButton, Card } from 'react-native-paper'
+import { IconButton, Card, Text } from 'react-native-paper'
 import { Game, Team, Player } from '../Types'
 import { useNavigation } from '@react-navigation/native'
 import styles from '../styles'
@@ -30,19 +30,15 @@ function Games(props: GamesProps) {
           >
             <Card.Title
               title={intl
-                .get(`mission.${game.format}.${game.mission}`)
+                .get(`mission.${game.mission}`)
                 .d(humanizeString(game.mission))}
-              subtitle={game.teams
-                .map((team: Team) =>
-                  team.players
-                    .map((player: Player) =>
-                      intl
-                        .get(`army.${player.army}`)
-                        .d(humanizeString(player.army))
-                    )
-                    .join(', ')
-                )
-                .join(' vs ')}
+              subtitle={
+                intl.get(`mission.${game.type}`).d(humanizeString(game.type)) +
+                ' - ' +
+                intl
+                  .get(`mission.${game.format}`)
+                  .d(humanizeString(game.format))
+              }
               right={() => (
                 <IconButton
                   icon={'dots-vertical'}
@@ -52,6 +48,21 @@ function Games(props: GamesProps) {
                 />
               )}
             />
+            <Card.Content>
+              <Text>
+                {game.teams
+                  .map((team: Team) =>
+                    team.players
+                      .map((player: Player) =>
+                        intl
+                          .get(`army.${player.army}`)
+                          .d(humanizeString(player.army))
+                      )
+                      .join(', ')
+                  )
+                  .join(' vs ')}
+              </Text>
+            </Card.Content>
           </Card>
         ))}
     </View>

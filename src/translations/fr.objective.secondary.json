@@ -1,0 +1,149 @@
+{
+  "objective.battlefield-supremacy": {
+    "defaultMessage": "Suprématie militaire"
+  },
+  "objective.engage-on-all-fronts": {
+    "defaultMessage": "Sur tous les fronts"
+  },
+  "objective.description.engage-on-all-fronts": {
+    "defaultMessage": "Objectif Progressif\nMarquez 2 points de victoire à la fin de votre tour si vous avez 1 unité ou plus de votre armée entièrement dans 3 quarts de table différents, et que ces unités sont toutes à plus de 6'' du centre du champ de bataille. Marquez 3 points de victoire à la place si vous avez 1 unité ou plus de votre armée entièrement dans chaque quart de table, et que toutes ces unités sont à plus de 6'' du centre du champ de bataille."
+  },
+  "objective.line-breaker": {
+    "defaultMessage": "Briseur de ligne"
+  },
+  "objective.description.line-breaker": {
+    "defaultMessage": "Objectif Progressif\nMarquez 4 points de victoire à la fin de votre our si 2 unités ou plus de votre armée (AÉRODYNES exclus) sont entièrement dans la zone de déploiement adverse."
+  },
+  "objective.domination": {
+    "defaultMessage": "Domination"
+  },
+  "objective.description.domination": {
+    "defaultMessage": "Objectif Progressif\nMarquez 3 points de victoire si vous contrôlez plus de la moitié du nombre total de pions objectif sur le champ de bataille à la fin de votre tour."
+  },
+  "objective.no-mercy-no-respite": {
+    "defaultMessage": "Pas de pitié, pas de répit"
+  },
+  "objective.thin-their-ranks": {
+    "defaultMessage": "Érodez leurs rangs"
+  },
+  "objective.description.thin-their-ranks": {
+    "defaultMessage": "Objectif de fin de partie\nSi vous choisissez cet objectif, gardez un compte de points de pertes infligées ; chaque fois qu'une figurine ennemie est détruite, ajoutez 1 à ce compte (ajoutez 10 à ce compte à la place si la figurine qui a été détruite a une caractéristique de PV de 10 ou plus). Une figurine peut, si elle est ressucitée pour n'importe quelle raison (ex : elle a été détruite puis a été remise en jeu sur le champ de bataille), potentiellement octroyer plusieurs points à ce compte (en supposant qu'elle a été ressuscitée puis détruite à nouveau). À la fin de la bataille, divisez par 10 votre compte de points de pertes infligées en arrondissant à l'entier inférieur ; le résultat est le nombre de points de victoire marqués."
+  },
+  "objective.grind-them-down": {
+    "defaultMessage": "Broyez-les (GT-2020)"
+  },
+  "objective.description.grind-them-down": {
+    "defaultMessage": "Objectif progressif\nMarquez 3 points de victoire à la fin du round de bataille si davantage d'unités ennemies que d'unités amies ont été détruites à ce round de bataille"
+  },
+  "objective.attrition": {
+    "defaultMessage": "Attrition (Base)"
+  },
+  "objective.description.attrition": {
+    "defaultMessage": "Objectif progressif\nMarquez 4 points de victoire à la fin du round de bataille si plus d'unités ennemies que d'unités amies ont été détruites à ce round de bataille."
+  },
+  "objective.while-we-stand-we-fight": {
+    "defaultMessage": "Combattons tant que nous tenons"
+  },
+  "objective.description.while-we-stand-we-fight": {
+    "defaultMessage": "Objectif de fin de partie\nSi vous choisissez cet objectif, alors avant la bataille, identifiez les 3 figurines de votre armée (figurines avec le rôle tactique Fortification exclues) qui ont la valeur en point la plus élevée, et notez-les sur votre feuille d'armée (si deux figurines ou plus sont à égalité, vous pouvez choisir parmi elles). Si votre armée compte trois figurines ou moins, alors vous devez à la place identifier toutes les unités de votre armée. La valeur en point d'une figurine inclut les points de toutes ses armes et équipements. Vous marquez 5 points de victoire pour chacune de ces figurines qui se trouve sur le champ de bataille à la fin de la bataille."
+  },
+  "objective.first-strike": {
+    "defaultMessage": "Premier sang (Base)"
+  },
+  "objective.description.first-strike": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 5 points de victoire à la fin de la bataille si une ou plusieurs unités ennemies ont été détruites au 1er round de bataille, et marquez 3 points de victoire supplémentaires si plus d'unités ennemies que d'unités amies ont été détruites au 1er round de bataille."
+  },
+  "objective.purge-the-ennemy": {
+    "defaultMessage": "Éliminez l'ennemi"
+  },
+  "objective.titan-hunter": {
+    "defaultMessage": "Chasseur de titans (GT-2020)"
+  },
+  "objective.description.titan-hunter": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 10 points de victoire à la fin de la bataille si 1 figurine TITANESQUE ennemie a été détruite, 12 points de victoire si 2 figurines TITANESQUES ennemies ont été détruites, ou 15 points de victoire si 3 figurines TITANESQUES ennemies ou plus ont été détruites."
+  },
+  "objective.titan-slayers": {
+    "defaultMessage": "Tueurs de titans (Base)"
+  },
+  "objective.description.titan-slayers": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 10 points de victoire à la fin de la bataille si 1 figurine TITANESQUE ennemie a été détruite, ou 15 points de victoire si deux figurines TITANESQUES ennemies ou plus ont été détruites."
+  },
+  "objective.bring-it-down": {
+    "defaultMessage": "Abattez-le"
+  },
+  "objective.description.bring-it-down": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 2 points de victoire à la fin de la bataille pour chaque figurine MONSTRE ou VÉHICULE ennemie avec une caractéristique de PV de 10 ou moins qui a été détruite, et 3 points de victoire pour chaque figurine MONSTRE ou VÉHICULE ennemie avec une caractéristique de PV de 11 ou plus qui a été détruite."
+  },
+  "objective.slay-the-warlord": {
+    "defaultMessage": "Tuez le seigneur de guerre (Base)"
+  },
+  "objective.description.slay-the-warlord": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 6 points de victoire à la fin de la bataille si le SEIGNEUR DE GUERRE ennemi a été détruit."
+  },
+  "objective.cut-off-the-head": {
+    "defaultMessage": "Coupez la tête (GT-2020)"
+  },
+  "objective.description.cut-off-the-head": {
+    "defaultMessage": "Objectif de fin de partie\nÀ la fin de la bataille, vous marquez des points de victoire si le seigneur de guerre ennemi a été détruit lors de la bataille. Le nombre de points de victoire marqué dépend du round de bataille lors duquel le SEIGNEUR DE GUERRE ennemi a été détruit, comme indiqué dans le tableau ci-dessous.\nRound 1 : 13 points de victoire\nRound 2 : 10 points de victoire\nRound 3 : 6 points de victoire\nRound 4 : 3 points de victoire\nRound 5 : 1 points de victoire\nSi le SEIGNEUR DE GUERRE ennemi a été détruit, mais a été ressuscité ou est revenu d'une façon ou d'une autre sur le champ de bataille avant d'être à nouveau détruit, pour le calcul de cet objectif secondaire, on utilise le dernier round de bataille lors duquel il a été retiré du champ de bataille."
+  },
+  "objective.assassinate": {
+    "defaultMessage": "Assassinat"
+  },
+  "objective.description.assassinate": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 3 points de victoire à la fin de la bataille pour chaque figurine PERSONNAGE ennemie qui a été détruite."
+  },
+  "objective.shadow-operations": {
+    "defaultMessage": "Opérations clandestines"
+  },
+  "objective.raise-the-banners-high": {
+    "defaultMessage": "Levez haut les étendards"
+  },
+  "objective.description.raise-the-banners-high": {
+    "defaultMessage": "Objectif Progressif et de Fin de Partie\nSi vous choisissez cet objectif, alors les unités de votre armée peuvent accomplir l'action suivante: Lever les Étendards (Action): 1 unité d'INFANTERIE ou plus de votre armée peut commencer cette action à la fin de votre phase de Mouvement. Chaque unité de votre armée qui commence cette action doit être à portée d'un pion objectif différent sur lequel aucun de vos étendards n'a été levé (voir ci-dessous). Une unité ne peut pas commencer cette action s'il y a la moindre unité ennemie (AÉRODYNES exclus) à portée du même pion objectif. L'action est accomplie à la fin de votre tour. Si cette action est accomplie, on dit qu'un étendard de votre armée a été levé sur ce pion objectif (l'étendard est \"retiré\" si votre adversaire contrôle le pion objectif au début de n'importe quelle phase). Vous marquez 1 point de victoire à la fin de chacune de vos phases de Commandement, et 1 point de victoire à la fin de la bataille, pour chaque pion objectif du champ de bataille sur lequel un de vos étendards a été levé."
+  },
+  "objective.investigate-sites": {
+    "defaultMessage": "Inspecter le terrain"
+  },
+  "objective.description.investigate-sites": {
+    "defaultMessage": "Objectif Progressif\nMarquez 3 points de victoire chaque fois qu'une unité de votre armée accomplit l'action suivante :\nInspecter le Terrain (Action) : 1 unité d'INFANTERIE (PERSONNAGES exclus) de votre armée peut commencer cette action à la fin de votre phase de Mouvement si elle est à 6'' du centre du champ de bataille et qu'aucune unité ennemie (AÉRODYNES exclus) ne se trouve à 6'' du centre du champ de bataille. L'action est accomplie à la fin de votre tour."
+  },
+  "objective.deploy-scramblers": {
+    "defaultMessage": "Déployez les brouilleurs (GT-2020)"
+  },
+  "objective.description.deploy-scramblers": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 10 points de victoire à la fin de la bataille si vous avez réussi à accomplir l'action suivante trois fois durant la bataille - une fois dans votre zone de déploiement, une fois dans la zone de déploiement de votre adversaire et une fois à plus de 6'' de la zone de déploiement de chaque joueur. Cette action est accomplie à la fin de votre tour."
+  },
+  "objective.repair-teleport-homer": {
+    "defaultMessage": "Réparer la balise de téléportation"
+  },
+  "objective.description.repair-teleport-homer": {
+    "defaultMessage": "Objectif Progressif\nMarquez 4 points de victoire chaque fois qu'une unité de votre armée accomplit l'action suivante:\nRéparer la Balise de Téléportation (Action) : 1 unité d'INFANTERIE de votre armée peut commencer cette action à la fin de votre phase de Mouvement si elle est entièrement dans la zone de déploiement adverse. L'action est accomplie à l a fin de votre prochaine phase de Commandement, si l'unité qui la tente est toujours dans la zone de déploiement adverse."
+  },
+  "objective.warpcraft": {
+    "defaultMessage": "Art du warp"
+  },
+  "objective.abhor-the-witch": {
+    "defaultMessage": "Abhorrez le sorcier (Base)"
+  },
+  "objective.description.abhor-the-witch": {
+    "defaultMessage": "Objectif de fin de partie\nVous ne pouvez pas choisir cet objectif secondaire si votre armée inclut la moindre unité PSYKER. Marquez 5 points de victoire à la fin de la bataille pour chaque unité PERSONNAGE PSYKER ennemie qui a été détruite, et 3 points de victoire pour chaque autre unité PSYKER ennemie qui a été détruite."
+  },
+  "objective.mental-interrogation": {
+    "defaultMessage": "Interrogation mentale"
+  },
+  "objective.description.mental-interrogation": {
+    "defaultMessage": "Objectif Progressif\nMarquez 3 points de victoire chaque fois que vous accomplissez l'action psychique suivante :\nInterrogation Mentale (Action Psychique - Charge Warp 4): 1 unité PERSONNAGE PSYKER de votre armée peut tenter d'accomplir cette action psychique à votre phase psychique si elle est à 18'' d'une ou plusieurs figurines PERSONNAGES ennemies."
+  },
+  "objective.psychic-ritual": {
+    "defaultMessage": "Rituel psychique"
+  },
+  "objective.description.psychic-ritual": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 15 points de victoire à la fin bataille si une même unité de votre armée a accompli l'action psychique suivante 3 fois durant la partie :\nRituel Psychique (Action Psychique - Charge Warp 3): 1 unité PERSONNAGE PSYKER de votre armée peut tenter d'accomplir cette action psychique à votre phase psychique si elle est à 6'' du centre du champ de bataille."
+  },
+  "objective.pierce-the-evil": {
+    "defaultMessage": "Percer le voile (GT-2020)"
+  },
+  "objective.description.pierce-the-evil": {
+    "defaultMessage": "Objectif de fin de partie\nMarquez 8 points de victoire à la fin de la bataille si une ou plusieurs unités de votre armée ont accompli avec succès l'action psychique 2 fois ou plus lors de la bataille, ou 15 points de victoire à la fin de la bataille si une ou plusieurs unités de votre armée ont accompli avec succès l'action psychique suivante 4 fois lors de la bataille (vous ne pouvez accomplir cet objectif qu'une fois par bataille) :\nPercer le Voile (Action Psychique - Charge War 4) : 1 unité PERSONNAGE PSYKER de votre armée peut tenter d'accomplir cette action psychique durant votre phase Psychique s'il est à 6'' du bord de table de votre adversaire et à plus de 6'' de toute figurine ennemie."
+  }
+}

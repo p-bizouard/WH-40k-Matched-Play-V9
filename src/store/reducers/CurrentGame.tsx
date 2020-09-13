@@ -15,10 +15,12 @@ export interface CurrentGameAction {
 
 const defaultObjective = {
   id: '',
+  type: '',
   category: '',
   scores: [null, null, null, null, null],
 }
 const defaultPlayer = {
+  commandPoints: [null, null, null, null, null],
   army: '',
   faction: '',
   primaryObjectives: [clonedeep(defaultObjective)],
@@ -35,6 +37,7 @@ const defaultGame = {
   name: '',
   mission: '',
   format: '',
+  type: '',
   date: new Date(),
   teams: [clonedeep(defaultTeam), clonedeep(defaultTeam)],
 }
@@ -65,21 +68,23 @@ const currentGameReducer = (
           return {
             ...team,
             players: team.players.map((player: Player) => {
-              const format = missions.find(
-                (format) => format.id === state.format
-              )
-
-              if (!format) return state
+              if (!state.type || !state.format) return player
 
               return {
                 ...player,
-                primaryObjectives: format.missions
-                  .find((mission) => mission.id === state.mission)!
+                primaryObjectives: missions
+                  .find(
+                    (mission) =>
+                      mission.id === state.mission &&
+                      mission.type === state.type &&
+                      mission.format === state.format
+                  )!
                   .primary.map((objective: Objective) => {
                     return {
                       ...clonedeep(defaultObjective),
                       id: objective.id,
-                      category: format.id,
+                      type: state.type,
+                      category: state.format,
                     } as PlayerObjective
                   }),
               } as Player
@@ -119,9 +124,7 @@ const currentGameReducer = (
           if (teamIndex === action.data.teamNumber) {
             return {
               ...team,
-              players: team.players.concat({
-                ...defaultGame.teams[0].players[0],
-              }),
+              players: team.players.concat(clonedeep(defaultPlayer)),
             } as Team
           }
           return team

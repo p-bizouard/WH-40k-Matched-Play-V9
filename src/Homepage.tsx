@@ -6,7 +6,7 @@ import {
   resetGames,
   resetConfiguration,
 } from './store/actions'
-import { Button } from 'react-native-paper'
+import { Button, IconButton } from 'react-native-paper'
 import { Game, HomepageScreenNavigationProp } from './types'
 import Games from './components/Games'
 import styles, { theme } from './styles'
@@ -14,6 +14,8 @@ import { ScrollView } from 'react-native'
 import { useHeaderHeight } from '@react-navigation/stack'
 import LocaleSelector from './components/LocaleSelector'
 import intl from 'react-intl-universal'
+import MenuDrawer from './components/MenuDrawer'
+import MenuDrawerButton from './components/MenuDrawerButton'
 
 interface HomepageProps {
   initConfiguration: typeof initConfiguration
@@ -24,6 +26,7 @@ interface HomepageProps {
   }
   currentGame: Game
   navigation: HomepageScreenNavigationProp
+  openDrawer: Function
 }
 
 function Homepage({ navigation, ...props }: HomepageProps) {
@@ -44,6 +47,8 @@ function Homepage({ navigation, ...props }: HomepageProps) {
       title: intl.get('display.homepage').d('Games list'),
       // eslint-disable-next-line react/display-name
       headerRight: () => <LocaleSelector />,
+      // eslint-disable-next-line react/display-name
+      headerLeft: () => <MenuDrawerButton openDrawer={props.openDrawer} />,
     })
   }
 

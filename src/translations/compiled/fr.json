@@ -5,6 +5,24 @@
       "value": "T'au"
     }
   ],
+  "display.about": [
+    {
+      "type": 0,
+      "value": "À propos"
+    }
+  ],
+  "display.about-text": [
+    {
+      "type": 0,
+      "value": "Application gratuite et sans publicités. Réalisé sur mon temps libre, c'est à cause de cette application que je n'ai pas le temps de peindre mes figurines.\n\nN'hésitez pas à me faire part de vos commentaires, idées ou simples encouragements 👇"
+    }
+  ],
+  "display.about-text-copyright": [
+    {
+      "type": 0,
+      "value": "This application is completely unofficial and in no way endorsed by Games Workshop Limited. All associated missions, names, races from the Warhammer 40,000 universe are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2008, variably registered in the UK and other countries around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners."
+    }
+  ],
   "display.add-game": [
     {
       "type": 0,
@@ -15,6 +33,12 @@
     {
       "type": 0,
       "value": "Fermer"
+    }
+  ],
+  "display.contact-the-author": [
+    {
+      "type": 0,
+      "value": "Contacter l'auteur"
     }
   ],
   "display.edit-game": [
@@ -29,6 +53,12 @@
       "value": "Parties enregistrées"
     }
   ],
+  "display.i-have-a-question": [
+    {
+      "type": 0,
+      "value": "J'ai une question"
+    }
+  ],
   "display.none": [
     {
       "type": 0,
@@ -39,6 +69,12 @@
     {
       "type": 0,
       "value": "Sauvegarder"
+    }
+  ],
+  "display.title": [
+    {
+      "type": 0,
+      "value": "WH40K - Matched Play V9"
     }
   ],
   "display.view-game": [
@@ -63,6 +99,18 @@
     {
       "type": 0,
       "value": "Ajouter une équipe"
+    }
+  ],
+  "game.command-points": [
+    {
+      "type": 0,
+      "value": "Points de commandement"
+    }
+  ],
+  "game.compact": [
+    {
+      "type": 0,
+      "value": "Compact"
     }
   ],
   "game.delete": [
@@ -119,6 +167,12 @@
       "value": "Sélectionner une armée"
     }
   ],
+  "game.set-mission": [
+    {
+      "type": 0,
+      "value": "Définir la mission"
+    }
+  ],
   "game.team-number-x": [
     {
       "type": 0,
@@ -129,10 +183,82 @@
       "value": "teamNumber"
     }
   ],
+  "mission.all-out-war": [
+    {
+      "type": 0,
+      "value": "Guerre totale"
+    }
+  ],
+  "mission.ascension": [
+    {
+      "type": 0,
+      "value": "Élévation"
+    }
+  ],
+  "mission.centre-ground": [
+    {
+      "type": 0,
+      "value": "Position centrale"
+    }
+  ],
   "mission.combat-patrol": [
     {
       "type": 0,
       "value": "Patrouille de combat"
+    }
+  ],
+  "mission.crossfire": [
+    {
+      "type": 0,
+      "value": "Tirs croisés"
+    }
+  ],
+  "mission.divide-and-conquer": [
+    {
+      "type": 0,
+      "value": "Diviser et conquérir"
+    }
+  ],
+  "mission.encircle": [
+    {
+      "type": 0,
+      "value": "Encerclement"
+    }
+  ],
+  "mission.eternal-war": [
+    {
+      "type": 0,
+      "value": "Guerre éternelle"
+    }
+  ],
+  "mission.exploration": [
+    {
+      "type": 0,
+      "value": "Exploration"
+    }
+  ],
+  "mission.forward-push": [
+    {
+      "type": 0,
+      "value": "Irruption"
+    }
+  ],
+  "mission.frontline-warfare": [
+    {
+      "type": 0,
+      "value": "Lignes de bataille"
+    }
+  ],
+  "mission.gt2020": [
+    {
+      "type": 0,
+      "value": "Grand tournament 2020"
+    }
+  ],
+  "mission.incisive-attack": [
+    {
+      "type": 0,
+      "value": "Attaque incisive"
     }
   ],
   "mission.incursion": [
@@ -141,55 +267,91 @@
       "value": "Incursion"
     }
   ],
-  "mission.incursion.ascension": [
+  "mission.lines-of-battle": [
     {
       "type": 0,
-      "value": "Élévation"
+      "value": "Lignes de bataille"
     }
   ],
-  "mission.incursion.centre-ground": [
+  "mission.no-mans-land": [
     {
       "type": 0,
-      "value": "Position centrale"
+      "value": "No man's land"
     }
   ],
-  "mission.incursion.crossfire": [
+  "mission.outriders": [
     {
       "type": 0,
-      "value": "Tirs croisés"
+      "value": "Éclaireurs"
     }
   ],
-  "mission.incursion.forward-push": [
+  "mission.overrun": [
     {
       "type": 0,
-      "value": "Irruption"
+      "value": "Débordement"
     }
   ],
-  "mission.incursion.raid": [
+  "mission.pathway-to-glory": [
+    {
+      "type": 0,
+      "value": "La voie vers la victoire"
+    }
+  ],
+  "mission.priority-target": [
+    {
+      "type": 0,
+      "value": "Cible prioritaire"
+    }
+  ],
+  "mission.raid": [
     {
       "type": 0,
       "value": "Raid"
     }
   ],
-  "mission.incursion.reconnaissance-mission": [
+  "mission.ransack": [
+    {
+      "type": 0,
+      "value": "Saccage"
+    }
+  ],
+  "mission.reconnaissance-mission": [
     {
       "type": 0,
       "value": "Mission de reconnaissance"
     }
   ],
-  "mission.incursion.resupply": [
+  "mission.resupply": [
     {
       "type": 0,
       "value": "Réapprovisionnement"
     }
   ],
-  "mission.incursion.rise-of-the-machine-spirit": [
+  "mission.retrieval-mission": [
+    {
+      "type": 0,
+      "value": "Mission de récupération"
+    }
+  ],
+  "mission.rise-of-the-machine-spirit": [
     {
       "type": 0,
       "value": "L'éveil de la machine"
     }
   ],
-  "mission.incursion.show-of-force": [
+  "mission.scorched-earth": [
+    {
+      "type": 0,
+      "value": "Terre brulée"
+    }
+  ],
+  "mission.shifting-front": [
+    {
+      "type": 0,
+      "value": "Front mouvant"
+    }
+  ],
+  "mission.show-of-force": [
     {
       "type": 0,
       "value": "Démonstration de force"
@@ -201,58 +363,52 @@
       "value": "Strike force"
     }
   ],
-  "mission.strike-force.exploration": [
-    {
-      "type": 0,
-      "value": "Exploration"
-    }
-  ],
-  "mission.strike-force.front-line-warfare": [
-    {
-      "type": 0,
-      "value": "Lignes de bataille"
-    }
-  ],
-  "mission.strike-force.overrun": [
-    {
-      "type": 0,
-      "value": "Débordement"
-    }
-  ],
-  "mission.strike-force.priority-target": [
-    {
-      "type": 0,
-      "value": "Cible prioritaire"
-    }
-  ],
-  "mission.strike-force.retrieval-mission": [
-    {
-      "type": 0,
-      "value": "Mission de récupération"
-    }
-  ],
-  "mission.strike-force.scorched-earth": [
-    {
-      "type": 0,
-      "value": "Terre brulée"
-    }
-  ],
-  "mission.strike-force.surround-and-destroy": [
+  "mission.surround-and-destroy": [
     {
       "type": 0,
       "value": "Encercler et détruire"
     }
   ],
-  "mission.strike-force.sweep-and-clear": [
+  "mission.sweep-and-clear": [
     {
       "type": 0,
       "value": "Balayer et nettoyer"
     }
   ],
-  "mission.strike-force.vital-intelligence": [
+  "mission.the-four-pillars": [
+    {
+      "type": 0,
+      "value": "Les quatre piliers"
+    }
+  ],
+  "mission.vital-intelligence": [
     {
       "type": 0,
       "value": "Renseignements vitaux"
+    }
+  ],
+  "objective.abhor-the-witch": [
+    {
+      "type": 0,
+      "value": "Abhorrez le sorcier (Base)"
+    }
+  ],
+  "objective.ascend": [
+    {
+      "type": 0,
+      "value": "S'élever"
+    }
+  ],
+  "objective.assassinate": [
+    {
+      "type": 0,
+      "value": "Assassinat"
+    }
+  ],
+  "objective.attrition": [
+    {
+      "type": 0,
+      "value": "Attrition (Base)"
     }
   ],
   "objective.battlefield-supremacy": [
@@ -261,202 +417,394 @@
       "value": "Suprématie militaire"
     }
   ],
-  "objective.battlefield-supremacy.domination": [
+  "objective.bring-it-down": [
     {
       "type": 0,
-      "value": "Domination"
+      "value": "Abattez-le"
     }
   ],
-  "objective.battlefield-supremacy.engage-on-all-fronts": [
+  "objective.centre-ground": [
     {
       "type": 0,
-      "value": "Sur tous les fronts"
+      "value": "Position centrale"
     }
   ],
-  "objective.battlefield-supremacy.line-breaker": [
+  "objective.cut-off-the-head": [
     {
       "type": 0,
-      "value": "Briseur de ligne"
+      "value": "Coupez la tête (GT-2020)"
     }
   ],
-  "objective.description.battlefield-supremacy.domination": [
+  "objective.data-intercept": [
     {
       "type": 0,
-      "value": "À la fin de votre tour, 3pts si vous controlez plus de la moitié des objectifs"
+      "value": "Interception de données"
     }
   ],
-  "objective.description.battlefield-supremacy.engage-on-all-fronts": [
+  "objective.deploy-scramblers": [
     {
       "type": 0,
-      "value": "À la fin de votre tour, 2pts si 1+ unité entièrement dans 3 quarts de table à 6' du centre du champ de bataille. 3pts si 1+ unité dans chaque quart."
+      "value": "Déployez les brouilleurs (GT-2020)"
     }
   ],
-  "objective.description.battlefield-supremacy.line-breaker": [
+  "objective.description.abhor-the-witch": [
     {
       "type": 0,
-      "value": "À la fin de votre tour, 4pts si 2+ unités entièrement dans la zone de déploiement adverse"
+      "value": "Objectif de fin de partie\nVous ne pouvez pas choisir cet objectif secondaire si votre armée inclut la moindre unité PSYKER. Marquez 5 points de victoire à la fin de la bataille pour chaque unité PERSONNAGE PSYKER ennemie qui a été détruite, et 3 points de victoire pour chaque autre unité PSYKER ennemie qui a été détruite."
     }
   ],
-  "objective.description.incursion.domination": [
+  "objective.description.ascend": [
     {
       "type": 0,
-      "value": "En phase de commandement : 5pts si vous contrôlez 2 objectif, +5 pts si 3 objectifs, +5 pts si plus d'objectifs que l'adversaire"
+      "value": "À la fin de chacun de vos tours, si vous contrôlez le pion objectif central, vous marquez un nombre de points égal au numéro du round en cours. +1pt si votre seigneur de guerre est à portée du pion objectif central"
     }
   ],
-  "objective.description.incursion.take-and-hold": [
+  "objective.description.assassinate": [
     {
       "type": 0,
-      "value": "En phase de commandement : 5pts si vous contrôlez 1 objectif, +5 pts si 2 objectifs, +5 pts si plus d'objectifs que l'adversaire"
+      "value": "Objectif de fin de partie\nMarquez 3 points de victoire à la fin de la bataille pour chaque figurine PERSONNAGE ennemie qui a été détruite."
     }
   ],
-  "objective.description.no-mercy-no-respite.attrition": [
+  "objective.description.attrition": [
     {
       "type": 0,
-      "value": "À la fin du round, 3pts si plus d'unités ennemies détruites que d'unités amies"
+      "value": "Objectif progressif\nMarquez 4 points de victoire à la fin du round de bataille si plus d'unités ennemies que d'unités amies ont été détruites à ce round de bataille."
     }
   ],
-  "objective.description.no-mercy-no-respite.thin-their-ranks": [
+  "objective.description.bring-it-down": [
     {
       "type": 0,
-      "value": "Comptez 1 point pour chaque figurine ennemie détruite, 10 si 10pv ou plus. À la fin de la bataille, divisez par 10 en arrondissant à l'entier inférieur"
+      "value": "Objectif de fin de partie\nMarquez 2 points de victoire à la fin de la bataille pour chaque figurine MONSTRE ou VÉHICULE ennemie avec une caractéristique de PV de 10 ou moins qui a été détruite, et 3 points de victoire pour chaque figurine MONSTRE ou VÉHICULE ennemie avec une caractéristique de PV de 11 ou plus qui a été détruite."
     }
   ],
-  "objective.description.no-mercy-no-respite.while-we-stand-we-fight": [
+  "objective.description.centre-ground": [
     {
       "type": 0,
-      "value": "À la fin de la bataille, 5pts par figurine sur le champ de bataille parmi les 3 qui coûtent le plus de points."
+      "value": "Chaque fois que votre armée accomplit l'action suivante, 3pts si vous contrôlez à ce moment là un des pions A, 5pts si vous contrôlez les 2 pions A. `Position Centrale (Action) : 1 unité de votre armée est à portée d'un pion A à la fin de votre phase de mouvement et qu'aucune unité ennemie (aérodynes exclus) n'est à portée de cet objectif. L'action est accomplie à la fin de votre prochaine phase de Commandement tant que l'unité est toujours à portée du pion."
     }
   ],
-  "objective.description.purge-the-ennemy.assassinate": [
+  "objective.description.cut-off-the-head": [
     {
       "type": 0,
-      "value": "En fin de bataille, 3pts pour chaque figurine personnage ennemi détruite"
+      "value": "Objectif de fin de partie\nÀ la fin de la bataille, vous marquez des points de victoire si le seigneur de guerre ennemi a été détruit lors de la bataille. Le nombre de points de victoire marqué dépend du round de bataille lors duquel le SEIGNEUR DE GUERRE ennemi a été détruit, comme indiqué dans le tableau ci-dessous.\nRound 1 : 13 points de victoire\nRound 2 : 10 points de victoire\nRound 3 : 6 points de victoire\nRound 4 : 3 points de victoire\nRound 5 : 1 points de victoire\nSi le SEIGNEUR DE GUERRE ennemi a été détruit, mais a été ressuscité ou est revenu d'une façon ou d'une autre sur le champ de bataille avant d'être à nouveau détruit, pour le calcul de cet objectif secondaire, on utilise le dernier round de bataille lors duquel il a été retiré du champ de bataille."
     }
   ],
-  "objective.description.purge-the-ennemy.bring-it-down": [
+  "objective.description.data-intercept": [
     {
       "type": 0,
-      "value": "À la fin de la bataille, 2pts par figurine monstre ou véhicule ennemie avec 10pv ou moins détruite. 3pts si 11+pv"
+      "value": "À la fin de la phase de mouvement, si l'unité est à portée de l'objectif et sans ennemis.\n+1pt par objectif contrôlé si l'unité est toujours à portée de l'objectif à la fin de la prochaine phase de commandement."
     }
   ],
-  "objective.description.purge-the-ennemy.slay-the-warlord": [
+  "objective.description.deploy-scramblers": [
     {
       "type": 0,
-      "value": "13pts si seigneur de guerre ennemi tué au tour 1, 10pts au tour 2, 6pts au tour 3, 3pts au tour 4, 1pt au tour 5"
+      "value": "Objectif de fin de partie\nMarquez 10 points de victoire à la fin de la bataille si vous avez réussi à accomplir l'action suivante trois fois durant la bataille - une fois dans votre zone de déploiement, une fois dans la zone de déploiement de votre adversaire et une fois à plus de 6' de la zone de déploiement de chaque joueur. Cette action est accomplie à la fin de votre tour."
     }
   ],
-  "objective.description.purge-the-ennemy.titan-slayers": [
+  "objective.description.domination": [
     {
       "type": 0,
-      "value": "À la fin de la bataille, 10pts si une unité ennemie titanesque détruite, 12pts si 2, 15pts si 3"
+      "value": "Objectif Progressif\nMarquez 3 points de victoire si vous contrôlez plus de la moitié du nombre total de pions objectif sur le champ de bataille à la fin de votre tour."
     }
   ],
-  "objective.description.shadow-operations.deploy-scramblers": [
+  "objective.description.encircle": [
     {
       "type": 0,
-      "value": "En fin de bataille, 10pts si 1 drone déployé dans votre zone, 1 dans la zone adverse, et 1 à 6+' de la zone de chaque joueur. Drone déployé par infanterie hors personnage en fin de phase de mouvement si unité entièrement dans zone ciblée"
+      "value": "Marquez 3 points de victoire si vous avez au moins 1 unité de votre armée (AÉRODYNES exclus) entièrement à 6' de votre bord de champ de bataille et au moins 1 unité de votre armée (AÉRODYNES exclus) entièrement à 6' du bord de champ de bataille adverse à la fin de votre tour (marquez 5 points de victoire à la place si 1 de ces unités est de surcroît entièrement dans la zone de déploiement adverse)."
     }
   ],
-  "objective.description.shadow-operations.investigate-sites": [
+  "objective.description.engage-on-all-fronts": [
     {
       "type": 0,
-      "value": "En fin de tour, 3pts si une unité infanterie hors personnage est à 6' du centre à la fin de la phase de mouvement et qu'aucun ennemi à 6', jusqu'en fin de tour"
+      "value": "Objectif Progressif\nMarquez 2 points de victoire à la fin de votre tour si vous avez 1 unité ou plus de votre armée entièrement dans 3 quarts de table différents, et que ces unités sont toutes à plus de 6' du centre du champ de bataille. Marquez 3 points de victoire à la place si vous avez 1 unité ou plus de votre armée entièrement dans chaque quart de table, et que toutes ces unités sont à plus de 6' du centre du champ de bataille."
     }
   ],
-  "objective.description.shadow-operations.raise-the-banners-high": [
+  "objective.description.first-strike": [
     {
       "type": 0,
-      "value": "En fin de phase de mouvement, une unité infanterie peut lever un étendard si aucun ennemi sur l'objectif. +1pt à votre phase de commandement et à la fin de la bataille si aucun ennemi intervenu sur l'objectif"
+      "value": "Objectif de fin de partie\nMarquez 5 points de victoire à la fin de la bataille si une ou plusieurs unités ennemies ont été détruites au 1er round de bataille, et marquez 3 points de victoire supplémentaires si plus d'unités ennemies que d'unités amies ont été détruites au 1er round de bataille."
     }
   ],
-  "objective.description.shadow-operations.repair-teleport-homer": [
+  "objective.description.forward-push": [
     {
       "type": 0,
-      "value": "4pts à chaque fois qu'une unité d'infanterie entièrement dans zone adverse en fin de phase de mouvement, et toujours entièrement dans la zone adverse à votre prochaine phase de commandement"
+      "value": "Action à réaliser. Au début de votre phase de mouvement, 1 unité peut commencer à effectuer l'action si elle est à portée d'un pion que vous contrôlez. Cette action est accomplie à la fin de votre tour. 1pt pour le pion dans votre camp, 2pts pour le pion central le plus proche de votre zone, 4pts pour le pion central le plus éloigné, 8pts pour le pion dans la zone adverse."
     }
   ],
-  "objective.description.strike-force.data-intercept": [
+  "objective.description.grind-them-down": [
     {
       "type": 0,
-      "value": "À la fin de la phase de mouvement, si l'unité est à portée de l'objectif et sans ennemis.\n+1pt par objectif controlé si l'unité est toujours à portée de l'objectif à la fin de la prochaine phase de commandement."
+      "value": "Objectif progressif\nMarquez 3 points de victoire à la fin du round de bataille si davantage d'unités ennemies que d'unités amies ont été détruites à ce round de bataille"
     }
   ],
-  "objective.description.strike-force.domination": [
+  "objective.description.hold-the-center": [
     {
       "type": 0,
-      "value": "En phase de commandement : 5pts si vous contrôlez 2 objectif, +5 pts si 3 objectifs, +5 pts si plus d'objectifs que l'adversaire"
+      "value": "Marquez 5 points de victoire à la fin de votre phase de commandement si vous contrôlez plus de pions objectif marqués B que votre adversaire n'en contrôle et que vous avez plus de figurines entièrement à 12' du centre du champ de bataille que votre adversaire. Cet objectif secondaire ne peut pas être marqué au 1er round de bataille."
     }
   ],
-  "objective.description.strike-force.minimise-losses": [
+  "objective.description.inload-data-psalm": [
+    {
+      "type": 0,
+      "value": "Action à réaliser : Une ou plusieurs unités de votre armée peut commencer cette action à votre phase de mouvement. Chaque unité qiu commence doit être à porté d'un pion différent. Impossible si une unité ennemie est à portée du pion (aérodynes exclus). Cette action se termine à la fin de votre phase de commandement suivante. 1pt pour 1 action, 3pts pour 2 actions, 6pts pour 3 actions, 10pts pour 4 actions."
+    }
+  ],
+  "objective.description.investigate-sites": [
+    {
+      "type": 0,
+      "value": "Objectif Progressif\nMarquez 3 points de victoire chaque fois qu'une unité de votre armée accomplit l'action suivante :\nInspecter le Terrain (Action) : 1 unité d'INFANTERIE (PERSONNAGES exclus) de votre armée peut commencer cette action à la fin de votre phase de Mouvement si elle est à 6' du centre du champ de bataille et qu'aucune unité ennemie (AÉRODYNES exclus) ne se trouve à 6' du centre du champ de bataille. L'action est accomplie à la fin de votre tour."
+    }
+  ],
+  "objective.description.line-breaker": [
+    {
+      "type": 0,
+      "value": "Objectif Progressif\nMarquez 4 points de victoire à la fin de votre our si 2 unités ou plus de votre armée (AÉRODYNES exclus) sont entièrement dans la zone de déploiement adverse."
+    }
+  ],
+  "objective.description.lines-of-demarcation": [
+    {
+      "type": 0,
+      "value": "À la fin de votre tour, vous marquez 4 points de victoire si vous contrôlez les deux pions objectifs marqués A, ou 2 points de victoire si vous contrôlez les 2 pions objectifs marqués B (selon le gain le plus élevé)."
+    }
+  ],
+  "objective.description.mental-interrogation": [
+    {
+      "type": 0,
+      "value": "Objectif Progressif\nMarquez 3 points de victoire chaque fois que vous accomplissez l'action psychique suivante :\nInterrogation Mentale (Action Psychique - Charge Warp 4): 1 unité PERSONNAGE PSYKER de votre armée peut tenter d'accomplir cette action psychique à votre phase psychique si elle est à 18' d'une ou plusieurs figurines PERSONNAGES ennemies."
+    }
+  ],
+  "objective.description.minimise-losses": [
     {
       "type": 0,
       "value": "En fin de bataille : 15pts si 75+% des unités présentes sur table au début de la partie sont vivantes em fin. 10pts si 50+%, 5pts si 25+%"
     }
   ],
-  "objective.description.strike-force.raze": [
+  "objective.description.outflank": [
+    {
+      "type": 0,
+      "value": "À la fin de votre phase de Commandement, 3pts si vous contrôlez les 2 pions objectifs marqués A. 5pts si vous contrôlez A et qu'il y a au moins 1 unité ennemie à 9' du centre de table. Ne peut être marqué au 1er round"
+    }
+  ],
+  "objective.description.pierce-the-evil": [
+    {
+      "type": 0,
+      "value": "Objectif de fin de partie\nMarquez 8 points de victoire à la fin de la bataille si une ou plusieurs unités de votre armée ont accompli avec succès l'action psychique 2 fois ou plus lors de la bataille, ou 15 points de victoire à la fin de la bataille si une ou plusieurs unités de votre armée ont accompli avec succès l'action psychique suivante 4 fois lors de la bataille (vous ne pouvez accomplir cet objectif qu'une fois par bataille) :\nPercer le Voile (Action Psychique - Charge War 4) : 1 unité PERSONNAGE PSYKER de votre armée peut tenter d'accomplir cette action psychique durant votre phase Psychique s'il est à 6' du bord de table de votre adversaire et à plus de 6' de toute figurine ennemie."
+    }
+  ],
+  "objective.description.psychic-ritual": [
+    {
+      "type": 0,
+      "value": "Objectif de fin de partie\nMarquez 15 points de victoire à la fin bataille si une même unité de votre armée a accompli l'action psychique suivante 3 fois durant la partie :\nRituel Psychique (Action Psychique - Charge Warp 3): 1 unité PERSONNAGE PSYKER de votre armée peut tenter d'accomplir cette action psychique à votre phase psychique si elle est à 6' du centre du champ de bataille."
+    }
+  ],
+  "objective.description.raid-supply-lines": [
+    {
+      "type": 0,
+      "value": "À la fin de votre phase de commandement, 3pts si vous contrôlez 1 des pions objectifs dans la zone de déploiement de votre adversaire, 5pts si vous contrôlez les 2. Ne peut-être marqué au 1er round."
+    }
+  ],
+  "objective.description.raise-the-banners-high": [
+    {
+      "type": 0,
+      "value": "Objectif Progressif et de Fin de Partie\nSi vous choisissez cet objectif, alors les unités de votre armée peuvent accomplir l'action suivante: Lever les Étendards (Action): 1 unité d'INFANTERIE ou plus de votre armée peut commencer cette action à la fin de votre phase de Mouvement. Chaque unité de votre armée qui commence cette action doit être à portée d'un pion objectif différent sur lequel aucun de vos étendards n'a été levé (voir ci-dessous). Une unité ne peut pas commencer cette action s'il y a la moindre unité ennemie (AÉRODYNES exclus) à portée du même pion objectif. L'action est accomplie à la fin de votre tour. Si cette action est accomplie, on dit qu'un étendard de votre armée a été levé sur ce pion objectif (l'étendard est \"retiré\" si votre adversaire contrôle le pion objectif au début de n'importe quelle phase). Vous marquez 1 point de victoire à la fin de chacune de vos phases de Commandement, et 1 point de victoire à la fin de la bataille, pour chaque pion objectif du champ de bataille sur lequel un de vos étendards a été levé."
+    }
+  ],
+  "objective.description.ransack": [
+    {
+      "type": 0,
+      "value": "Marquez des points de victoire à la fin de votre phase de Commandement si vous contrôlez un ou plusieurs pions objectifs qui se trouvent dans la zone de déploiement adverse, comme indiqué par le tableau ci-dessous :\n- 1 pion contrôlé : 2 points de victoire\n- 2 pions contrôlé : 3 points de victoire\n- 3 pions contrôlé : 5 points de victoire"
+    }
+  ],
+  "objective.description.raze": [
     {
       "type": 0,
       "value": "En fin de bataille : 5pts si 1 objectif rasé, 15 pts si 2 objectifs"
     }
   ],
-  "objective.description.strike-force.surround-them": [
+  "objective.description.repair-teleport-homer": [
     {
       "type": 0,
-      "value": "4pts à la fin de votre phase de commandement et à la fin de la bataille si vous contrôlez 2 objectifs dans votre zone de déploiement, et 1+ dans la zone de déploiement adversaire.\n8pts si vous contrôlez les 4 objectifs dans les zones de déploiement"
+      "value": "Objectif Progressif\nMarquez 4 points de victoire chaque fois qu'une unité de votre armée accomplit l'action suivante:\nRéparer la Balise de Téléportation (Action) : 1 unité d'INFANTERIE de votre armée peut commencer cette action à la fin de votre phase de Mouvement si elle est entièrement dans la zone de déploiement adverse. L'action est accomplie à l a fin de votre prochaine phase de Commandement, si l'unité qui la tente est toujours dans la zone de déploiement adverse."
     }
   ],
-  "objective.description.strike-force.take-and-hold": [
+  "objective.description.search-for-the-portal": [
     {
       "type": 0,
-      "value": "En phase de commandement : 5pts si vous contrôlez 1 objectif, +5 pts si 2 objectifs, +5 pts si plus d'objectifs que l'adversaire"
+      "value": "Chaque fois qu'une unité de votre armée accomplit l'action Cherchez le Portail, vous marquez 1 point de victoire, et 1 point de victoire supplémentaire pour chaque pion objectif marqué A actuellement sous votre contrôle (pour un maximum de 5 points de victoire).\nChercher le Portail (Action) : 1 unité d'INFANTERIE de votre armée (PERSONNAGES exclus) peut commencer à effectuer cette action à la fin de votre phase de Mouvement si elle est entièrement dans la Zone de Fouille figurée sur la carte de déploiement (rayon de 12' du centre). L'action est accomplie à la fin de votre prochaine phase de commandement tant que l'unité qui l'effectue est toujours entièrement dans la Zone de Fouille."
     }
   ],
-  "objective.description.strike-force.vital-ground": [
+  "objective.description.secure-landing-sites": [
+    {
+      "type": 0,
+      "value": "À la fin de votre phase de Commandement, 2pts par objectif A contrôlé au T2, 2pts par objectif A au T3, 3pts par objectif A au T4, 6pts par objectif A au T5. Ne peut-être marqué au 1er round."
+    }
+  ],
+  "objective.description.secure-no-mans-land": [
+    {
+      "type": 0,
+      "value": "À la fin de chacun de vos tours, si vous contrôlez le pion objectif central, vous marquez un nombre de points égal au numéro du round de bataille actuel."
+    }
+  ],
+  "objective.description.siphon-power": [
+    {
+      "type": 0,
+      "value": "Action à accomplir : une unité ou plus de votre armée peut commencer cette action à la fin de votre phase de mouvement. Chaque unité qui commence doit être à portée d'un objectif différent. Une unité ne peut pas commencer l'action si une unité ennemie (aérodyne exclu) est à portée de l'objectif. L'action est accomplie à la fin de votre prochaine phase de commandement. 1 action : 1pt, 2 actions : 3pts, 3 actions : 6pts, 4 actions: 10pts"
+    }
+  ],
+  "objective.description.slay-the-warlord": [
+    {
+      "type": 0,
+      "value": "Objectif de fin de partie\nMarquez 6 points de victoire à la fin de la bataille si le SEIGNEUR DE GUERRE ennemi a été détruit."
+    }
+  ],
+  "objective.description.surgical-assault": [
+    {
+      "type": 0,
+      "value": "Marquez 5 points de victoire si vous contrôlez le pion objectif dans la zone adverse à la fin de votre tour."
+    }
+  ],
+  "objective.description.surround-them": [
+    {
+      "type": 0,
+      "value": "Marquez 4 points de victoire à la fin de votre phase de Commandement et à la fin de la bataille si vous contrôlez les pions objectifs dans votre zone de déploiement et un pion objectif ou plus dans la zone de déploiement adverse. Marquez 8 points de victoire à la place si vous contrôlez les quatre pions objectif qui sont dans les zones de déploiement."
+    }
+  ],
+  "objective.description.survey": [
+    {
+      "type": 0,
+      "value": "Marquez 5 points de victoire si vous contrôlez les deux pions objectifs qui ne sont dans aucune des zones de déploiement des joueurs à la fin de votre phase de commandement. Cet objectif secondaire ne peut pas être marqué au 1er round de bataille."
+    }
+  ],
+  "objective.description.take-and-hold": [
+    {
+      "type": 0,
+      "value": "À la fin de la phase de Commandement de chaque joueur, le joueur dont c'est le tour marque 5 points de victoire pour chacune des conditions suivantes qu'il remplit (pour un maximum de 15 points de victoire) :\n- Il contrôle 1 pion objectif ou plus.\n- Il contrôle 2 pion objectif ou plus.\n- Il contrôle plus de pions objectif que son adversaire n'en contrôle.\n\nCet objectif principal ne peut pas être marqué au 1er round de bataille."
+    }
+  ],
+  "objective.description.test-their-line": [
+    {
+      "type": 0,
+      "value": "Marquez 3 points de victoire à la fin de votre tour si deux unités de votre armée ou plus (AÉRODYNES exclus) sont entièrement dans la zone de déploiement de votre adversaire et qu'au moins deux bords de champ de bataille différents ont au moins une de ces unités entièrement à 6' dé ux (si l'un de ces bords de champ de bataille est le bord de champ de bataille adverse, marquez 5 points de victoire à la place). Pour les besoins de cet objectif, une unité ne peut être entièrement à 6' de deux bords de champ de bataille parce qu'elle est dans un angle du champ de bataille, vous pouvez choisir quel bord de champ de bataille prendre en compte à la fin de votre tour."
+    }
+  ],
+  "objective.description.thin-their-ranks": [
+    {
+      "type": 0,
+      "value": "Objectif de fin de partie\nSi vous choisissez cet objectif, gardez un compte de points de pertes infligées ; chaque fois qu'une figurine ennemie est détruite, ajoutez 1 à ce compte (ajoutez 10 à ce compte à la place si la figurine qui a été détruite a une caractéristique de PV de 10 ou plus). Une figurine peut, si elle est ressucitée pour n'importe quelle raison (ex : elle a été détruite puis a été remise en jeu sur le champ de bataille), potentiellement octroyer plusieurs points à ce compte (en supposant qu'elle a été ressuscitée puis détruite à nouveau). À la fin de la bataille, divisez par 10 votre compte de points de pertes infligées en arrondissant à l'entier inférieur ; le résultat est le nombre de points de victoire marqués."
+    }
+  ],
+  "objective.description.titan-hunter": [
+    {
+      "type": 0,
+      "value": "Objectif de fin de partie\nMarquez 10 points de victoire à la fin de la bataille si 1 figurine TITANESQUE ennemie a été détruite, 12 points de victoire si 2 figurines TITANESQUES ennemies ont été détruites, ou 15 points de victoire si 3 figurines TITANESQUES ennemies ou plus ont été détruites."
+    }
+  ],
+  "objective.description.titan-slayers": [
+    {
+      "type": 0,
+      "value": "Objectif de fin de partie\nMarquez 10 points de victoire à la fin de la bataille si 1 figurine TITANESQUE ennemie a été détruite, ou 15 points de victoire si deux figurines TITANESQUES ennemies ou plus ont été détruites."
+    }
+  ],
+  "objective.description.unified-advance": [
+    {
+      "type": 0,
+      "value": "À la fin de la phase de Commandement de chaque joueur, le joueur dont c'est le tour marque 5 points de victoire pour chacune des conditions suivantes qu'il remplit (pour un maximum de 15 points de victoire) :\n- Il contrôle 1 objectif ou plus.\n- Il contrôle au moins 1 pion objectif marqué A\n- Il contrôle au moins 1 pion objectif marqué A, au moins 1 pion objectif marqué B et au moins 1 pion objectif marqué C.\nCet objectif principal ne peut pas être marqué au 1er round de bataille."
+    }
+  ],
+  "objective.description.vital-ground": [
     {
       "type": 0,
       "value": "À la fin de vos phases de commandement :\n3pts si vous contrôlez l'objectif de l'adversaire, +2pts par objectif en zone neutre"
     }
   ],
-  "objective.description.warpcraft.abhor-the-witch": [
+  "objective.description.while-we-stand-we-fight": [
     {
       "type": 0,
-      "value": "Si votre armée ne contient pas de psyker. 5pts pour chaque unité personnage psyker ennemie détruite, 3pts pour chaque unité psyker non personnage"
+      "value": "Objectif de fin de partie\nSi vous choisissez cet objectif, alors avant la bataille, identifiez les 3 figurines de votre armée (figurines avec le rôle tactique Fortification exclues) qui ont la valeur en point la plus élevée, et notez-les sur votre feuille d'armée (si deux figurines ou plus sont à égalité, vous pouvez choisir parmi elles). Si votre armée compte trois figurines ou moins, alors vous devez à la place identifier toutes les unités de votre armée. La valeur en point d'une figurine inclut les points de toutes ses armes et équipements. Vous marquez 5 points de victoire pour chacune de ces figurines qui se trouve sur le champ de bataille à la fin de la bataille."
     }
   ],
-  "objective.description.warpcraft.mental-interrogation": [
+  "objective.direct-assault": [
     {
       "type": 0,
-      "value": "3pts pour chaque pouvoir psy spécial réussi : `Interrogation Mentale`, charge warp 4, si votre psyker est à 18' d'une figurine personnage ennemie"
+      "value": "Assaut direct"
     }
   ],
-  "objective.description.warpcraft.pierce-the-evil": [
-    {
-      "type": 0,
-      "value": "En fin de bataille, 8pts si pouvoir psy spécial réussi 2x : `Percer le Voile`, charge warp 4, si votre psyker est à 6' du bord de table adversaire et à plus de 6' de figurine ennemie"
-    }
-  ],
-  "objective.description.warpcraft.psychic-ritual": [
-    {
-      "type": 0,
-      "value": "En fin de partie, 15pts si pouvoir psy spécial réussi 3x : `Rituel Psychique`, charge warp 3, si votre psyker est à 6' du centre de table"
-    }
-  ],
-  "objective.description.xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx": [
-    {
-      "type": 0,
-      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
-    }
-  ],
-  "objective.incursion.domination": [
+  "objective.domination": [
     {
       "type": 0,
       "value": "Domination"
     }
   ],
-  "objective.incursion.take-and-hold": [
+  "objective.encircle": [
     {
       "type": 0,
-      "value": "Prendre et tenir"
+      "value": "Encercler"
+    }
+  ],
+  "objective.engage-on-all-fronts": [
+    {
+      "type": 0,
+      "value": "Sur tous les fronts"
+    }
+  ],
+  "objective.first-strike": [
+    {
+      "type": 0,
+      "value": "Premier sang (Base)"
+    }
+  ],
+  "objective.forward-push": [
+    {
+      "type": 0,
+      "value": "Irruption"
+    }
+  ],
+  "objective.grind-them-down": [
+    {
+      "type": 0,
+      "value": "Broyez-les (GT-2020)"
+    }
+  ],
+  "objective.hold-the-center": [
+    {
+      "type": 0,
+      "value": "Tenir le centre"
+    }
+  ],
+  "objective.inload-data-psalm": [
+    {
+      "type": 0,
+      "value": "Télécharger le data-psaume"
+    }
+  ],
+  "objective.investigate-sites": [
+    {
+      "type": 0,
+      "value": "Inspecter le terrain"
+    }
+  ],
+  "objective.line-breaker": [
+    {
+      "type": 0,
+      "value": "Briseur de ligne"
+    }
+  ],
+  "objective.lines-of-demarcation": [
+    {
+      "type": 0,
+      "value": "Lignes de démarcation"
+    }
+  ],
+  "objective.mental-interrogation": [
+    {
+      "type": 0,
+      "value": "Interrogation mentale"
+    }
+  ],
+  "objective.minimise-losses": [
+    {
+      "type": 0,
+      "value": "Minimiser les pertes"
     }
   ],
   "objective.no-mercy-no-respite": [
@@ -465,22 +813,22 @@
       "value": "Pas de pitié, pas de répit"
     }
   ],
-  "objective.no-mercy-no-respite.attrition": [
+  "objective.outflank": [
     {
       "type": 0,
-      "value": "Broyez-les"
+      "value": "Prise de flanc"
     }
   ],
-  "objective.no-mercy-no-respite.thin-their-ranks": [
+  "objective.overrun": [
     {
       "type": 0,
-      "value": "Érodez leurs rangs"
+      "value": "Débordement"
     }
   ],
-  "objective.no-mercy-no-respite.while-we-stand-we-fight": [
+  "objective.pierce-the-evil": [
     {
       "type": 0,
-      "value": "Combattons tant que nous tenons"
+      "value": "Percer le voile (GT-2020)"
     }
   ],
   "objective.primary": [
@@ -489,34 +837,58 @@
       "value": "Primaire"
     }
   ],
+  "objective.priority-targets": [
+    {
+      "type": 0,
+      "value": "Cibles prioritaires"
+    }
+  ],
+  "objective.psychic-ritual": [
+    {
+      "type": 0,
+      "value": "Rituel psychique"
+    }
+  ],
   "objective.purge-the-ennemy": [
     {
       "type": 0,
       "value": "Éliminez l'ennemi"
     }
   ],
-  "objective.purge-the-ennemy.assassinate": [
+  "objective.raid-supply-lines": [
     {
       "type": 0,
-      "value": "Assassinat"
+      "value": "Attaquez les lignes de ravitaillement"
     }
   ],
-  "objective.purge-the-ennemy.bring-it-down": [
+  "objective.raise-the-banners-high": [
     {
       "type": 0,
-      "value": "Abattez-le"
+      "value": "Levez haut les étendards"
     }
   ],
-  "objective.purge-the-ennemy.slay-the-warlord": [
+  "objective.ransack": [
     {
       "type": 0,
-      "value": "Coupez la tête"
+      "value": "Saccage"
     }
   ],
-  "objective.purge-the-ennemy.titan-slayers": [
+  "objective.raze": [
     {
       "type": 0,
-      "value": "Chasseur de titans"
+      "value": "Raser"
+    }
+  ],
+  "objective.repair-teleport-homer": [
+    {
+      "type": 0,
+      "value": "Réparer la balise de téléportation"
+    }
+  ],
+  "objective.search-for-the-portal": [
+    {
+      "type": 0,
+      "value": "Chercher le portail"
     }
   ],
   "objective.secondary": [
@@ -525,97 +897,97 @@
       "value": "Secondaire"
     }
   ],
+  "objective.secure-landing-sites": [
+    {
+      "type": 0,
+      "value": "Sécurisez les sites d'atterrissage"
+    }
+  ],
+  "objective.secure-no-mans-land": [
+    {
+      "type": 0,
+      "value": "Sécuriser le no man's land"
+    }
+  ],
   "objective.shadow-operations": [
     {
       "type": 0,
       "value": "Opérations clandestines"
     }
   ],
-  "objective.shadow-operations.deploy-scramblers": [
+  "objective.siphon-power": [
     {
       "type": 0,
-      "value": "Déployez les brouilleurs"
+      "value": "Siphon de pouvoir"
     }
   ],
-  "objective.shadow-operations.investigate-sites": [
+  "objective.slay-the-warlord": [
     {
       "type": 0,
-      "value": "Inspecter le terrain"
+      "value": "Tuez le seigneur de guerre (Base)"
     }
   ],
-  "objective.shadow-operations.raise-the-banners-high": [
-    {
-      "type": 0,
-      "value": "Levez haut les étendards"
-    }
-  ],
-  "objective.shadow-operations.repair-teleport-homer": [
-    {
-      "type": 0,
-      "value": "Réparer la balise de téléportation"
-    }
-  ],
-  "objective.strike-force.data-intercept": [
-    {
-      "type": 0,
-      "value": "Interception de données"
-    }
-  ],
-  "objective.strike-force.direct-assault": [
-    {
-      "type": 0,
-      "value": "Assaut direct"
-    }
-  ],
-  "objective.strike-force.domination": [
-    {
-      "type": 0,
-      "value": "Domination"
-    }
-  ],
-  "objective.strike-force.minimise-losses": [
-    {
-      "type": 0,
-      "value": "Minimiser les pertes"
-    }
-  ],
-  "objective.strike-force.overrun": [
-    {
-      "type": 0,
-      "value": "Débordement"
-    }
-  ],
-  "objective.strike-force.priority-targets": [
-    {
-      "type": 0,
-      "value": "Cibles prioritaires"
-    }
-  ],
-  "objective.strike-force.raze": [
-    {
-      "type": 0,
-      "value": "Raser"
-    }
-  ],
-  "objective.strike-force.strategic-scan": [
+  "objective.strategic-scan": [
     {
       "type": 0,
       "value": "Scan stratégique"
     }
   ],
-  "objective.strike-force.surround-them": [
+  "objective.surgical-assault": [
+    {
+      "type": 0,
+      "value": "Assaut Chirurgical"
+    }
+  ],
+  "objective.surround-them": [
     {
       "type": 0,
       "value": "Encerclez-les"
     }
   ],
-  "objective.strike-force.take-and-hold": [
+  "objective.survey": [
+    {
+      "type": 0,
+      "value": "Sondage"
+    }
+  ],
+  "objective.take-and-hold": [
     {
       "type": 0,
       "value": "Prendre et tenir"
     }
   ],
-  "objective.strike-force.vital-ground": [
+  "objective.test-their-line": [
+    {
+      "type": 0,
+      "value": "Éprouvez leur Ligne"
+    }
+  ],
+  "objective.thin-their-ranks": [
+    {
+      "type": 0,
+      "value": "Érodez leurs rangs"
+    }
+  ],
+  "objective.titan-hunter": [
+    {
+      "type": 0,
+      "value": "Chasseur de titans (GT-2020)"
+    }
+  ],
+  "objective.titan-slayers": [
+    {
+      "type": 0,
+      "value": "Tueurs de titans (Base)"
+    }
+  ],
+  "objective.unified-advance": [
+    {
+      "type": 0,
+      "value": "Avance unifiée"
+    }
+  ],
+  "objective.vital-ground": [
     {
       "type": 0,
       "value": "Terrain vital"
@@ -627,34 +999,10 @@
       "value": "Art du warp"
     }
   ],
-  "objective.warpcraft.abhor-the-witch": [
+  "objective.while-we-stand-we-fight": [
     {
       "type": 0,
-      "value": "Abhorrez le sorcier"
-    }
-  ],
-  "objective.warpcraft.mental-interrogation": [
-    {
-      "type": 0,
-      "value": "Interrogation mentale"
-    }
-  ],
-  "objective.warpcraft.pierce-the-evil": [
-    {
-      "type": 0,
-      "value": "Percer le voile"
-    }
-  ],
-  "objective.warpcraft.psychic-ritual": [
-    {
-      "type": 0,
-      "value": "Rituel psychique"
-    }
-  ],
-  "objective.xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx": [
-    {
-      "type": 0,
-      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
+      "value": "Combattons tant que nous tenons"
     }
   ]
 }

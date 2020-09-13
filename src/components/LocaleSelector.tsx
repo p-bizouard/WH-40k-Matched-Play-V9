@@ -69,7 +69,7 @@ function LocaleSelector({ ...props }: LocaleSelectorProps) {
         {
           getLocales().filter(
             (locale) => locale.iso === props.configuration.locale
-          )[0].name
+          )[0].short
         }
       </Button>
     </View>

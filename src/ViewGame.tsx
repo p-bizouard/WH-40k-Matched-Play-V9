@@ -19,6 +19,8 @@ import PlayerObjective from './components/PlayerObjective'
 import intl from 'react-intl-universal'
 import humanizeString from 'humanize-string'
 import LocaleSelector from './components/LocaleSelector'
+import PlayerCommandPoints from './components/PlayerCommandPoints'
+import MenuDrawerButton from './components/MenuDrawerButton'
 
 interface ViewGameProps {
   updateGame: Function
@@ -30,6 +32,7 @@ interface ViewGameProps {
   configuration: {
     locale: String
   }
+  openDrawer: Function
 }
 
 function ViewGame({ navigation, route, ...props }: ViewGameProps) {
@@ -50,6 +53,8 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
       title: intl.get('display.view-game').d(`View game`),
       // eslint-disable-next-line react/display-name
       headerRight: () => <LocaleSelector />,
+      // eslint-disable-next-line react/display-name
+      headerLeft: () => <MenuDrawerButton openDrawer={props.openDrawer} />,
     })
   }
 
@@ -69,7 +74,7 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
           return (
             reduced +
             objective.scores.reduce((reduced2: number, score: number) => {
-              return reduced2 + score
+              return Math.min(reduced2 + score, 45)
             }, 0)
           )
         },
@@ -80,7 +85,7 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
           return (
             reduced +
             objective.scores.reduce((reduced2: number, score: number) => {
-              return reduced2 + score
+              return Math.min(reduced2 + score, 15)
             }, 0)
           )
         },
@@ -104,6 +109,21 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
     >
       {initialized ? (
         <View style={styles.container}>
+          <Title style={styles.alignRight}>
+            {intl
+              .get(`mission.${props.currentGame.type}`)
+              .d(humanizeString(props.currentGame.type))}
+          </Title>
+          <Title style={styles.alignRight}>
+            {intl
+              .get(`mission.${props.currentGame.format}`)
+              .d(humanizeString(props.currentGame.format))}
+          </Title>
+          <Title style={styles.alignRight}>
+            {intl
+              .get(`mission.${props.currentGame.mission}`)
+              .d(humanizeString(props.currentGame.mission))}
+          </Title>
           {props.currentGame.teams.map((team: Team, teamNumber: number) => {
             return (
               <View key={'team' + teamNumber} style={styles.team}>
@@ -119,7 +139,9 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
                           })
                           .d(`Team ${teamNumber + 1}`)}
                       </Title>
-                      <Title style={styles.bold}>{totalTeamScore(team)}</Title>
+                      <Title style={styles.bold}>
+                        {totalTeamScore(team)} pts
+                      </Title>
                     </View>
                   ) : null}
                 </View>
@@ -128,13 +150,18 @@ function ViewGame({ navigation, route, ...props }: ViewGameProps) {
                   return (
                     <View key={'player' + teamNumber + '-' + playerNumber}>
                       <View style={styles.flexView}>
-                        <Title>
+                        <Title style={styles.bold}>
                           {intl
                             .get(`army.${player.army}`)
                             .d(humanizeString(player.army))}
                         </Title>
-                        <Title>{totalPlayerScore(player)}</Title>
+                        <Title>{totalPlayerScore(player)} pts</Title>
                       </View>
+                      <PlayerCommandPoints
+                        key={`player-command-points-${teamNumber}-${playerNumber}`}
+                        teamNumber={teamNumber}
+                        playerNumber={playerNumber}
+                      />
                       {player.primaryObjectives.map(
                         (
                           objective: PlayerObjectiveType,

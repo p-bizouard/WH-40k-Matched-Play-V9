@@ -20,10 +20,19 @@
         "id": "thin-their-ranks"
       },
       {
-        "id": "attrition"
+        "id": "attrition",
+        "typesRestriction": ["eternal-war"]
+      },
+      {
+        "id": "grind-them-down",
+        "typesRestriction": ["gt2020"]
       },
       {
         "id": "while-we-stand-we-fight"
+      },
+      {
+        "id": "first-strike",
+        "typesRestriction": ["eternal-war"]
       }
     ]
   },
@@ -31,16 +40,26 @@
     "id": "purge-the-ennemy",
     "secondary": [
       {
-        "id": "titan-slayers"
+        "id": "titan-hunter",
+        "typesRestriction": ["gt2020"]
+      },
+      {
+        "id": "titan-slayers",
+        "typesRestriction": ["eternal-war"]
       },
       {
         "id": "bring-it-down"
       },
       {
-        "id": "slay-the-warlord"
+        "id": "assassinate"
       },
       {
-        "id": "assassinate"
+        "id": "slay-the-warlord",
+        "typesRestriction": ["eternal-war"]
+      },
+      {
+        "id": "cut-off-the-head",
+        "typesRestriction": ["gt2020"]
       }
     ]
   },
@@ -54,7 +73,8 @@
         "id": "investigate-sites"
       },
       {
-        "id": "deploy-scramblers"
+        "id": "deploy-scramblers",
+        "typesRestriction": ["gt2020"]
       },
       {
         "id": "repair-teleport-homer"
@@ -65,16 +85,18 @@
     "id": "warpcraft",
     "secondary": [
       {
-        "id": "abhor-the-witch"
-      },
-      {
         "id": "mental-interrogation"
       },
       {
         "id": "psychic-ritual"
       },
       {
-        "id": "pierce-the-evil"
+        "id": "abhor-the-witch",
+        "typesRestriction": ["eternal-war"]
+      },
+      {
+        "id": "pierce-the-evil",
+        "typeRestriction": ["gt2020"]
       }
     ]
   },

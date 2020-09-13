@@ -40,6 +40,22 @@ const styles = StyleSheet.create({
   mb10: {
     marginBottom: 10,
   },
+  alignRight: {
+    textAlign: 'right',
+  },
+  menuTitle: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  mt10: {
+    marginTop: 10,
+  },
+  mt30: {
+    marginTop: 30,
+  },
+  mt60: {
+    marginTop: 60,
+  },
   mr10: {
     marginRight: 10,
   },
@@ -48,6 +64,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
+  },
+  flexVertical: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+  flexVerticalTop: {
+    flex: 1,
+  },
+  flexVerticalBottom: {
+    marginTop: 'auto',
   },
   flexViewLeft: {
     justifyContent: 'flex-start',
@@ -67,6 +95,9 @@ const styles = StyleSheet.create({
     maxWidth: 600,
     alignSelf: 'center',
     maxHeight: '85%',
+  },
+  light: {
+    color: '#aaa',
   },
 })
 

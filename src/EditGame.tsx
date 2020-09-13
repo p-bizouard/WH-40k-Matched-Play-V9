@@ -27,6 +27,7 @@ import { useHeaderHeight } from '@react-navigation/stack'
 import SaveCurrentGameButton from './components/SaveCurrentGameButton'
 import intl from 'react-intl-universal'
 import { connect } from 'react-redux'
+import MenuDrawerButton from './components/MenuDrawerButton'
 
 interface EditGameProps {
   addPlayer: typeof addPlayer
@@ -39,6 +40,7 @@ interface EditGameProps {
   currentGame: Game
   navigation: EditGameScreenNavigationProp
   route: EditGameRouteProp
+  openDrawer: Function
 }
 
 function EditGame({ navigation, route, ...props }: EditGameProps) {
@@ -68,6 +70,8 @@ function EditGame({ navigation, route, ...props }: EditGameProps) {
       headerRight: () => (
         <SaveCurrentGameButton navigation={navigation} icon={true} />
       ),
+      // eslint-disable-next-line react/display-name
+      headerLeft: () => <MenuDrawerButton openDrawer={props.openDrawer} />,
     })
   }
 

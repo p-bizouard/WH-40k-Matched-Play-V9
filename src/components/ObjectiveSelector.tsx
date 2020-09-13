@@ -2,6 +2,8 @@ import React from 'react'
 import { View, ScrollView } from 'react-native'
 import objectives from '../data/objectives.json'
 import missions from '../data/missions.json'
+import gameTypes from '../data/gameTypes.json'
+import gameFormats from '../data/gameFormats.json'
 import intl from 'react-intl-universal'
 import { connect } from 'react-redux'
 import { updatePlayerObjective } from '../store/actions/index'
@@ -22,6 +24,7 @@ import {
   Objective,
   Mission,
   GameFormat,
+  GameType,
 } from '../Types'
 import styles from '../styles'
 import humanizeString from 'humanize-string'
@@ -57,6 +60,7 @@ class ObjectiveSelector extends React.Component<
     const showDialog = () => this.setState({ dialog: true })
 
     const updateObjective = (
+      objectiveTypeId: string,
       objectiveCategoryId: string,
       objectiveId: string
     ) => {
@@ -64,6 +68,7 @@ class ObjectiveSelector extends React.Component<
         this.props.teamNumber,
         this.props.playerNumber,
         this.props.objectiveNumber,
+        objectiveTypeId,
         objectiveCategoryId,
         objectiveId,
         'secondary'
@@ -75,12 +80,15 @@ class ObjectiveSelector extends React.Component<
       this.props.playerNumber
     ]
 
-    const format: GameFormat | undefined = missions.find(
-      (format) => this.props.currentGame.format === format.id
+    const gameFormat: GameFormat | undefined = gameFormats.find(
+      (gameFormat) => this.props.currentGame.format === gameFormat.id
     )
-    const mission = format
-      ? format.missions.find(
-        (mission: Mission) => mission.id === this.props.currentGame.mission
+    const gameType: GameType | undefined = gameTypes.find(
+      (gameType) => this.props.currentGame.type === gameType.id
+    )
+    const mission = gameFormat
+      ? missions.find(
+          (mission: Mission) => mission.id === this.props.currentGame.mission
         )
       : undefined
 
@@ -106,18 +114,22 @@ class ObjectiveSelector extends React.Component<
                   <Title>
                     {intl.get('game.mission-secondary').d('Mission secondary')}
                   </Title>
-                  {format && mission ? (
+                  {gameFormat && gameType && mission ? (
                     <View key={`objective-mission-${mission.id}`}>
                       {mission.secondary.map((objective: Objective) => {
                         const description = intl.get(
-                          `objective.description.${format.id}.${objective.id}`
+                          `objective.description.${objective.id}`
                         )
 
                         return (
                           <TouchableRipple
                             key={`objective-${objective.id}`}
                             onPress={() => {
-                              updateObjective(format.id, objective.id)
+                              updateObjective(
+                                gameType.id,
+                                gameFormat.id,
+                                objective.id
+                              )
                             }}
                             rippleColor="rgba(0, 0, 0, .32)"
                           >
@@ -125,15 +137,19 @@ class ObjectiveSelector extends React.Component<
                               <RadioButton.Item
                                 style={{ paddingLeft: 0 }}
                                 label={intl
-                                  .get(`objective.${format.id}.${objective.id}`)
+                                  .get(`objective.${objective.id}`)
                                   .d(humanizeString(objective.id))}
                                 value={objective.id}
                                 key={`objective-${objective.id}`}
                                 onPress={() => {
-                                  updateObjective(format.id, objective.id)
+                                  updateObjective(
+                                    gameType.id,
+                                    gameFormat.id,
+                                    objective.id
+                                  )
                                 }}
                               />
-                              {description && this.state.notes ? (
+                              {description && !this.state.notes ? (
                                 <Text>{description}</Text>
                               ) : null}
                             </View>
@@ -153,7 +169,19 @@ class ObjectiveSelector extends React.Component<
                       >
                         <Divider style={[styles.divider, { marginTop: 10 }]} />
 
-                        <Title>
+                        <Title
+                          style={{
+                            color: player.secondaryObjectives.find(
+                              (playerObjective, playerObjectiveIndex) =>
+                                playerObjective.category ===
+                                  objectiveCategory.id &&
+                                playerObjectiveIndex !==
+                                  this.props.objectiveNumber
+                            )
+                              ? 'lightgrey'
+                              : 'black',
+                          }}
+                        >
                           {intl
                             .get(`objective.${objectiveCategory.id}`)
                             .d(humanizeString(objectiveCategory.id))}
@@ -161,13 +189,14 @@ class ObjectiveSelector extends React.Component<
                         {objectiveCategory.secondary.map(
                           (objective: Objective) => {
                             const description = intl.get(
-                              `objective.description.${objectiveCategory.id}.${objective.id}`
+                              `objective.description.${objective.id}`
                             )
                             return (
                               <TouchableRipple
                                 key={`objective-${objective.id}`}
                                 onPress={() => {
                                   updateObjective(
+                                    'base',
                                     objectiveCategory.id,
                                     objective.id
                                   )
@@ -176,23 +205,65 @@ class ObjectiveSelector extends React.Component<
                               >
                                 <View>
                                   <RadioButton.Item
+                                    labelStyle={{
+                                      color:
+                                        (objective.typesRestriction &&
+                                          gameType &&
+                                          objective.typesRestriction.includes(
+                                            gameType.id
+                                          )) ||
+                                        player.secondaryObjectives.find(
+                                          (
+                                            playerObjective,
+                                            playerObjectiveIndex
+                                          ) =>
+                                            playerObjective.category ===
+                                              objectiveCategory.id &&
+                                            playerObjectiveIndex !==
+                                              this.props.objectiveNumber
+                                        )
+                                          ? 'lightgrey'
+                                          : 'black',
+                                    }}
                                     style={{ paddingLeft: 0 }}
                                     label={intl
-                                      .get(
-                                        `objective.${objectiveCategory.id}.${objective.id}`
-                                      )
+                                      .get(`objective.${objective.id}`)
                                       .d(humanizeString(objective.id))}
                                     value={objective.id}
                                     key={`objective-${objective.id}`}
                                     onPress={() => {
                                       updateObjective(
+                                        'base',
                                         objectiveCategory.id,
                                         objective.id
                                       )
                                     }}
                                   />
-                                  {description && this.state.notes ? (
-                                    <Text>{description}</Text>
+                                  {description && !this.state.notes ? (
+                                    <Text
+                                      style={{
+                                        color:
+                                          (objective.typesRestriction &&
+                                            gameType &&
+                                            objective.typesRestriction.includes(
+                                              gameType.id
+                                            )) ||
+                                          player.secondaryObjectives.find(
+                                            (
+                                              playerObjective,
+                                              playerObjectiveIndex
+                                            ) =>
+                                              playerObjective.category ===
+                                                objectiveCategory.id &&
+                                              playerObjectiveIndex !==
+                                                this.props.objectiveNumber
+                                          )
+                                            ? 'lightgrey'
+                                            : 'black',
+                                      }}
+                                    >
+                                      {description}
+                                    </Text>
                                   ) : null}
                                 </View>
                               </TouchableRipple>
@@ -208,8 +279,13 @@ class ObjectiveSelector extends React.Component<
             <Dialog.Actions>
               <View style={styles.flexView}>
                 <View>
-                  <Text>{intl.get('game.notes').d('Notes')}</Text>
-                  <Switch value={this.state.notes} onValueChange={() => this.setState({notes: !this.state.notes})} />
+                  <Text>{intl.get('game.compact').d('Compact')}</Text>
+                  <Switch
+                    value={this.state.notes}
+                    onValueChange={() =>
+                      this.setState({ notes: !this.state.notes })
+                    }
+                  />
                 </View>
                 <Button onPress={hideDialog}>
                   {intl.get('display.close').d('Close')}
@@ -234,30 +310,23 @@ class ObjectiveSelector extends React.Component<
         >
           {player.secondaryObjectives[this.props.objectiveNumber].id
             ? intl
-              .get('game.objective-x', {
-                objectiveNumber: this.props.objectiveNumber + 1,
-              })
-              .d(`Obj. ${this.props.objectiveNumber + 1}`) +
+                .get('game.objective-x', {
+                  objectiveNumber: this.props.objectiveNumber + 1,
+                })
+                .d(`Obj. ${this.props.objectiveNumber + 1}`) +
               ' : ' +
               intl
                 .get(
                   `objective.${
-                    player.secondaryObjectives[this.props.objectiveNumber]
-                      .category
-                  }.${
                     player.secondaryObjectives[this.props.objectiveNumber].id
                   }`
                 )
-                .d(
-                  humanizeString(
-                    player.secondaryObjectives[this.props.objectiveNumber].id
-                  )
-                )
+                .d(player.secondaryObjectives[this.props.objectiveNumber].id)
             : intl
-              .get('game.objective-x-set', {
-                objectiveNumber: this.props.objectiveNumber + 1,
-              })
-              .d(`Click to set objective ${this.props.objectiveNumber + 1}`)}
+                .get('game.objective-x-set', {
+                  objectiveNumber: this.props.objectiveNumber + 1,
+                })
+                .d(`Click to set objective ${this.props.objectiveNumber + 1}`)}
         </Button>
       </View>
     )
@@ -273,6 +342,7 @@ const mapDispatchToProps = (dispatch: Function) => ({
     teamNumber: number,
     playerNumber: number,
     objectiveNumber: number,
+    objectiveTypeId: string,
     objectiveCategoryId: string,
     objectiveId: string,
     primaryOrSecondary: string,
@@ -284,6 +354,7 @@ const mapDispatchToProps = (dispatch: Function) => ({
         teamNumber,
         playerNumber,
         objectiveNumber,
+        objectiveTypeId,
         objectiveCategoryId,
         objectiveId,
         primaryOrSecondary,

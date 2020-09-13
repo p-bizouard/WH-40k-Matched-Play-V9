@@ -1,5 +1,6 @@
 import { PlayerObjective } from '../../types'
 import { updateGame } from './games'
+import { Platform } from 'react-native'
 
 export function removePlayer(teamNumber: number, playerNumber: number) {
   return (dispatch: Function) => {
@@ -46,15 +47,17 @@ export function resetCurrentGame() {
   }
 }
 
-export function setMission(formatId: string, missionId: string) {
+export function setMission(
+  missionType: string,
+  missionFormatId: string,
+  missionId: string
+) {
   return (dispatch: Function) => {
-    if (formatId && missionId) {
-      dispatch({
-        type: 'SET_MISSION',
-        data: { formatId, missionId },
-      })
-      dispatch(resetPrimaryObjectives())
-    }
+    dispatch({
+      type: 'UPDATE_CURRENT_GAME',
+      data: { type: missionType, format: missionFormatId, mission: missionId },
+    })
+    dispatch(resetPrimaryObjectives())
   }
 }
 
@@ -95,6 +98,7 @@ export function updatePlayerObjective(
   teamNumber: number,
   playerNumber: number,
   objectiveNumber: number,
+  objectiveTypeId: string,
   objectiveCategoryId: string,
   objectiveId: string,
   primaryOrSecondary: string,
@@ -124,6 +128,7 @@ export function updatePlayerObjective(
                 return {
                   ...currentObjective,
                   id: objectiveId,
+                  type: objectiveTypeId,
                   category: objectiveCategoryId,
                   scores: scores ? scores : currentObjective.scores,
                 }

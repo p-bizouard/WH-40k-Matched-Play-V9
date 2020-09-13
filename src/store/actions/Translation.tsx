@@ -9,10 +9,12 @@ export const getLocales = () => {
   return [
     {
       name: 'English',
+      short: 'EN',
       iso: 'en-GB',
     },
     {
       name: 'Français',
+      short: 'FR',
       iso: 'fr-FR',
     },
   ]

@@ -1,5 +1,4 @@
-import { RouteProp, CompositeNavigationProp } from '@react-navigation/native'
-import { InteractionManager } from 'react-native'
+import { RouteProp } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 
 export interface UpdateLocale {
@@ -15,17 +14,15 @@ export interface DispatchLocale {
 
 export interface GameFormat {
   id: string
-  missions: Mission[]
 }
-export interface Mission {
+
+export interface GameType {
   id: string
-  number: number | null
-  primary: Objective[]
-  secondary: Objective[]
 }
 
 export interface Objective {
   id: string
+  typesRestriction?: string[]
 }
 
 export interface ObjectiveCategory {
@@ -35,6 +32,7 @@ export interface ObjectiveCategory {
 
 export interface PlayerObjective {
   id: string
+  type: string
   category: string
   scores: number[] | null[]
 }
@@ -44,6 +42,7 @@ export interface Player {
   faction: string
   primaryObjectives: PlayerObjective[]
   secondaryObjectives: PlayerObjective[]
+  commandPoints: number[] | null[]
 }
 
 export interface Team {
@@ -52,6 +51,7 @@ export interface Team {
 
 export interface Game {
   id?: string
+  type: string
   format: string
   mission: string
   name: string
@@ -70,6 +70,9 @@ export interface Faction {
 
 export interface Mission {
   id: string
+  type: string
+  format: string
+  number: number
   primary: Objective[]
   secondary: Objective[]
 }
@@ -78,9 +81,11 @@ type RootStackParamList = {
   Homepage: undefined
   EditGame: { game?: Game }
   ViewGame: { game: Game }
+  About: undefined
 }
 export type EditGameRouteProp = RouteProp<RootStackParamList, 'EditGame'>
 export type ViewGameRouteProp = RouteProp<RootStackParamList, 'ViewGame'>
+export type AboutRouteProp = RouteProp<RootStackParamList, 'About'>
 
 export type HomepageScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -94,4 +99,9 @@ export type EditGameScreenNavigationProp = StackNavigationProp<
 export type ViewGameScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
   'ViewGame'
+>
+
+export type AboutScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'About'
 >

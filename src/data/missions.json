@@ -1,125 +1,574 @@
 [
-	{
-		"id": "combat-patrol",
-		"missions": []
-		},
-	{
-		"id": "incursion",
-		"missions": [
-			{
-				"id": "crossfire",
-				"number": 11,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "outflank" }]
-			},
-			{
-				"id": "resupply",
-				"number": 12,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "secure-landing-sites" }]
-			},
-			{
-				"id": "raid",
-				"number": 13,
-				"primary": [{ "id": "domination" }],
-				"secondary": [{ "id": "raid-supply-lines" }]
-			},
-			{
-				"id": "centre-ground",
-				"number": 21,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "centre-ground" }]
-			},
-			{
-				"id": "ascension",
-				"number": 22,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "ascend" }]
-			},
-			{
-				"id": "forward-push",
-				"number": 23,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "forward-push" }]
-			},
-			{
-				"id": "rise-of-the-machine-spirit",
-				"number": 31,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "inload-data-psalm" }]
-			},
-			{
-				"id": "show-of-force",
-				"number": 32,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "minimise-losses" }]
-			},
-			{
-				"id": "reconnaissance-mission",
-				"number": 33,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "recon-sweep" }]
-			}
-		]
-	},
-	{
-		"id": "strike-force",
-		"missions": [
-			{
-				"id": "retrieval-mission",
-				"number": 11,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "minimise-losses" }]
-			},
-			{
-				"id": "scorched-earth",
-				"number": 12,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "raze" }]
-			},
-			{
-				"id": "vital-intelligence",
-				"number": 13,
-				"primary": [{ "id": "domination" }],
-				"secondary": [{ "id": "data-intercept" }]
-			},
-			{
-				"id": "surround-and-destroy",
-				"number": 21,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "surround-them" }]
-			},
-			{
-				"id": "front-line-warfare",
-				"number": 22,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "vital-ground" }]
-			},
-			{
-				"id": "exploration",
-				"number": 23,
-				"primary": [{ "id": "domination" }],
-				"secondary": [{ "id": "strategic-scan" }]
-			},
-			{
-				"id": "overrun",
-				"number": 31,
-				"primary": [{ "id": "domination" }],
-				"secondary": [{ "id": "overrun" }]
-			},
-			{
-				"id": "sweep-and-clear",
-				"number": 32,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "direct-assault" }]
-			},
-			{
-				"id": "priority-target",
-				"number": 33,
-				"primary": [{ "id": "take-and-hold" }],
-				"secondary": [{ "id": "priority-targets" }]
-			}
-		]
-	},
-	{ "id": "onslaught", "missions": [] }
+  {
+    "id": "crossfire",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 11,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "outflank"
+      }
+    ]
+  },
+  {
+    "id": "resupply",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 12,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "secure-landing-sites"
+      }
+    ]
+  },
+  {
+    "id": "raid",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 13,
+    "primary": [
+      {
+        "id": "domination"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "raid-supply-lines"
+      }
+    ]
+  },
+  {
+    "id": "centre-ground",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 21,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "centre-ground"
+      }
+    ]
+  },
+  {
+    "id": "ascension",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 22,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "ascend"
+      }
+    ]
+  },
+  {
+    "id": "forward-push",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 23,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "forward-push"
+      }
+    ]
+  },
+  {
+    "id": "rise-of-the-machine-spirit",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 31,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "inload-data-psalm"
+      }
+    ]
+  },
+  {
+    "id": "show-of-force",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 32,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "minimise-losses"
+      }
+    ]
+  },
+  {
+    "id": "reconnaissance-mission",
+    "type": "gt2020",
+    "format": "incursion",
+    "number": 33,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "recon-sweep"
+      }
+    ]
+  },
+  {
+    "id": "retrieval-mission",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 11,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "minimise-losses"
+      }
+    ]
+  },
+  {
+    "id": "scorched-earth",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 12,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "raze"
+      }
+    ]
+  },
+  {
+    "id": "vital-intelligence",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 13,
+    "primary": [
+      {
+        "id": "domination"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "data-intercept"
+      }
+    ]
+  },
+  {
+    "id": "surround-and-destroy",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 21,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "surround-them"
+      }
+    ]
+  },
+  {
+    "id": "frontline-warfare",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 22,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "vital-ground"
+      }
+    ]
+  },
+  {
+    "id": "exploration",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 23,
+    "primary": [
+      {
+        "id": "domination"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "strategic-scan"
+      }
+    ]
+  },
+  {
+    "id": "overrun",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 31,
+    "primary": [
+      {
+        "id": "domination"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "overrun"
+      }
+    ]
+  },
+  {
+    "id": "sweep-and-clear",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 32,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "direct-assault"
+      }
+    ]
+  },
+  {
+    "id": "priority-target",
+    "type": "gt2020",
+    "format": "strike-force",
+    "number": 33,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "priority-targets"
+      }
+    ]
+  },
+  {
+    "id": "incisive-attack",
+    "type": "eternal-war",
+    "format": "combat-patrol",
+    "number": 1,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "surgical-assault"
+      }
+    ]
+  },
+  {
+    "id": "outriders",
+    "type": "eternal-war",
+    "format": "combat-patrol",
+    "number": 2,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "survey"
+      }
+    ]
+  },
+  {
+    "id": "encircle",
+    "type": "eternal-war",
+    "format": "combat-patrol",
+    "number": 3,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "encircle"
+      }
+    ]
+  },
+  {
+    "id": "divide-and-conquer",
+    "type": "eternal-war",
+    "format": "incursion",
+    "number": 1,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "lines-of-demarcation"
+      }
+    ]
+  },
+  {
+    "id": "crossfire",
+    "type": "eternal-war",
+    "format": "incursion",
+    "number": 2,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "outflank"
+      }
+    ]
+  },
+  {
+    "id": "centre-ground",
+    "type": "eternal-war",
+    "format": "incursion",
+    "number": 3,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [{ "id": "centre-ground" }]
+  },
+  {
+    "id": "forward-push",
+    "type": "eternal-war",
+    "format": "incursion",
+    "number": 4,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "forward-push"
+      }
+    ]
+  },
+  {
+    "id": "ransack",
+    "type": "eternal-war",
+    "format": "incursion",
+    "number": 5,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "ransack"
+      }
+    ]
+  },
+  {
+    "id": "shifting-front",
+    "type": "eternal-war",
+    "format": "incursion",
+    "number": 6,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "test-their-line"
+      }
+    ]
+  },
+  {
+    "id": "retrieval-mission",
+    "type": "eternal-war",
+    "format": "strike-force",
+    "number": 1,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "minimize-losses"
+      }
+    ]
+  },
+  {
+    "id": "frontline-warfare",
+    "type": "eternal-war",
+    "format": "strike-force",
+    "number": 2,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "vital-ground"
+      }
+    ]
+  },
+  {
+    "id": "the-four-pillars",
+    "type": "eternal-war",
+    "format": "strike-force",
+    "number": 3,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "siphon-power"
+      }
+    ]
+  },
+  {
+    "id": "no-mans-land",
+    "type": "eternal-war",
+    "format": "strike-force",
+    "number": 4,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "secure-no-mans-land"
+      }
+    ]
+  },
+  {
+    "id": "scorched-earth",
+    "type": "eternal-war",
+    "format": "strike-force",
+    "number": 5,
+    "primary": [
+      {
+        "id": "take-and-hold"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "raze"
+      }
+    ]
+  },
+  {
+    "id": "vital-intelligence",
+    "type": "eternal-war",
+    "format": "strike-force",
+    "number": 6,
+    "primary": [
+      {
+        "id": "domination"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "data-intercept"
+      }
+    ]
+  },
+  {
+    "id": "lines-of-battle",
+    "type": "eternal-war",
+    "format": "onslaught",
+    "number": 1,
+    "primary": [
+      {
+        "id": "unified-advance"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "hold-the-center"
+      }
+    ]
+  },
+  {
+    "id": "all-out-war",
+    "type": "eternal-war",
+    "format": "onslaught",
+    "number": 2,
+    "primary": [
+      {
+        "id": "domination"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "surround-them"
+      }
+    ]
+  },
+  {
+    "id": "pathway-to-glory",
+    "type": "eternal-war",
+    "format": "onslaught",
+    "number": 3,
+    "primary": [
+      {
+        "id": "domination"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "search-for-the-portal"
+      }
+    ]
+  }
 ]

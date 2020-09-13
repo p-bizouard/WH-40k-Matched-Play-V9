@@ -1,66 +1,105 @@
 {
-	"mission.combat-patrol": {
-		"defaultMessage": "Patrouille de combat"
-	},
-	"mission.incursion": {
-		"defaultMessage": "Incursion"
-	},
-	"mission.incursion.crossfire": {
-		"defaultMessage": "Tirs croisés"
-	},
-	"mission.incursion.resupply": {
-		"defaultMessage": "Réapprovisionnement"
-	},
-	"mission.incursion.raid": {
-		"defaultMessage": "Raid"
-	},
-	"mission.incursion.centre-ground": {
-		"defaultMessage": "Position centrale"
-	},
-	"mission.incursion.ascension": {
-		"defaultMessage": "Élévation"
-	},
-	"mission.incursion.forward-push": {
-		"defaultMessage": "Irruption"
-	},
-	"mission.incursion.rise-of-the-machine-spirit": {
-		"defaultMessage": "L'éveil de la machine"
-	},
-	"mission.incursion.show-of-force": {
-		"defaultMessage": "Démonstration de force"
-	},
-	"mission.incursion.reconnaissance-mission": {
-		"defaultMessage": "Mission de reconnaissance"
+  "mission.gt2020": {
+    "defaultMessage": "Grand tournament 2020"
+  },
+  "mission.eternal-war": {
+    "defaultMessage": "Guerre éternelle"
+  },
+  "mission.combat-patrol": {
+    "defaultMessage": "Patrouille de combat"
+  },
+  "mission.incursion": {
+    "defaultMessage": "Incursion"
+  },
+  "mission.crossfire": {
+    "defaultMessage": "Tirs croisés"
+  },
+  "mission.resupply": {
+    "defaultMessage": "Réapprovisionnement"
+  },
+  "mission.raid": {
+    "defaultMessage": "Raid"
+  },
+  "mission.centre-ground": {
+    "defaultMessage": "Position centrale"
+  },
+  "mission.ascension": {
+    "defaultMessage": "Élévation"
+  },
+  "mission.forward-push": {
+    "defaultMessage": "Irruption"
+  },
+  "mission.rise-of-the-machine-spirit": {
+    "defaultMessage": "L'éveil de la machine"
+  },
+  "mission.show-of-force": {
+    "defaultMessage": "Démonstration de force"
+  },
+  "mission.reconnaissance-mission": {
+    "defaultMessage": "Mission de reconnaissance"
   },
 
-	"mission.strike-force": {
-		"defaultMessage": "Strike force"
-	},
-	"mission.strike-force.retrieval-mission": {
-		"defaultMessage": "Mission de récupération"
-	},
-	"mission.strike-force.scorched-earth": {
-		"defaultMessage": "Terre brulée"
-	},
-	"mission.strike-force.vital-intelligence": {
-		"defaultMessage": "Renseignements vitaux"
-	},
-	"mission.strike-force.surround-and-destroy": {
-		"defaultMessage": "Encercler et détruire"
-	},
-	"mission.strike-force.front-line-warfare": {
-		"defaultMessage": "Lignes de bataille"
-	},
-	"mission.strike-force.exploration": {
-		"defaultMessage": "Exploration"
-	},
-	"mission.strike-force.overrun": {
-		"defaultMessage": "Débordement"
-	},
-	"mission.strike-force.sweep-and-clear": {
-		"defaultMessage": "Balayer et nettoyer"
-	},
-	"mission.strike-force.priority-target": {
-		"defaultMessage": "Cible prioritaire"
-	}
+  "mission.strike-force": {
+    "defaultMessage": "Strike force"
+  },
+  "mission.retrieval-mission": {
+    "defaultMessage": "Mission de récupération"
+  },
+  "mission.scorched-earth": {
+    "defaultMessage": "Terre brulée"
+  },
+  "mission.vital-intelligence": {
+    "defaultMessage": "Renseignements vitaux"
+  },
+  "mission.surround-and-destroy": {
+    "defaultMessage": "Encercler et détruire"
+  },
+  "mission.frontline-warfare": {
+    "defaultMessage": "Lignes de bataille"
+  },
+  "mission.exploration": {
+    "defaultMessage": "Exploration"
+  },
+  "mission.overrun": {
+    "defaultMessage": "Débordement"
+  },
+  "mission.sweep-and-clear": {
+    "defaultMessage": "Balayer et nettoyer"
+  },
+  "mission.priority-target": {
+    "defaultMessage": "Cible prioritaire"
+  },
+  "mission.the-four-pillars": {
+    "defaultMessage": "Les quatre piliers"
+  },
+  "mission.no-mans-land": {
+    "defaultMessage": "No man's land"
+  },
+  "mission.incisive-attack": {
+    "defaultMessage": "Attaque incisive"
+  },
+  "mission.outriders": {
+    "defaultMessage": "Éclaireurs"
+  },
+  "mission.encircle": {
+    "defaultMessage": "Encerclement"
+  },
+  "mission.divide-and-conquer": {
+    "defaultMessage": "Diviser et conquérir"
+  },
+  "mission.ransack": {
+    "defaultMessage": "Saccage"
+  },
+  "mission.shifting-front": {
+    "defaultMessage": "Front mouvant"
+  },
+  "mission.lines-of-battle": {
+    "defaultMessage": "Lignes de bataille"
+  },
+  "mission.all-out-war": {
+    "defaultMessage": "Guerre totale"
+  },
+  "mission.pathway-to-glory": {
+    "defaultMessage": "La voie vers la victoire"
+  }
 }

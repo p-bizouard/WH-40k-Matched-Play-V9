@@ -1,5 +1,14 @@
 {
   "prettier.requireConfig": true,
   "prettier.singleQuote": true,
-  "prettier.useEditorConfig": false
+  "prettier.useEditorConfig": false,
+  "spellright.language": [
+    "fr"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "json"
+  ]
 }

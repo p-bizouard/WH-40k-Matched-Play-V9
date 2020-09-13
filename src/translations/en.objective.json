@@ -1,1 +1,77 @@
-{}
+{
+  "objective.description.take-and-hold": {
+    "defaultMessage": "Progressive: At the end of each player’s Command phase, the player whose turn it is scores 5 victory points for each of the following conditions they satisfy (for a maximum of 15 victory points):\n-They control one or more objective markers.\n-They control two or more objective markers.\n-They control more objective markers than their opponent controls.\nThis primary objective cannot be scored in the first battle round."
+  },
+  "objective.description.domination": {
+    "defaultMessage": "Progressive: At the end of each player's Command phase, the player whose turn it is scores 5 victory points for each of the following conditions they satisfy (for a maximum of 15 victory points):\n- They control two or more objective markers.\n- They control three or more objective markers.\n- They control more objective markers than their opponent controls.\nThis primary objective cannot be scored in the first battle round."
+  },
+  "objective.description.unified-advance": {
+    "defaultMessage": "Progressive: At the end of each player’s Command phase, the player whose turn it is scores 5 victory points for each of the following conditions they satisfy (for a maximum of 15 victory points):\n- They control one or more objective markers.\n- They control at least one objective marker labelled A, and at least one objective marker labelled C.\n- They control at least one objective marker labelled A, at least one objective marker labelled B and at least one objective marker labelled C.\nThis primary objective cannot be scored in the first battle round."
+  },
+  "objective.description.minimise-losses": {
+    "defaultMessage": "End game: At the start of the battle, add up the number of units in your army — this is your army’s Strength. If a unit splits to form two or more individual units during the battle, then immediately increase your army’s Strength accordingly (e.g. if one unit in your army splits to form three individual units, your army’s Strength is increased by 2). If a unit merges with another to form a combined unit during the battle, then decrease your army’s strength accordingly (e.g. if two units from your army merge to form one unit, you immediately decrease your army’s strength by 1). At the end of the battle, add up how many units from your army are left on the battlefield, including all units embarked within TRANSPORTS, but excluding all units that have been added to your army during the battle. If the total is 75% or more of your army’s Strength, score 15 victory points; if the total is less than 75%, but is 50% or more of your army's Strength, score 10 victory points; if the total is less than 50%, but is 25% or more of your army's Strength, score 5 victory points."
+  },
+  "objective.description.raze": {
+    "defaultMessage": "End game: At the end of the battle, a player scores 5 victory points if one objective marker was removed from the battlefield due to a successful Raze Objective action performed by a unit from their army during the battle, and 15 victory points if two objective markers were so removed."
+  },
+  "objective.description.data-intercept": {
+    "defaultMessage": "Progressive: Each time a unit from your army successfully completes the following action, you score a number of victory points equal to the number of objective markers you currently control:\n\nAction: One unit from your army can start to perform this action at the end of your Movement phase if it is within range of an objective marker and no enemy units (excluding AIRCRAFT) are within range of that objective marker. The action is completed at the end of your next Command phase so long as the unit performing it is still within range of the same objective marker."
+  },
+  "objective.description.vital-ground": {
+    "defaultMessage": "Progressive: At the end of each of your Command phases, you score 3 victory points if you control the objective marker in your opponent's deployment zone, and score 2 victory points for each objective marker that you control that is not in either player’s deployment zone (for a maximum of 7 victory points). This secondary objective cannot be scored in the first battle round."
+  },
+  "objective.description.outflank": {
+    "defaultMessage": "Progressive: At the end of your Command phase, you score 3 victory points if you control both of the objective markers labelled A. Score 5 victory points instead if, at the end of your Command phase, you control both of the objective markers labelled A and there is at least one enemy unit within 9'' of the centre of the battlefield. This secondary objective cannot be scored in the first battle round."
+  },
+  "objective.description.secure-landing-sites": {
+    "defaultMessage": "Progressive: Score a number of victory points at the end of your Command phase for each objective marker labelled A that you control, as shown in the table bellow (note that the victory points scored changes depending upon the battle round number).\n- 2 battle round : 2 victory points\n- 3 battle round : 2 victory points\n- 4 battle round : 3 victory points\n- 5 battle round : 6 victory points"
+  },
+  "objective.description.raid-supply-lines": {
+    "defaultMessage": "À la fin de votre phase de commandement, 3pts si vous contrôlez 1 des pions objectifs dans la zone de déploiement de votre adversaire, 5pts si vous contrôlez les 2. Ne peut-être marqué au 1er round."
+  },
+  "objective.description.centre-ground": {
+    "defaultMessage": "Progressive: Each time a unit from your army successfully completes the following action, you score 3 victory points if you currently control one of the objective markers labelled A, or 5 victory points if you currently control both objective markers labelled A:\n\nAction: One unit from your army can start to perform this action at the end of your Movement phase if it is within range of an objective marker labelled A and no enemy units (excluding AIRCRAFT) are within range of that objective marker. The action is completed at the end of your next Command phase so long as the unit performing it is still within range of the same objective marker."
+  },
+  "objective.description.ascend": {
+    "defaultMessage": "Progressive: At the end of each of your turns, if you control the central objective marker you score a number of victory points equal to the current battle round (so 1 victory point in the first battle round, 2 victory points in the second battle round, etc.) In addition, at the end of each of your turns you score 1 victory point if your Warlord is within range of the central objective marker."
+  },
+  "objective.description.forward-push": {
+    "defaultMessage": "Progressive: If you select this objective, then units in your army can perform the following action\n\nAction: One unit from your army can start to perform this action at the start of your Movement phase if it is within range of an objective marker that you control. The action is completed at the end of your turn and you score a number of victory points depending on which objective marker this action was performed on:"
+  },
+  "objective.description.inload-data-psalm": {
+    "defaultMessage": "Action: One or more units of your army can start to perform this action at the end of the Mouvement phase. Each unit that start to perform this action must be within range of a different objective marker. A unit cannot start to perform this action while any ennemy unit (excluding AIRCRAFT) are in range of the same objective marker. This action is completed at the end of your next Command phase, and you score a number of victory points depending on how many units completed this action this phase, as shown in the table bellow.\n- 1 action: 1 victory point\n- 2 actions: 3 victory points\n- 3 actions: 6 victory points\n- 4 actions: 10 victory points"
+  },
+  "objective.description.surgical-assault": {
+    "defaultMessage": "Progressive: Score 5 victory points if you control the objective marker in your opponent’s deployment zone at the end of your turn."
+  },
+  "objective.description.survey": {
+    "defaultMessage": "Progressive: Score 5 victory points if you control both of the objective markers that are not in either player’s deployment zone at the end of your Command phase. This secondary objective cannot be scored in the first battle round."
+  },
+  "objective.description.encircle": {
+    "defaultMessage": "Progressive: Score 3 victory points if you have at least one unit from your army (excluding AIRCRAFT) wholly within 6'' of your battlefield edge and at least one unit from your army (excluding AIRCRAFT) wholly within 6'' of your opponent's battlefield edge at the end of your turn (score 5 victory points instead if one of these units is also wholly within your opponent’s deployment zone)."
+  },
+  "objective.description.lines-of-demarcation": {
+    "defaultMessage": "Progressive: At the end of your turn, you score 4 victory points if you control both objective markers labelled A, or 2 victory points if you control both objective markers labelled B."
+  },
+  "objective.description.ransack": {
+    "defaultMessage": "Progressive: Score a number of victory points at the end of your Command phase if you control one or more of the objective markers that are within your opponent's territory, as shown in the table below:"
+  },
+  "objective.description.test-their-line": {
+    "defaultMessage": "Progressive: Score 3 victory points at the end of your turn if two or more units from your army (excluding AIRCRAFT) are wholly within your opponent's deployment zone and at least two different battlefield edges have at least one of those units wholly within 6'' of them (if one of those battlefield edges is your opponent's battlefield edge, score 5 victory points instead). For the purposes of this objective, a unit can only count as being wholly within 6''' of one battlefield edge at a time - if a unit is within 6''' of two battlefield edges because it is in the corner of the battlefield, you can select which battlefield edge it counts as being wholly within 6''' of at the end of your turn."
+  },
+  "objective.description.hold-the-center": {
+    "defaultMessage": "Progressive: Score 5 victory points at the end of your Command phase if you control more objective markers labelled B than your opponent does and you have more models wholly within 12'' of the centre of the battlefield than your opponent does. This secondary objective cannot be scored in the first battle round."
+  },
+  "objective.description.surround-them": {
+    "defaultMessage": "Progressive and End Game: Score 4 victory points at the end of your Command phase and at the end of the battle if you control both the objective markers in your deployment zone and one or more objective markers in your opponent's deployment zone. Score 8 victory points instead if you control all four objective markers that are in deployment zones."
+  },
+  "objective.description.search-for-the-portal": {
+    "defaultMessage": "Progressive: Each time a unit from your army successfully completes the Search for the Portal action (see below) you score 1 victory point, plus 1 additional victory point for each objective marker labelled A that is currently under your control (for a maximum of 5 victory points).\n\nAction: One INFANTRY unit from your army (excluding CHARACTERS) can start to perform this action at the end of your Movement phase if it is wholly within the Search Area shown on the deployment map. The action is completed at the end of your next Command phase so long as the unit performing it is still wholly within the Search Area."
+  },
+  "objective.description.secure-no-mans-land": {
+    "defaultMessage": "Progressive: At the end of each of your turns, if you control the central objective marker you score a number of victory points equal to the current battle round number (so 1 victory point in the first battle round, 2 victory points in the second battle round etc.)."
+  },
+  "objective.description.siphon-power": {
+    "defaultMessage": "Progressive: If you select this objective, units in your army can perform the following action:\n\nAction: One or more units from your army can start to perform this action at the end of your Movement phase. Each unit that starts to perform this action must be within range of a different objective marker. A unit cannot start this action while any enemy units (excluding AIRCRAFT) are in range of the same objective marker. The action is completed at the end of your next Command phase, and you score a number of victory points depending on how many units completed this action this phase, as shown in the table below:1 action : 1pt, 2 actions : 3pts, 3 actions : 6pts, 4 actions: 10pts"
+  }
+}

@@ -41,6 +41,7 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
       props.teamNumber,
       props.playerNumber,
       props.objectiveNumber,
+      getObjective().type,
       getObjective().category,
       getObjective().id,
       props.primaryOrSecondary,
@@ -65,7 +66,7 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
   }
 
   const objectiveDescription = intl.get(
-    `objective.description.${getObjective().category}.${getObjective().id}`
+    `objective.description.${getObjective().id}`
   )
   return (
     <View>
@@ -83,9 +84,7 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
             >
               <Title>
                 {intl
-                  .get(
-                    `objective.${getObjective().category}.${getObjective().id}`
-                  )
+                  .get(`objective.${getObjective().id}`)
                   .d(humanizeString(getObjective().id))}
               </Title>
               <Text>{objectiveDescription}</Text>
@@ -112,7 +111,7 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
             }}
           >
             {intl
-              .get(`objective.${getObjective().category}.${getObjective().id}`)
+              .get(`objective.${getObjective().id}`)
               .d(humanizeString(getObjective().id))}{' '}
             (
             {intl
@@ -131,7 +130,15 @@ function PlayerObjective({ ...props }: PlayerObjectiveProps) {
             />
           ) : null}
           <Text style={{ marginLeft: 'auto' }}>
-            {getObjective().scores.reduce((a: number, b: number) => a + b, 0)}
+            {getObjective().scores.reduce(
+              (a: number, b: number) =>
+                Math.min(
+                  a + b,
+                  props.primaryOrSecondary === 'primary' ? 45 : 15
+                ),
+              0
+            )}{' '}
+            pts
           </Text>
         </View>
         <View style={[styles.flexView]}>

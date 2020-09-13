@@ -1,0 +1,68 @@
+{
+  "objective.description.engage-on-all-fronts": {
+    "defaultMessage": "Progressive: Score 2 victory points at the end of your turn if you have one or more units from your army wholly within three different table quarters, and those units are all more than 6'' from the centre of the battlefield. Score 3 victory points instead if you have one or more units from your army wholly within each table quarter, and those units are all more than 6'' from the centre of the battlefield."
+  },
+  "objective.description.line-breaker": {
+    "defaultMessage": "Progressive: Score 4 victory points at the end of your turn if two or more units from your army (excluding AIRCRAFT) are wholly within your opponent's deployment zone."
+  },
+  "objective.description.domination": {
+    "defaultMessage": "Progressive: Score 3 victory points if you control more than half the total number of objective markers on the battlefield at the end of your turn."
+  },
+  "objective.description.thin-their-ranks": {
+    "defaultMessage": "End game: If you select this objective, keep a tally of kill points; each time an enemy model is destroyed, add 1 to this tally (add 10 to this tally instead if the model that was destroyed had a Wounds characteristic of 10 or more). A model can, if it is resurrected for any reason (i.e. it was destroyed and subsequently returned to the battlefield), potentially add several points to this tally (assuming it is resurrected and subsequently destroyed several times over). At the end of the battle, divide your kill points tally by 10 and round down - the result is the number of victory points you score."
+  },
+  "objective.description.grind-them-down": {
+    "defaultMessage": "Progressive: Score 3 victory points at the end of the battle round if more enemy units than friendly units were destroyed this battle round."
+  },
+  "objective.description.attrition": {
+    "defaultMessage": "Progressive: Score 4 victory points at the end of the battle round if more enemy units than friendly units were destroyed this battle round."
+  },
+  "objective.description.while-we-stand-we-fight": {
+    "defaultMessage": "End game: If you select this objective, then before the battle you must identify which three models from your army (excluding models with the Fortifications Battlefield Role) have the highest points value, and make a note of them on your army roster (if two or more are models are tied, you can choose between them). If your army has three or fewer models, then you instead identify all the units in your army. A model's points cost includes the points of all weapons and wargear it is equipped with. You score 5 victory points for each of these models that are on the battlefield at the end of the battle."
+  },
+  "objective.description.first-strike": {
+    "defaultMessage": "End game: Score 5 victory points at the end of the battle if any enemy units were destroyed in the first battle round, and score an additional 3 victory points if more enemy units than friendly units were destroyed in the first battle round."
+  },
+  "objective.description.titan-hunter": {
+    "defaultMessage": "End game: Score 10 victory points at the end of the battle if one enemy TITANIC model is destroyed, score 12 victory points if two enemy TITANIC models are destroyed, or 15 victory points if three or more enemy TITANIC models are destroyed."
+  },
+  "objective.description.titan-slayers": {
+    "defaultMessage": "End game: Score 10 victory points at the end of the battle if one enemy TITANIC model is destroyed, or 15 victory points if two or more enemy TITANIC models are destroyed."
+  },
+  "objective.description.bring-it-down": {
+    "defaultMessage": "End game: Score 2 victory points at the end of the battle for each enemy MONSTER or VEHICLE model with a Wounds characteristic of 10 or less that is destroyed, and 3 victory points for each enemy MONSTER or VEHICLE model with a Wounds characteristic of 11 or more that is destroyed."
+  },
+  "objective.description.slay-the-warlord": {
+    "defaultMessage": "End game: Score 6 victory points at the end of the battle if the enemy WARLORD is destroyed."
+  },
+  "objective.description.cut-off-the-head": {
+    "defaultMessage": "End game: At the end of yhe battle, you score a number of points if the enemy WARLORD was destroyed during the battle. The number of victory points scored depends on the battle round during which the ennemy WARLORD was destroyed, as shown in the table bellow. 1 battle round : 13 points\n- 2 battle round : 10 points\n- 3 battle round : 6 points\n- 4 battle round : 3 points\n- 5 battle round : 1 point\nIf an enemy WARLORD was destroyed then resurrected or otherwise returned to the battlefield and subsequently destroyed again, then for the purposes of this secondary objective it was destroyed during the battle round in which it was last removed from the battlefield."
+  },
+  "objective.description.assassinate": {
+    "defaultMessage": "End game: Score 3 victory points at the end of the battle for each enemy CHARACTER model that is destroyed."
+  },
+  "objective.description.raise-the-banners-high": {
+    "defaultMessage": "Progressive and end game: If you select this objective, then units in your army can perform the following action\n\nAction: One or more INFANTRY units from your army can start to perform this action at the end of your Movement phase. Each unit from your army that starts to perform this action must be in range of a different objective marker that does not have one of your banners raised upon it (see below). A unit cannot start this action while there are any enemy units (excluding AIRCRAFT) in range of the same objective marker. The Action is completed at the end of your turn. If this Action is successfully completed, that objective marker is said to have one of your army’s banners raised on it (the banner is ‘removed’ if your opponent controls the objective marker at the start of any phase). You score 1 victory point at the end of each of your Command phases, and 1 victory point at the end of the battle, for each objective marker on the battlefield that has one of your banners raised upon it."
+  },
+  "objective.description.investigate-sites": {
+    "defaultMessage": "Progressive: Score 3 victory points each time a unit from your army successfully completes the following action\n\nAction): One INFANTRY unit (excluding CHARACTERS) from your army can start to perform this action at the end of your Movement phase if it is within 6'' of the centre of the battlefield and no enemy units (excluding AIRCRAFT) are within 6'' of the centre of the battlefield. The Action is completed at the end of your turn."
+  },
+  "objective.description.deploy-scramblers": {
+    "defaultMessage": "End game: Score 10 victory points at the end of the battle if you successfuly completed the following action three times during the battle - once in your deployment zone, once in your opponent's deployment zone and once more than 6'' from either playe'rs deployment zone:\n\nAction: One INFRANTRY unit (excluding CHARACTERS) from your army can start to perform this action at the end of your Movement phase if it is wholly within your deployment zone, wholly within your opponent's deployment zone or more than 6'' from either player's deployment zone. This action is completed at the end of your turn."
+  },
+  "objective.description.repair-teleport-homer": {
+    "defaultMessage": "Progressive: Score 5 victory points each time a unit from your army successfully completes the following action\n\nAction: One INFANTRY unit from your army can start to perform this action at the end of your Movement phase if it is wholly within your opponent's deployment zone. The Action is completed at the end of your next Command phase provided the unit attempting it is still wholly within your opponent's deployment zone."
+  },
+  "objective.description.abhor-the-witch": {
+    "defaultMessage": "End game: You cannot select this secondary objective if your army includes any PSYKER units. Score 5 victory points at the end of the battle for each enemy PSYKER CHARACTER unit that is destroyed, and 3 victory points for every other enemy PSYKER unit that is destroyed."
+  },
+  "objective.description.mental-interrogation": {
+    "defaultMessage": "Progressive: Score 3 victory points each time you successfully complete the following psychic action\n\nPsychic Action - Warp Charge 4: One PSYKER CHARACTER from your army can attempt to perform this psychic action in your Psychic phase if it is within 18'' of any enemy CHARACTER models."
+  },
+  "objective.description.psychic-ritual": {
+    "defaultMessage": "End game: Score 15 victory points at the end of the battle if any unit from your army successfully completed the following psychic action 3 times during the battle\n\nPsychic Action - Warp Charge 3: One PSYKER CHARACTER unit from your army can attempt to perform this psychic action in your Psychic phase if it is within 6'' of the centre of the battlefield."
+  },
+  "objective.description.pierce-the-evil": {
+    "defaultMessage": "End game: Score 8 victory points at the end of the battle if any unit from your army successfully completed the following psychic action 2 times during the battle, or 15 victory points at the end of the battle if any unit from your army successfully completed the following psychic action 4 times during the battle\n\nPsychic Action - Warp Charge 3: One PSYKER CHARACTER unit from your army can attempt to perform this psychic action in your Psychic phase if it is within 6'' of your opponent's battlefield edge and more than 6'' from any enemy models."
+  }
+}
