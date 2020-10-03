@@ -70,6 +70,19 @@ function About({ navigation, route, ...props }: AboutProps) {
             {intl.get('display.contact-the-author').d('Contact the author')}
           </Button>
 
+          <Button
+            icon="code-tags"
+            mode="outlined"
+            style={[styles.mt30]}
+            onPress={() =>
+              Linking.openURL(
+                'https://github.com/p-bizouard/WH-40k-Matched-Play-V9'
+              )
+            }
+          >
+            {intl.get('display.source-code').d('Source code')}
+          </Button>
+
           <Text style={[styles.light, styles.mt30]}>
             {intl.get('display.about-text-copyright')}
           </Text>

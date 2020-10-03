@@ -24,10 +24,13 @@
     "defaultMessage": "À propos"
   },
   "display.about-text": {
-    "defaultMessage": "Application gratuite et sans publicités. Réalisé sur mon temps libre, c'est à cause de cette application que je n'ai pas le temps de peindre mes figurines.\n\nN'hésitez pas à me faire part de vos commentaires, idées ou simples encouragements 👇"
+    "defaultMessage": "Application open source et sans publicités. Réalisé sur mon temps libre, c'est à cause de cette application que je n'ai pas le temps de peindre mes figurines.\n\nN'hésitez pas à me faire part de vos commentaires, idées ou simples encouragements 👇"
   },
   "display.about-text-copyright": {
     "defaultMessage": "This application is completely unofficial and in no way endorsed by Games Workshop Limited. All associated missions, names, races from the Warhammer 40,000 universe are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2008, variably registered in the UK and other countries around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners."
+  },
+  "display.source-code": {
+    "defaultMessage": "Code source"
   },
 
   "game.add": {

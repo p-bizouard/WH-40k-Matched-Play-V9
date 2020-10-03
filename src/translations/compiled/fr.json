@@ -14,7 +14,7 @@
   "display.about-text": [
     {
       "type": 0,
-      "value": "Application gratuite et sans publicités. Réalisé sur mon temps libre, c'est à cause de cette application que je n'ai pas le temps de peindre mes figurines.\n\nN'hésitez pas à me faire part de vos commentaires, idées ou simples encouragements 👇"
+      "value": "Application open source et sans publicités. Réalisé sur mon temps libre, c'est à cause de cette application que je n'ai pas le temps de peindre mes figurines.\n\nN'hésitez pas à me faire part de vos commentaires, idées ou simples encouragements 👇"
     }
   ],
   "display.about-text-copyright": [
@@ -69,6 +69,12 @@
     {
       "type": 0,
       "value": "Sauvegarder"
+    }
+  ],
+  "display.source-code": [
+    {
+      "type": 0,
+      "value": "Code source"
     }
   ],
   "display.title": [

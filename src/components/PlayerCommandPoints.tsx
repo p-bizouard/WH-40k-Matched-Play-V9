@@ -1,25 +1,12 @@
-import React, { useState } from 'react'
-import { View, ScrollView } from 'react-native'
+import React from 'react'
+import { View } from 'react-native'
 
 import { connect } from 'react-redux'
 import { updatePlayer } from '../store/actions'
-import {
-  Text,
-  TextInput,
-  Portal,
-  Dialog,
-  Button,
-  Title,
-  IconButton,
-} from 'react-native-paper'
-import {
-  Game,
-  Player,
-  PlayerCommandPoints as PlayerCommandPointsType,
-} from '../Types'
+import { Text, TextInput } from 'react-native-paper'
+import { Game, Player } from '../Types'
 import styles from '../styles'
 import { isNumber } from 'lodash'
-import humanizeString from 'humanize-string'
 import intl from 'react-intl-universal'
 
 interface PlayerCommandPointsProps {
@@ -72,7 +59,7 @@ function PlayerCommandPoints({ ...props }: PlayerCommandPointsProps) {
         <Text>{intl.get(`game.command-points`).d('Command points')} :</Text>
         <Text style={{ marginLeft: 'auto' }}>
           {getPlayer().commandPoints.reduce(
-            (a: number, b: number) => (b > 0 ? b : a),
+            (a: number, b: number) => (b !== null ? b : a),
             0
           )}{' '}
           CP
