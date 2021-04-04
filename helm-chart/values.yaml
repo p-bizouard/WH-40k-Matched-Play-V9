@@ -5,15 +5,15 @@
 replicaCount: 1
 
 image:
-  repository: core.harbor.bizouard.fr/wh40kobjectives/application
+  repository: ~
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: 'latest'
 
 imagePullSecrets:
   - name: harbor-wh40kobjectives
-nameOverride: ''
-fullnameOverride: ''
+nameOverride: 'wh40kobjectives'
+fullnameOverride: 'wh40kobjectives'
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -44,16 +44,7 @@ service:
   port: 80
 
 ingress:
-  enabled: true
-  annotations:
-    kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/redirect-replacement: '$1//www.wh40kobjectives.ovh/$2'
-    traefik.ingress.kubernetes.io/redirect-regex: ^(.*)//wh40kobjectives.ovh/(.*)$'
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  hosts:
-    - wh40kobjectives.ovh
-    - www.wh40kobjectives.ovh
+  enabled: false
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
