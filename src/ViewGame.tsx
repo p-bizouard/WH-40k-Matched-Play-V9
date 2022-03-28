@@ -10,7 +10,7 @@ import {
   ViewGameRouteProp,
   PlayerObjective as PlayerObjectiveType,
   ViewGameScreenNavigationProp,
-} from './types'
+} from './Types'
 
 import styles from './styles'
 import { ScrollView } from 'react-native-gesture-handler'
